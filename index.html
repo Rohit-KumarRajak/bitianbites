@@ -3,50 +3,95 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Bitian Bites - Delicious homemade Mixture, Nimki, and Kurkure snacks made specially for BIT Mesra students. Affordable, hygienic and tasty snacks right from your campus.">
-  <meta name="keywords" content="Bitian Bites, BIT Mesra Snacks, Hostel Food, Mixture, Nimki, Kurkure, Campus Snacks, Homemade Snacks, College Food, Rohit's Production">
-  <meta name="author" content="Rohit Kumar Rajak">
+  <title>Bitian Bites | Campus Food Delivery</title>
+  <meta name="description" content="Order fresh food from verified campus stalls at BIT Mesra. Enjoy hygienic, delicious, and affordable meals delivered right to your hostel." />
+  <meta name="keywords" content="Bitian Bites, BIT Mesra, Food Truck, Chotu Dhaba, Apna Rasoi, Paahan Stall, Hostel Food, BIT Food Delivery" />
+  <meta name="author" content="Rohit Kumar Rajak" />
 
-  <meta name="google-site-verification" content="QfRMym8BlwRWd4Paaq1s60VYKnxebOhnTehrhYYi1Bk" />
-  <title>Bitian Bites - Snacks for BIT Mesra</title>
   <link rel="stylesheet" href="style.css" />
-  <script src="script.js"></script>
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+<script>
+  (function () {
+    emailjs.init("OZEW-ADCN5AImu8VW"); // ✅ Tumhara public key
+  })();
+</script>
+
 </head>
 <body>
-  <header>
-    <img src="PF.png" alt="Rohit Image" class="rohit-img" />
-    <h1>Rohit's Production</h1>
-    <p>ना सिर्फ स्वादिष्ट, बल्कि यादों से भरा!</p>
-  </header>
+<header>
+  <div class="hero-img">
+    <img src="bitmesra.png" alt="BIT Mesra Campus">
+  </div>
+  <div class="hero-text">
+    <h1>Bitian Bites</h1>
+    <p>Campus Food Ordering Portal - BIT Mesra</p>
+  </div>
+</header>
 
-  <section class="intro">
-    <h2>Business Introduction</h2>
-    <p>We deliver delicious, hygienic, and affordable snacks like Mixture, Nimki, and Kurkure. Locally produced, supporting small businesses and local employment.</p>
-  </section>
 
-  <section class="products">
-    <h2>Our Products</h2>
-    <div class="product-card">
-      <h3>Mixture</h3>
-      <p>₹50 (0.5 kg)</p>
-    </div>
-    <div class="product-card">
-      <h3>Nimki</h3>
-      <p>₹30 (0.5 kg)</p>
-    </div>
-    <div class="product-card">
-      <h3>Kurkure</h3>
-      <p>₹50 (250 gm)</p>
-    </div>
-  </section>
+  <main>
+    <section id="note">
+      <h2>📢 Note</h2>
+      <p>More stalls and food options will be added post summer vacation. Stay tuned!</p>
+    </section>
 
-  <section class="contact">
-    <h2>Order Now</h2>
-    <button onclick="orderNow()">Order on WhatsApp</button>
-  </section>
+    <section id="shops">
+      <h2>🍴 Select a Stall</h2>
+      <div class="shop-list">
+        <button onclick="loadMenu('foodtruck')">Food Truck</button>
+        <button onclick="loadMenu('chotu')">Chotu Dhaba</button>
+        <button onclick="loadMenu('apna')">Apna Rasoi</button>
+        <button onclick="loadMenu('paahan')">Paahan Stall</button>
+      </div>
+    </section>
+
+    <section id="menu" style="display:none;">
+      <h2>📋 Menu</h2>
+      <div id="menu-items"></div>
+    </section>
+
+    <section id="hostel">
+      <h2>🚚 Delivery Details</h2>
+      <div class="input-group">
+        <label for="user-name">Your Name:</label>
+        <input type="text" id="user-name" placeholder="Enter your name" required>
+      </div>
+      <div class="input-group">
+        <label for="hostel-select">Hostel:</label>
+        <select id="hostel-select">
+          <option value="">Select Hostel</option>
+          <option value="Girls Hostel">Girls Hostel</option>
+          <option value="Hostel 1">Hostel 1</option>
+          <option value="Hostel 2">Hostel 2</option>
+          <option value="Hostel 3">Hostel 3</option>
+          <option value="Hostel 4">Hostel 4</option>
+          <option value="Hostel 5">Hostel 5</option>
+          <option value="Hostel 6">Hostel 6</option>
+          <option value="Hostel 7">Hostel 7</option>
+          <option value="Hostel 10">Hostel 10</option>
+          <option value="Hostel 11">Hostel 11</option>
+          <option value="Hostel 12">Hostel 12</option>
+          <option value="Hostel 13">Hostel 13</option>
+          
+        </select>
+      </div>
+    </section>
+
+    <section id="cart">
+      <h2>🛒 Your Cart</h2>
+      <ul id="cart-items"></ul>
+      <button class="order-btn" onclick="placeOrder()">✅ Place Order via WhatsApp</button>
+    </section>
+  </main>
 
   <footer>
-    <p>&copy; 2025 Rohit's Production | Homemade Taste, Premium Quality</p>
+    <div style="display:flex; align-items:center; justify-content:center; gap:10px;">
+      <img src="PF.png" alt="Founder Rohit Kumar Rajak" style="width:55px; height:55px; border-radius:50%; border:2px solid white; object-fit:cover;">
+      <p>&copy; 2025 Bitian Bites | Founded by Rohit Kumar Rajak</p>
+    </div>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
