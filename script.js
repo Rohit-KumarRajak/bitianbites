@@ -47,24 +47,35 @@ function loadMenu(shop) {
     const div = document.createElement('div');
     div.innerHTML = `
       <span>${item.name} - ₹${item.price}</span>
-      <button class='add-btn' onclick='addToCart("${item.name}", ${item.price}, this)'>Add</button>
+      <button class='add-btn' onclick='addToCart("${item.name}", ${item.price})'>Add</button>
     `;
     menuItemsDiv.appendChild(div);
   });
 }
 
-function addToCart(item, price, btn) {
-  cart.push({ item, price });
-  const li = document.createElement('li');
-  li.textContent = `${item} - ₹${price}`;
-  document.getElementById('cart-items').appendChild(li);
-  if (btn) btn.textContent = 'Added';
-  btn.disabled = true;
-  btn.classList.add('added');
+function addToCart(item, price) {
+  const existing = cart.find(i => i.name === item);
+  if (existing) {
+    existing.qty += 1;
+  } else {
+    cart.push({ name: item, price, qty: 1 });
+  }
+  renderCart();
+}
+
+function renderCart() {
+  const cartList = document.getElementById('cart-items');
+  cartList.innerHTML = '';
+  cart.forEach(i => {
+    const li = document.createElement('li');
+    li.textContent = `${i.name} x ${i.qty} = ₹${i.price * i.qty}`;
+    cartList.appendChild(li);
+  });
 }
 
 function placeOrder() {
   const name = document.getElementById('user-name').value.trim();
+  const email = document.getElementById('user-email').value.trim();
   const hostel = document.getElementById('hostel-select').value;
 
   if (!currentShop || cart.length === 0) {
@@ -72,21 +83,21 @@ function placeOrder() {
     return;
   }
 
-  if (!hostel || !name) {
-    alert('Please fill in your name and hostel.');
+  if (!hostel || !name || !email) {
+    alert('Please select your hostel.');
     return;
   }
 
-  const total = cart.reduce((sum, c) => sum + c.price, 0);
+  const total = cart.reduce((sum, i) => sum + (i.price * i.qty), 0);
 
   if (total < 50) {
     alert("Minimum order amount should be ₹50.");
     return;
   }
 
-  const orderText = cart.map(c => `- ${c.item}: ₹${c.price}`).join('\n');
+  const orderText = cart.map(i => `- ${i.name} x ${i.qty} = ₹${i.price * i.qty}`).join('\n');
   const message =
-    `Hello, I want to order from ${currentShop.toUpperCase()}:\n${orderText}\n\nTotal: ₹${total}\nName: ${name}\nHostel: ${hostel}`;
+    `Hello, I want to order from ${currentShop.toUpperCase()}:\n${orderText}\n\nTotal: ₹${total}\nName: ${name}\nEmail: ${email}\nHostel: ${hostel}`;
 
   const waUrl = `https://wa.me/${whatsappNumbers[currentShop]}?text=${encodeURIComponent(message)}`;
   window.open(waUrl, '_blank');
@@ -98,6 +109,7 @@ function placeOrder() {
     order_summary: orderText,
     total_amount: total,
     user_name: name,
+    user_email: email,
     user_hostel: hostel,
     vendor: currentShop.toUpperCase(),
     time: time
@@ -108,10 +120,5 @@ function placeOrder() {
   });
 
   cart = [];
-  document.getElementById('cart-items').innerHTML = '';
-  document.querySelectorAll('.add-btn').forEach(btn => {
-    btn.textContent = 'Add';
-    btn.disabled = false;
-    btn.classList.remove('added');
-  });
+  renderCart();
 }
