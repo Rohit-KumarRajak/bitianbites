@@ -3,35 +3,73 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="google-site-verification" content="QfRMym8BlwRWd4Paaq1s60VYKnxebOhnTehrhYYi1Bk" />
+  <meta name="google-site-verification" content="QfRMym8BlwRWd4Paaq1s60VYKnxebOhnTehrhYYi1Bk" />
   <title>Bitian Bites | Campus Food Delivery</title>
   <meta name="description" content="Order fresh food from verified campus stalls at BIT Mesra. Enjoy hygienic, delicious, and affordable meals delivered right to your hostel." />
   <meta name="keywords" content="Bitian Bites, BIT Mesra, Food Truck, Chotu Dhaba, Apna Rasoi, Paahan Stall, Hostel Food, BIT Food Delivery" />
   <meta name="author" content="Rohit Kumar Rajak" />
 
   <link rel="stylesheet" href="style.css" />
- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/jwt-decode/build/jwt-decode.min.js"></script>
 
-<script>
-  (function () {
-    emailjs.init("OZEW-ADCN5AImu8VW"); // ✅ Tumhara public key
-  })();
-</script>
+  <script>
+    function handleCredentialResponse(response) {
+      const data = jwt_decode(response.credential);
+      const email = data.email;
+      const name = data.name;
 
+      const bitEmailPattern = /^btech\d{5}\.\d{2}@bitmesra\.ac\.in$/;
+      if (!bitEmailPattern.test(email)) {
+        alert("Only BIT Mesra student emails allowed!");
+        return;
+      }
+
+      document.getElementById('user-name').value = name;
+      document.getElementById('user-email').value = email;
+      document.getElementById('login-section').style.display = 'none';
+      document.querySelector('main').style.display = 'block';
+    }
+
+    (function () {
+      emailjs.init("OZEW-ADCN5AImu8VW");
+    })();
+  </script>
 </head>
 <body>
-<header>
-  <div class="hero-img">
-    <img src="bitmesra.png" alt="BIT Mesra Campus">
-  </div>
-  <div class="hero-text">
-    <h1>Bitian Bites</h1>
-    <p>Campus Food Ordering Portal - BIT Mesra</p>
-  </div>
-</header>
+  <header>
+    <div class="hero-img">
+      <img src="bitmesra.png" alt="BIT Mesra Campus">
+    </div>
+    <div class="hero-text">
+      <h1>Bitian Bites</h1>
+      <p>Campus Food Ordering Portal - BIT Mesra</p>
+    </div>
+  </header>
 
+  <section id="login-section">
+    <div id="g_id_onload"
+      data-client_id=581523739451-mnjcba0lk0ipn81d31bn0gtch7ei4c13.apps.googleusercontent.com
+      data-callback="handleCredentialResponse"
+      data-auto_prompt="false">
+    </div>
 
-  <main>
+    <div class="g_id_signin"
+      data-type="standard"
+      data-size="large"
+      data-theme="filled_blue"
+      data-text="sign_in_with"
+      data-shape="pill"
+      data-logo_alignment="left">
+    </div>
+
+    <p style="text-align:center; margin-top: 10px; color: #444; font-weight: 500;">
+      Please login using your official <strong>@bitmesra.ac.in</strong> email only to continue.
+    </p>
+  </section>
+
+  <main style="display:none;">
     <section id="note">
       <h2>📢 Note</h2>
       <p>More stalls and food options will be added post summer vacation. Stay tuned!</p>
@@ -56,7 +94,11 @@
       <h2>🚚 Delivery Details</h2>
       <div class="input-group">
         <label for="user-name">Your Name:</label>
-        <input type="text" id="user-name" placeholder="Enter your name" required>
+        <input type="text" id="user-name" placeholder="Enter your name" readonly required>
+      </div>
+      <div class="input-group">
+        <label for="user-email">Your BIT Gmail:</label>
+        <input type="email" id="user-email" placeholder="Your BIT email" readonly required>
       </div>
       <div class="input-group">
         <label for="hostel-select">Hostel:</label>
@@ -74,7 +116,6 @@
           <option value="Hostel 11">Hostel 11</option>
           <option value="Hostel 12">Hostel 12</option>
           <option value="Hostel 13">Hostel 13</option>
-          
         </select>
       </div>
     </section>
