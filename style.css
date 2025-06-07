@@ -251,3 +251,11 @@ footer img:hover {
     grid-column: unset;
   }
 }
+/* Center Google Login Section */
+#login-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 0;
+}
