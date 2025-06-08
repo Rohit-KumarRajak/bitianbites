@@ -21,14 +21,23 @@
       const name = data.name;
 
       const bitEmailPattern = /^btech\d{5}\.\d{2}@bitmesra\.ac\.in$/;
-      if (!bitEmailPattern.test(email)) {
-        alert("Only BIT Mesra student emails allowed!");
-        return;
-      }
-       // 🔒 Blocked BIT email(s)
-  const blockedEmails = ['btech10383.24@bitmesra.ac.in', 'btech10000.02@bitmesra.ac.in']; // example
+
+  // ✅ Special Access Gmail IDs allowed even if not BIT format
+  const allowedSpecialEmails = ['chandradeok96@gmail.com', 'rohitkrrajak993455@gmail.com','kaushalkr7858@gmail.com'];
+
+  // 🔒 Blocked BIT email(s)
+  const blockedEmails = [
+    'btech10383.02@bitmesra.ac.in',
+    'btech10000.02@bitmesra.ac.in'
+  ];
+
   if (blockedEmails.includes(email)) {
     alert("⚠️ Access denied! This BIT email is blocked from using Bitian Bites.");
+    return;
+  }
+
+  if (!bitEmailPattern.test(email) && !allowedSpecialEmails.includes(email)) {
+    alert("Only BIT Mesra student emails allowed!");
     return;
   }
 
@@ -134,11 +143,18 @@
   </main>
 
   <footer>
-    <div style="display:flex; align-items:center; justify-content:center; gap:10px;">
+  <div style="display:flex; flex-direction: column; align-items:center; justify-content:center; gap:10px; text-align:center;">
+    <div style="display: flex; align-items:center; gap:10px;">
       <img src="PF.png" alt="Founder Rohit Kumar Rajak" style="width:55px; height:55px; border-radius:50%; border:2px solid white; object-fit:cover;">
-      <p>&copy; 2025 Bitian Bites | Founded by Rohit Kumar Rajak</p>
+      <p style="margin:0;">&copy; 2025 Bitian Bites | Founded by Rohit Kumar Rajak</p>
     </div>
-  </footer>
+    <p style="font-size: 0.9rem; color: #ffeaea;">
+      Want special email access? Contact us at:<br>
+      📧 <a href="mailto:rohitkrrajak8051@gmail.com" style="color: #fff; text-decoration: underline;">bitianbites.support@gmail.com</a>
+    </p>
+  </div>
+</footer>
+
 
   <script src="script.js"></script>
 </body>
