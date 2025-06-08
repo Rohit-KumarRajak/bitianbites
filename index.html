@@ -25,6 +25,12 @@
         alert("Only BIT Mesra student emails allowed!");
         return;
       }
+       // 🔒 Blocked BIT email(s)
+  const blockedEmails = ['btech10383.24@bitmesra.ac.in', 'btech10000.02@bitmesra.ac.in']; // example
+  if (blockedEmails.includes(email)) {
+    alert("⚠️ Access denied! This BIT email is blocked from using Bitian Bites.");
+    return;
+  }
 
       document.getElementById('user-name').value = name;
       document.getElementById('user-email').value = email;
