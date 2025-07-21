@@ -12,7 +12,7 @@ The platform ensures hygienic, affordable, and fast meal ordering from trusted c
 Only students with a **@bitmesra.ac.in** email ID can log in.  
 For special access (non-standard BIT emails), contact us at:
 
-📧 [bitianbites.support@gmail.com](mailto:bitianbites.support@gmail.com)
+📧 [bitianbites.support@gmail.com](mailto:rohitkrrajak8051@gmail.com)
 
 ---
 
