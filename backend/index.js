@@ -38,7 +38,7 @@ passport.use(new GoogleStrategy({
   callbackURL: "/auth/google/callback"
 }, (accessToken, refreshToken, profile, done) => {
   const email = profile.emails[0].value;
-  const regex = /^btech\d{5}\.\d{2}@bitmesra\.ac\.in$/;
+  const regex = /^[^@]+@bitmesra\.ac\.in$/;
   if (regex.test(email)) return done(null, profile);
   return done(null, false);
 }));
