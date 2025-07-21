@@ -1,34 +1,46 @@
-# Bitian Bites Backend
+# Bitian Bites 🍽️
 
-## 🧾 Features
-- Accepts food orders from authenticated BIT Mesra students (via Google login)
-- Stores order in MongoDB
-- Sends admin email via EmailJS with verified user name and email
+**Campus Food Ordering Platform – BIT Mesra**
 
-## 🚀 Setup
+Bitian Bites is a web application built for students of BIT Mesra to order food from campus stalls directly to their hostels.  
+The platform ensures hygienic, affordable, and fast meal ordering from trusted campus vendors.
 
-1. Clone or unzip this project.
-2. Run `npm install`
-3. Create a `.env` file from `.env.example` and fill in your credentials
-4. Start the server:
-```
-node index.js
-```
+---
 
-## 🔐 Google Login Format Allowed:
-`btechXXXXX.YY@bitmesra.ac.in` (YY = 00 to 99 allowed)
+## 🔐 Login Access
 
-## 🔗 Auth URL
-```
-http://localhost:3000/auth/google
-```
+Only students with a **@bitmesra.ac.in** email ID can log in.  
+For special access (non-standard BIT emails), contact us at:
 
-## 🧪 Test Order API
-POST to `/order` with JSON body containing:
-- user_name
-- user_email
-- user_hostel
-- vendor
-- order_summary
-- total_amount
-- time
+📧 [bitianbites.support@gmail.com](mailto:bitianbites.support@gmail.com)
+
+---
+
+## 🛠️ Tech Stack
+
+- **Frontend:** HTML, CSS, JavaScript
+- **Backend:** Node.js, Express
+- **Database:** MongoDB (Mongoose)
+- **Authentication:** Google OAuth
+- **Email Notifications:** EmailJS
+- **Deployment:** GitHub Pages (Frontend), Render/Node backend
+
+---
+
+## 📦 Features
+
+- Google login with BIT email verification
+- Stall-wise menu loading
+- Cart and WhatsApp-based order placement
+- Email confirmation to vendor and admin
+- Admin order logging via MongoDB
+
+---
+
+## 👨‍💻 Developed By
+
+Rohit Kumar Rajak  
+
+---
+
+> 🚀 Project maintained with ❤️ for the BIT Mesra campus community.
