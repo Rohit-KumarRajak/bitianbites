@@ -162,7 +162,9 @@ function addToCart(item, price) {
     cart.push({ name: item, price, qty: 1 });
   }
   renderCart();
+  alert(`✅ "${item}" added to your cart!`);
 }
+
 
 function renderCart() {
   const cartList = document.getElementById('cart-items');
