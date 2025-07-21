@@ -158,12 +158,14 @@ function addToCart(item, price) {
   const existing = cart.find(i => i.name === item);
   if (existing) {
     existing.qty += 1;
+    alert(`✅ "${item}" added again!\nTotal quantity: ${existing.qty}`);
   } else {
     cart.push({ name: item, price, qty: 1 });
+    alert(`✅ "${item}" added to your cart!\nTotal quantity: 1`);
   }
   renderCart();
-  alert(`✅ "${item}" added to your cart!`);
 }
+
 
 
 function renderCart() {
