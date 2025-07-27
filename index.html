@@ -8,13 +8,8 @@
   <meta name="description" content="Order fresh food from verified campus stalls at BIT Mesra. Enjoy hygienic, delicious, and affordable meals delivered right to your hostel." />
   <meta name="keywords" content="Bitian Bites, BIT Mesra, Food Truck, Chotu Dhaba, Apna Rasoi, Paahan Stall, Hostel Food, BIT Food Delivery" />
   <meta name="author" content="Rohit Kumar Rajak" />
-  
-  <!-- Font Awesome for icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <!-- Animate.css for animations -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
   <link rel="stylesheet" href="style.css" />
-  
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
   <script src="https://accounts.google.com/gsi/client" async defer></script>
   <script src="https://cdn.jsdelivr.net/npm/jwt-decode/build/jwt-decode.min.js"></script>
@@ -27,33 +22,30 @@
 
       const bitEmailPattern = /^[^@]+@bitmesra\.ac\.in$/;
 
-      // ✅ Special Access Gmail IDs allowed even if not BIT format
-      const allowedSpecialEmails = ['chandradeok96@gmail.com','amardeepraaj0@gmail.com', 'rohitkrrajak993455@gmail.com','kaushalkr7858@gmail.com'];
 
-      // 🔒 Blocked BIT email(s)
-      const blockedEmails = [
-        'btech10383.02@bitmesra.ac.in',
-        'btech10000.02@bitmesra.ac.in'
-      ];
+  // ✅ Special Access Gmail IDs allowed even if not BIT format
+  const allowedSpecialEmails = ['chandradeok96@gmail.com','amardeepraaj0@gmail.com', 'rohitkrrajak993455@gmail.com','kaushalkr7858@gmail.com'];
 
-      if (blockedEmails.includes(email)) {
-        alert("⚠️ Access denied! This BIT email is blocked from using Bitian Bites.");
-        return;
-      }
+  // 🔒 Blocked BIT email(s)
+  const blockedEmails = [
+    'btech10383.02@bitmesra.ac.in',
+    'btech10000.02@bitmesra.ac.in'
+  ];
 
-      if (!bitEmailPattern.test(email) && !allowedSpecialEmails.includes(email)) {
-        alert("Only BIT Mesra student emails allowed!");
-        return;
-      }
+  if (blockedEmails.includes(email)) {
+    alert("⚠️ Access denied! This BIT email is blocked from using Bitian Bites.");
+    return;
+  }
+
+  if (!bitEmailPattern.test(email) && !allowedSpecialEmails.includes(email)) {
+    alert("Only BIT Mesra student emails allowed!");
+    return;
+  }
 
       document.getElementById('user-name').value = name;
       document.getElementById('user-email').value = email;
-      document.getElementById('login-section').classList.add('animate__fadeOut');
-      setTimeout(() => {
-        document.getElementById('login-section').style.display = 'none';
-        document.querySelector('main').style.display = 'block';
-        document.querySelector('main').classList.add('animate__fadeIn');
-      }, 500);
+      document.getElementById('login-section').style.display = 'none';
+      document.querySelector('main').style.display = 'block';
     }
 
     (function () {
@@ -62,113 +54,70 @@
   </script>
 </head>
 <body>
-  <!-- Floating particles background -->
-  <div class="particles"></div>
-  
-  <header class="animate__animated animate__fadeIn">
+  <header>
     <div class="hero-img">
-      <div class="overlay"></div>
       <img src="bitmesra.png" alt="BIT Mesra Campus">
     </div>
     <div class="hero-text">
       <h1>Bitian Bites</h1>
       <p>Campus Food Ordering Portal - BIT Mesra</p>
-      <div class="scrolling-text">
-        <span>🍔 Delicious Food • 🚀 Fast Delivery • 🏆 Verified Stalls • 💳 Easy Ordering • 🍕 Student Favorites</span>
-      </div>
     </div>
   </header>
 
-  <section id="login-section" class="animate__animated animate__fadeIn">
-    <div class="login-container">
-      <div class="login-header">
-        <i class="fas fa-utensils"></i>
-        <h2>Welcome to Bitian Bites</h2>
-        <p>Login to order from your favorite campus stalls</p>
-      </div>
-      
-      <div id="g_id_onload"
-        data-client_id=581523739451-mnjcba0lk0ipn81d31bn0gtch7ei4c13.apps.googleusercontent.com
-        data-callback="handleCredentialResponse"
-        data-auto_prompt="false">
-      </div>
-
-      <div class="g_id_signin"
-        data-type="standard"
-        data-size="large"
-        data-theme="filled_blue"
-        data-text="sign_in_with"
-        data-shape="pill"
-        data-logo_alignment="left">
-      </div>
-
-      <div class="login-footer">
-        <p>
-          Please login using your official <strong>@bitmesra.ac.in</strong> email only to continue.
-        </p>
-        <div class="security-badge">
-          <i class="fas fa-lock"></i> <span>Secure Login</span>
-        </div>
-      </div>
+  <section id="login-section">
+    <div id="g_id_onload"
+      data-client_id=581523739451-mnjcba0lk0ipn81d31bn0gtch7ei4c13.apps.googleusercontent.com
+      data-callback="handleCredentialResponse"
+      data-auto_prompt="false">
     </div>
+
+    <div class="g_id_signin"
+      data-type="standard"
+      data-size="large"
+      data-theme="filled_blue"
+      data-text="sign_in_with"
+      data-shape="pill"
+      data-logo_alignment="left">
+    </div>
+
+    <p style="text-align:center; margin-top: 10px; color: #444; font-weight: 500;">
+      Please login using your official <strong>@bitmesra.ac.in</strong> email only to continue.
+    </p>
   </section>
 
   <main style="display:none;">
-    <section id="note" class="animate__animated animate__fadeInUp">
-      <div class="note-header">
-        <i class="fas fa-bullhorn"></i>
-        <h2>Important Note</h2>
-      </div>
+    <section id="note">
+      <h2>📢 Note</h2>
       <p>More stalls and food options will be added post summer vacation. Stay tuned!</p>
-      <div class="note-footer">
-        <i class="fas fa-clock"></i> Coming soon!
-      </div>
     </section>
 
-    <section id="shops" class="animate__animated animate__fadeInUp">
-      <div class="section-header">
-        <i class="fas fa-store"></i>
-        <h2>Select a Stall</h2>
-      </div>
+    <section id="shops">
+      <h2>🍴 Select a Stall</h2>
       <div class="shop-list">
-        <button onclick="loadMenu('foodtruck')" class="shop-btn">
-          <i class="fas fa-truck"></i> Food Truck
-        </button>
-        <button onclick="loadMenu('chotu')" class="shop-btn">
-          <i class="fas fa-utensils"></i> Chotu Dhaba
-        </button>
-        <button onclick="loadMenu('apna')" class="shop-btn">
-          <i class="fas fa-home"></i> Apna Rasoi
-        </button>
-        <button onclick="loadMenu('paahan')" class="shop-btn">
-          <i class="fas fa-mountain"></i> Paahan Stall
-        </button>
+        <button onclick="loadMenu('foodtruck')">Food Truck</button>
+        <button onclick="loadMenu('chotu')">Chotu Dhaba</button>
+        <button onclick="loadMenu('apna')">Apna Rasoi</button>
+        <button onclick="loadMenu('paahan')">Paahan Stall</button>
       </div>
     </section>
 
-    <section id="menu" style="display:none;" class="animate__animated animate__fadeIn">
-      <div class="section-header">
-        <i class="fas fa-book-open"></i>
-        <h2>Menu</h2>
-      </div>
+    <section id="menu" style="display:none;">
+      <h2>📋 Menu</h2>
       <div id="menu-items"></div>
     </section>
 
-    <section id="hostel" class="animate__animated animate__fadeInUp">
-      <div class="section-header">
-        <i class="fas fa-map-marker-alt"></i>
-        <h2>Delivery Details</h2>
-      </div>
+    <section id="hostel">
+      <h2>🚚 Delivery Details</h2>
       <div class="input-group">
-        <label for="user-name"><i class="fas fa-user"></i> Your Name:</label>
+        <label for="user-name">Your Name:</label>
         <input type="text" id="user-name" placeholder="Enter your name" readonly required>
       </div>
       <div class="input-group">
-        <label for="user-email"><i class="fas fa-envelope"></i> Your BIT Gmail:</label>
+        <label for="user-email">Your BIT Gmail:</label>
         <input type="email" id="user-email" placeholder="Your BIT email" readonly required>
       </div>
       <div class="input-group">
-        <label for="hostel-select"><i class="fas fa-bed"></i> Hostel:</label>
+        <label for="hostel-select">Hostel:</label>
         <select id="hostel-select">
           <option value="">Select Hostel</option>
           <option value="Girls Hostel">Girls Hostel</option>
@@ -187,49 +136,26 @@
       </div>
     </section>
 
-    <section id="cart" class="animate__animated animate__fadeInUp">
-      <div class="section-header">
-        <i class="fas fa-shopping-cart"></i>
-        <h2>Your Cart</h2>
-      </div>
+    <section id="cart">
+      <h2>🛒 Your Cart</h2>
       <ul id="cart-items"></ul>
-      <button class="order-btn" onclick="placeOrder()">
-        <i class="fas fa-paper-plane"></i> Place Order via WhatsApp
-      </button>
+      <button class="order-btn" onclick="placeOrder()">✅ Place Order via WhatsApp</button>
     </section>
   </main>
 
-  <footer class="animate__animated animate__fadeInUp">
-    <div class="footer-content">
-      <div class="founder-info">
-        <img src="PF.png" alt="Founder Rohit Kumar Rajak" class="founder-img">
-        <div>
-          <p class="copyright">&copy; 2025 Bitian Bites</p>
-          <p class="founder-text">Founded by Rohit Kumar Rajak</p>
-        </div>
-      </div>
-      <div class="footer-contact">
-        <p>
-          <i class="fas fa-envelope"></i> Want special email access? Contact us at:
-        </p>
-        <a href="mailto:rohitkrrajak8051@gmail.com" class="contact-email">
-          <i class="fas fa-paper-plane"></i> bitianbites.support@gmail.com
-        </a>
-      </div>
-      <div class="social-links">
-        <a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a>
-        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-        <a href="#" class="social-link"><i class="fab fa-telegram"></i></a>
-      </div>
+  <footer>
+  <div style="display:flex; flex-direction: column; align-items:center; justify-content:center; gap:10px; text-align:center;">
+    <div style="display: flex; align-items:center; gap:10px;">
+      <img src="PF.png" alt="Founder Rohit Kumar Rajak" style="width:55px; height:55px; border-radius:50%; border:2px solid white; object-fit:cover;">
+      <p style="margin:0;">&copy; 2025 Bitian Bites | Founded by Rohit Kumar Rajak</p>
     </div>
-    <div class="footer-wave">
-      <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
-        <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" fill="#ff3f6c"></path>
-        <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" fill="#ff3f6c"></path>
-        <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" fill="#ff3f6c"></path>
-      </svg>
-    </div>
-  </footer>
+    <p style="font-size: 0.9rem; color: #ffeaea;">
+      Want special email access? Contact us at:<br>
+      📧 <a href="mailto:rohitkrrajak8051@gmail.com" style="color: #fff; text-decoration: underline;">bitianbites.support@gmail.com</a>
+    </p>
+  </div>
+</footer>
+
 
   <script src="script.js"></script>
 </body>
