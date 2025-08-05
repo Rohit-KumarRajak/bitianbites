@@ -190,33 +190,33 @@ const menus = {
   ],
 
   Momos: [
-    { name: 'Steam Veg', price: 70 },
-    { name: 'Steam Chicken', price: 80 },
-    { name: 'Steam Paneer', price: 80 },
-    { name: 'Fry Veg', price: 80 },
-    { name: 'Fry Chicken', price: 90 },
-    { name: 'Fry Paneer', price: 90 },
-    { name: 'Tandoori Veg', price: 100 },
-    { name: 'Tandoori Chicken', price: 120 },
-    { name: 'Tandoori Paneer', price: 120 },
-    { name: 'Afghani Veg', price: 100 },
-    { name: 'Afghani Chicken', price: 120 },
-    { name: 'Afghani Paneer', price: 120 },
-    { name: 'Malai Veg', price: 100 },
-    { name: 'Malai Chicken', price: 120 },
-    { name: 'Malai Paneer', price: 120 },
-    { name: 'Haryali Veg', price: 100 },
-    { name: 'Haryali Chicken', price: 120 },
-    { name: 'Haryali Paneer', price: 120 },
-    { name: 'Achari Veg', price: 100 },
-    { name: 'Achari Chicken', price: 120 },
-    { name: 'Achari Paneer', price: 120 },
-    { name: 'Chilli Garlic Veg', price: 100 },
-    { name: 'Chilli Garlic Chicken', price: 120 },
-    { name: 'Chilli Garlic Paneer', price: 120 },
-    { name: 'Kurkuray Veg', price: 100 },
-    { name: 'Kurkuray Chicken', price: 120 },
-    { name: 'Kurkuray Paneer', price: 120 },
+    { name: 'Steam Veg Momos', price: 70 },
+    { name: 'Steam Chicken Momos', price: 80 },
+    { name: 'Steam Paneer Momos', price: 80 },
+    { name: 'Fry Veg Momos', price: 80 },
+    { name: 'Fry Chicken Momos', price: 90 },
+    { name: 'Fry Paneer Momos', price: 90 },
+    { name: 'Tandoori Veg Momos', price: 100 },
+    { name: 'Tandoori Chicken Momos', price: 120 },
+    { name: 'Tandoori Paneer Momos', price: 120 },
+    { name: 'Afghani Veg Momos', price: 100 },
+    { name: 'Afghani Chicken Momos', price: 120 },
+    { name: 'Afghani Paneer Momos', price: 120 },
+    { name: 'Malai Veg Momos', price: 100 },
+    { name: 'Malai Chicken Momos', price: 120 },
+    { name: 'Malai Paneer Momos', price: 120 },
+    { name: 'Haryali Veg Momos', price: 100 },
+    { name: 'Haryali Chicken Momos', price: 120 },
+    { name: 'Haryali Paneer Momos', price: 120 },
+    { name: 'Achari Veg Momos', price: 100 },
+    { name: 'Achari Chicken Momos', price: 120 },
+    { name: 'Achari Paneer Momos', price: 120 },
+    { name: 'Chilli Garlic Veg Momos', price: 100 },
+    { name: 'Chilli Garlic Chicken Momos', price: 120 },
+    { name: 'Chilli Garlic Paneer Momos', price: 120 },
+    { name: 'Kurkuray Veg Momos', price: 100 },
+    { name: 'Kurkuray Chicken Momos', price: 120 },
+    { name: 'Kurkuray Paneer Momos', price: 120 },
   ],
 
   Tikka: [
@@ -338,6 +338,126 @@ const menus = {
   ]
 },
 
+  italianpizzahub: {
+  PizzaForAll: [
+    { name: 'Tomato Pizza', price: 65 },
+    { name: 'Onion Pizza', price: 79 },
+    { name: 'Corn Pizza', price: 99 },
+    { name: 'Crispy Capsicum Pizza', price: 99 },
+    { name: 'Onion & Paneer Pizza', price: 130 },
+  ],
+
+  Soup: [
+    { name: 'Chumky Italian Vegetable Soup', price: 85 },
+    { name: 'Cream Of Masroom', price: 75 },
+    { name: 'Cream Of Chicken', price: 95 },
+  ],
+  Burger: [
+    { name: 'Veg. Burger', price: 70 },
+    { name: 'Veg. Cheese Burger', price: 80 },
+    { name: 'Chef Ajeet Spl. Veg. Burger (with French Fry)', price: 120 },
+    { name: 'Pizza Hub Spl. Burger (Veg.) (with French Fry)', price: 110 },
+    { name: 'Chicken & Cheese Burger', price: 110 },
+    { name: 'Pizza Hub Spl. Burger (Non-Veg.)', price: 130 },
+    { name: 'Chef Ajeet Spl. Chicken Burger', price: 140 },
+    { name: 'Chicken Salami & Cheese Burger', price: 150 },
+    { name: 'Italian Fried Chicken Burger', price: 110 },
+  ],
+
+  Sandwich: [
+    { name: 'Veg. & Paneer Sandwich (Half)', price: 60 },
+    { name: 'Veg. & Paneer Sandwich (Full)', price: 120 },
+    { name: 'Double Cheese Sandwich (Half)', price: 60 },
+    { name: 'Double Cheese Sandwich (Full)', price: 120 },
+    { name: 'Cheese Chilly Sandwich (Half)', price: 60 },
+    { name: 'Cheese Chilly Sandwich (Full)', price: 120 },
+    { name: 'Paneer Lehsooni Tikka Sandwich', price: 150 },
+    { name: 'Masala Corn Sandwich', price: 140 },
+    { name: 'Pizza Hub Special Sandwich (with French Fry)', price: 150 },
+    { name: 'Choco Sandwich', price: 130 },
+    { name: 'Grilled Chicken Tikka, Salami & Cheese Sandwich (with French Fry)', price: 180 },
+    { name: 'Grilled Chicken & Cheese Sandwich (with French Fry)', price: 160 },
+    { name: 'Grilled Chicken Sandwich (with French Fry)', price: 150 },
+    { name: 'Grilled Chicken Salami & Cheese Sandwich (with French Fry)', price: 150 },
+  ],
+
+  Snacks: [
+    { name: 'Masala Sweet Corn', price: 50 },
+    { name: 'Cheese Masala Corn', price: 60 },
+    { name: 'French Fry', price: 120 },
+    { name: 'V Crispers', price: 130 },
+    { name: 'Cheese Garlic Bread', price: 160 },
+    { name: 'Veg Finger (6 pcs)', price: 95 },
+    { name: 'Chilli Garlic Bowl (15 pcs)', price: 75 },
+    { name: 'Italian Nugget (10 pcs)', price: 95 },
+    { name: 'Italian Chess Bowl (8 pcs)', price: 120 },
+    { name: 'Veg Crisper', price: 95 },
+    { name: 'French Fry (Small)', price: 95 },
+  ],
+
+  Pasta: [
+    { name: 'Pane Arrabiata', price: 85 },
+    { name: 'Tandoori Pane', price: 120 },
+    { name: 'Pane Alfredo', price: 110 },
+    { name: 'Pane mix', price: 115 },
+    { name: 'Pane Aglio E Oglio', price: 115 },
+    { name: 'Spagetti Aglio E Oglio', price: 130 },
+    { name: 'Spagetti Chiken', price: 145 },
+  ],
+
+  Coffee: [
+    { name: 'Cold Coffee', price: 110 },
+  ],
+  Shakes: [
+    { name: 'Saffron Shake', price: 120 },
+    { name: 'Paan Shake', price: 120 },
+    { name: 'Kitkat Shake', price: 130 },
+    { name: 'Oreo Shake', price: 120 },
+    { name: 'Mango Shake', price: 110 },
+    { name: 'Banana Shake', price: 110 },
+    { name: 'Chocolate Shake', price: 110 },
+    { name: 'Strawberry Shake', price: 110 },
+    { name: 'Vanilla Shake', price: 110 },
+  ],
+
+  Mocktails: [
+    { name: 'Mojito Star', price: 110 },
+    { name: 'Paan Mojito', price: 110 },
+    { name: 'Kala Khatta Mojito', price: 110 },
+    { name: 'Straw Berry Bouncer', price: 110 },
+    { name: 'Mocha Cold Coffee', price: 110 },
+    { name: 'Green Apple Mojito', price: 110 },
+    { name: 'Masala Lemonade', price: 95 },
+    { name: 'Orange Mojito', price: 95 },
+    { name: 'Mango Mojito', price: 95 },
+    { name: 'Grapes Mojito', price: 95 },
+    { name: 'Watermelon Mojito', price: 95 },
+    { name: 'Salt Lime Soda', price: 60 },
+    { name: 'Sweet Lime Soda', price: 60 },
+    { name: 'Masala Cold Drink', price: 60 },
+  ],
+
+  ColdDrinks: [
+    { name: 'Coke', price: 30 },
+    { name: 'Thums-up', price: 30 },
+    { name: 'Sprite', price: 30 },
+    { name: 'Maza', price: 30 },
+    { name: 'Kinley', price: 20 },
+    { name: 'Coolberg', price: 80 },
+  ],
+
+  VegCombos: [
+    { name: 'Family Combo Veg (1 Large Pizza, 1 French Fry, 2 Grilled Sandwich, 2 Mocktails)', price: 699 },
+    { name: 'Couple Combo Veg (1 Medium Pizza, 1 Cheese Garlic Bread, 2 Coke)', price: 520 },
+    { name: 'Kids Combo Veg (1 Small Pizza, 1 French Fry, 1 Maza)', price: 249 },
+  ],
+  NonVegCombos: [
+    { name: 'Family Combo Non Veg (1 Large Pizza, 1 French Fry, 1 Grilled Sandwich, 2 Mocktails)', price: 749 },
+    { name: 'Couple Combo Non Veg (1 Medium Pizza, 1 Cheese Garlic Bread, 2 Coke)', price: 549 },
+    { name: 'Kids Combo Non Veg (1 Small Pizza, 1 French Fry, 1 Maza)', price: 249 },
+  ]
+},
+
   chotu: {
     Rolls: [
       { name: 'Veg. Roll', price: 35 },
@@ -352,7 +472,7 @@ const menus = {
 const whatsappNumbers = {
   rkfastfood: '917759922223',
   tandoorijunction: '916202639844',
-  apna: '918051568658',
+  italianpizzahub: '917050285626',
   paahan: '918051568658'
 };
 
@@ -471,6 +591,7 @@ function placeOrder() {
   cart = [];
   renderCart();
 }
+
 
 
 
