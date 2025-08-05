@@ -285,7 +285,7 @@ const menus = {
     { name: 'Classic Chicken Roll', price: 90 },
     { name: 'Chicken Egg Roll', price: 90 },
     { name: 'Double Egg Chicken Roll', price: 120 },
-    { name: 'Chicken Tandoori 'Chicken Roll', price: 120 },
+    { name: 'Chicken Tandoori Chicken Roll', price: 120 },
     { name: 'Chicken Malai Tikka Roll', price: 120 },
     { name: 'Classic Chicken Egg Tandoori Tikka Roll', price: 130 },
     { name: 'Classic Chicken Egg Malai Tikka Roll', price: 130 },
@@ -471,6 +471,7 @@ function placeOrder() {
   cart = [];
   renderCart();
 }
+
 
 
 
