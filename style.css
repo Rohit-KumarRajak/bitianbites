@@ -122,9 +122,10 @@ section h2 {
   font-size: 1rem;
   font-weight: bold;
   cursor: pointer;
-  margin-bottom: 16px;
+  margin: 0 auto 16px auto;
   box-shadow: 0 5px 14px rgba(255, 63, 108, 0.3);
   transition: all 0.3s ease;
+  display: block;
 }
 
 .back-btn:hover {
@@ -303,4 +304,5 @@ footer img:hover {
   align-items: center;
   justify-content: center;
 }
+
 
