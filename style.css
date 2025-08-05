@@ -112,6 +112,51 @@ section h2 {
   background: #c9274f;
   transform: scale(1.08);
 }
+/* Back Button */
+.back-btn {
+  background: #ff3f6c;
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 16px;
+  box-shadow: 0 5px 14px rgba(255, 63, 108, 0.3);
+  transition: all 0.3s ease;
+}
+
+.back-btn:hover {
+  background-color: #c92e50;
+  transform: scale(1.05);
+}
+
+/* Category Buttons */
+#category-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
+#category-buttons button {
+  background: #fff3f6;
+  border: 2px solid #ff3f6c;
+  color: #ff3f6c;
+  padding: 10px 18px;
+  border-radius: 24px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#category-buttons button:hover {
+  background: #ff3f6c;
+  color: white;
+}
 
 /* Menu Items */
 #menu-items > div {
@@ -258,3 +303,4 @@ footer img:hover {
   align-items: center;
   justify-content: center;
 }
+
