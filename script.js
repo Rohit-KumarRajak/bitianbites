@@ -458,6 +458,92 @@ const menus = {
   ]
 },
 
+  amritdharatecno: {
+  Maggi: [
+    { name: 'Maggi', price: 30 },
+    { name: 'Masala Maggi', price: 35 },
+    { name: 'Butter Maggi', price: 40 },
+    { name: 'Cheese Maggi', price: 45 },
+    { name: 'Onion Maggi', price: 40 },
+    { name: 'Egg Maggi', price: 40 },
+    { name: 'Chicken Maggi', price: 60 },
+  ],
+
+  Omelette: [
+    { name: 'Omelette', price: 30 },
+    { name: 'Bread Omelette', price: 40 },
+    { name: 'Bread Cheese Omelette', price: 50 },
+  ],
+
+    Idli: [
+    { name: 'Idli', price: 40 },
+  ],
+  Roll: [
+    { name: 'Veg Roll', price: 35 },
+    { name: 'Veg Cheese Roll', price: 50 },
+    { name: 'Paneer Roll', price: 60 },
+    { name: 'Egg Roll (Single)', price: 40 },
+    { name: 'Egg Roll (Double)', price: 50 },
+    { name: 'Egg Cheese Roll', price: 55 },
+    { name: 'Chicken Roll', price: 60 },
+    { name: 'Chicken Cheese Roll', price: 75 },
+    { name: 'Chicken Egg Roll', price: 70 },
+  ],
+
+  Chowmein: [
+    { name: 'Veg Chowmein (Full)', price: 70 },
+    { name: 'Veg Chowmein (Half)', price: 40 },
+    { name: 'Egg Chowmein (Full)', price: 90 },
+    { name: 'Egg Chowmein (Half)', price: 50 },
+    { name: 'Chicken Chowmein (Full)', price: 110 },
+    { name: 'Chicken Chowmein (Half)', price: 60 },
+    { name: 'Chicken Egg Chowmein (Half)', price: 70 },
+  ],
+
+  Rice: [
+    { name: 'Veg Fried Rice (Full)', price: 100 },
+    { name: 'Veg Fried Rice (Half)', price: 60 },
+    { name: 'Egg Fried Rice (Full)', price: 120 },
+    { name: 'Egg Fried Rice (Half)', price: 70 },
+    { name: 'Chicken Fried Rice (Full)', price: 160 },
+    { name: 'Chicken Fried Rice (Half)', price: 90 },
+    { name: 'Chicken Egg Fried Rice (Full)', price: 180 },
+    { name: 'Chicken Egg Fried Rice (Half)', price: 100 },
+  ],
+
+  Chilli: [
+    { name: 'Paneer Chilli (Full)', price: 120 },
+    { name: 'Paneer Chilli (Half)', price: 70 },
+    { name: 'Chicken Chilli (Full)', price: 120 },
+    { name: 'Chicken Chilli (Half)', price: 70 },
+  ],
+
+  Momo: [
+    { name: 'Veg Momo Fried (Full)', price: 80 },
+    { name: 'Veg Momo Fried (Half)', price: 45 },
+    { name: 'Veg Momo Steam (Full)', price: 60 },
+    { name: 'Veg Momo Steam (Half)', price: 35 },
+    { name: 'Chicken Momo Steam (Full)', price: 80 },
+    { name: 'Chicken Momo Steam (Half)', price: 45 },
+    { name: 'Chicken Momo Fried (Full)', price: 100 },
+    { name: 'Chicken Momo Fried (Half)', price: 55 },
+  ],
+
+  Paratha: [
+    { name: 'Onion Paratha', price: 35 },
+    { name: 'Aloo Paratha', price: 35 },
+    { name: 'Sattu Paratha', price: 40 },
+    { name: 'Paneer Paratha', price: 45 },
+    { name: 'Egg Paratha', price: 40 },
+  ],
+
+  Shake: [
+    { name: 'Banana Shake', price: 30 },
+    { name: 'Oreo Shake', price: 50 },
+    { name: 'Mango Shake', price: 50 },
+  ]
+},
+
   chotu: {
     Rolls: [
       { name: 'Veg. Roll', price: 35 },
@@ -473,6 +559,7 @@ const whatsappNumbers = {
   rkfastfood: '917759922223',
   tandoorijunction: '916202639844',
   italianpizzahub: '917050285626',
+  amritdharatecno: '919934062930',
   paahan: '918051568658'
 };
 
@@ -591,6 +678,7 @@ function placeOrder() {
   cart = [];
   renderCart();
 }
+
 
 
 
