@@ -167,6 +167,177 @@ const menus = {
   ]
 },
 
+  tandoorijunction: {
+  Noodles: [
+    { name: 'Veg. Desi Noodles (Full)', price: 80 },
+    { name: 'Veg. Desi Noodles (Half)', price: 50 },
+    { name: 'Veg Chilli Garlic Noodles (Full)', price: 90 },
+    { name: 'Veg Chilli Garlic Noodles (Half)', price: 60 },
+    { name: 'Veg Schezwan Noodles (Full)', price: 90 },
+    { name: 'Veg Schezwan Noodles (Half)', price: 60 },
+    { name: 'Paneer Noodles (Full)', price: 120 },
+    { name: 'Paneer Noodles (Half)', price: 70 },
+    { name: 'Mushroom Noodles (Full)', price: 120 },
+    { name: 'Mushroom Noodles (Half)', price: 70 },
+    { name: 'Veg Classic Noodles (Full)', price: 140 },
+    { name: 'Veg Classic Noodles (Half)', price: 80 },
+    { name: 'Egg Noodles (Full)', price: 100 },
+    { name: 'Egg Noodles (Half)', price: 60 },
+    { name: 'Chicken Noodles (Full)', price: 120 },
+    { name: 'Chicken Noodles (Half)', price: 70 },
+    { name: 'Non Veg Classic Noodles (Full)', price: 140 },
+    { name: 'Non Veg Classic Noodles (Half)', price: 80 },
+  ],
+
+  Momos: [
+    { name: 'Steam Veg', price: 70 },
+    { name: 'Steam Chicken', price: 80 },
+    { name: 'Steam Paneer', price: 80 },
+    { name: 'Fry Veg', price: 80 },
+    { name: 'Fry Chicken', price: 90 },
+    { name: 'Fry Paneer', price: 90 },
+    { name: 'Tandoori Veg', price: 100 },
+    { name: 'Tandoori Chicken', price: 120 },
+    { name: 'Tandoori Paneer', price: 120 },
+    { name: 'Afghani Veg', price: 100 },
+    { name: 'Afghani Chicken', price: 120 },
+    { name: 'Afghani Paneer', price: 120 },
+    { name: 'Malai Veg', price: 100 },
+    { name: 'Malai Chicken', price: 120 },
+    { name: 'Malai Paneer', price: 120 },
+    { name: 'Haryali Veg', price: 100 },
+    { name: 'Haryali Chicken', price: 120 },
+    { name: 'Haryali Paneer', price: 120 },
+    { name: 'Achari Veg', price: 100 },
+    { name: 'Achari Chicken', price: 120 },
+    { name: 'Achari Paneer', price: 120 },
+    { name: 'Chilli Garlic Veg', price: 100 },
+    { name: 'Chilli Garlic Chicken', price: 120 },
+    { name: 'Chilli Garlic Paneer', price: 120 },
+    { name: 'Kurkuray Veg', price: 100 },
+    { name: 'Kurkuray Chicken', price: 120 },
+    { name: 'Kurkuray Paneer', price: 120 },
+  ],
+
+  Tikka: [
+    { name: 'Paneer Tandoori Tikka', price: 150 },
+    { name: 'Paneer Malai Tikka', price: 150 },
+    { name: 'Paneer Haryali Tikka', price: 150 },
+    { name: 'Paneer Banjara Tikka', price: 150 },
+    { name: 'Chicken Tandoori Tikka', price: 160 },
+    { name: 'Chicken Malai Tikka', price: 160 },
+    { name: 'Chicken Haryali Tikka', price: 160 },
+    { name: 'Banjara Chicken Tikka', price: 160 },
+  ],
+
+  ChillyNonVeg: [
+    { name: 'Chilli Chicken Boneless (10 pcs)', price: 150 },
+    { name: 'Chicken 65 (10 pcs)', price: 150 },
+    { name: 'Garlic Chicken Chilli (10 pcs)', price: 150 },
+  ],
+
+  SpecialChicken: [
+    { name: 'Hot Chicken Fried Wings (4 pcs)', price: 140 },
+    { name: 'Hot Grill Chicken (Legs & Thai)', price: 140 },
+    { name: 'Chicken Lollipop (4 pcs)', price: 140 },
+    { name: 'Boil Chicken (1 container)', price: 130 },
+  ],
+
+  Rice: [
+    { name: 'Veg. Fried Rice (Full)', price: 90 },
+    { name: 'Veg. Fried Rice (Half)', price: 50 },
+    { name: 'Veg. Schezwan Fried Rice (Full)', price: 100 },
+    { name: 'Veg. Schezwan Fried Rice (Half)', price: 60 },
+    { name: 'Paneer Fried Rice (Full)', price: 120 },
+    { name: 'Paneer Fried Rice (Half)', price: 70 },
+    { name: 'Mushroom Fried Rice (Full)', price: 120 },
+    { name: 'Mushroom Fried Rice (Half)', price: 70 },
+    { name: 'Veg. Classic Fried Rice (Full)', price: 140 },
+    { name: 'Veg. Classic Fried Rice (Half)', price: 80 },
+    { name: 'Egg Fried Rice (Full)', price: 110 },
+    { name: 'Egg Fried Rice (Half)', price: 60 },
+    { name: 'Chicken Fried Rice (Full)', price: 130 },
+    { name: 'Chicken Fried Rice (Half)', price: 70 },
+    { name: 'Non Veg. Classic Fried Rice (Full)', price: 140 },
+    { name: 'Non Veg. Classic Fried Rice (Half)', price: 80 },
+  ],
+
+  Maggi: [
+    { name: 'Plane Maggi', price: 50 },
+    { name: 'Masala Maggi', price: 60 },
+    { name: 'Paneer Masala Cheese Maggi', price: 80 },
+    { name: 'Chiken Masala Cheese Maggi', price: 80 },
+  ],
+
+  RollVeg: [
+    { name: 'Veg Roll', price: 50 },
+    { name: 'Paneer Roll', price: 80 },
+    { name: 'Tandoori Chaap Roll', price: 100 },
+    { name: 'Malai Chaap Roll', price: 100 },
+    { name: 'Paneer Tandoori Tikka Roll', price: 110 },
+    { name: 'Paneer Malai Tikka Roll', price: 110 },
+  ],
+
+  RollNonVeg: [
+    { name: 'Single Egg Roll', price: 60 },
+    { name: 'Double Egg Roll', price: 70 },
+    { name: 'Chicken Roll', price: 80 },
+    { name: 'Classic Chicken Roll', price: 90 },
+    { name: 'Chicken Egg Roll', price: 90 },
+    { name: 'Double Egg Chicken Roll', price: 120 },
+    { name: 'Chicken Tandoori 'Chicken Roll', price: 120 },
+    { name: 'Chicken Malai Tikka Roll', price: 120 },
+    { name: 'Classic Chicken Egg Tandoori Tikka Roll', price: 130 },
+    { name: 'Classic Chicken Egg Malai Tikka Roll', price: 130 },
+    { name: 'Chicken Banjara Tikka Roll', price: 130 },
+  ],
+
+  SoyaChap: [
+    { name: 'Tandoori Soya Chap (10ps)', price: 130 },
+    { name: 'Afghani Soya Chap (10ps)', price: 130 },
+    { name: 'Haryani Soya Chap (10ps)', price: 130 },
+    { name: 'Achari Soya Chap (10ps)', price: 130 },
+    { name: 'Malai Soya Chap (10ps)', price: 130 },
+    { name: 'Chilli Garlic Soya Chap (10ps)', price: 130 },
+  ],
+
+  Pasta: [
+    { name: 'White Sauce Classic Cheese Pasta (Veg)', price: 120 },
+    { name: 'White Sauce Classic Cheese Pasta (Non. Veg)', price: 140 },
+    { name: 'Red Sauce Classic Cheese Pasta (Veg)', price: 120 },
+    { name: 'Red Sauce Classic Cheese Pasta (Non. Veg)', price: 140 },
+    { name: 'Mix Sauce Classic Cheese Pasta (Veg)', price: 120 },
+    { name: 'Mix Sauce Classic Cheese Pasta (Non. Veg)', price: 140 },
+  ],
+
+  ChineseCombo: [
+    { name: 'Veg Noodles & Veg Manchurian', price: 130 },
+    { name: 'Veg Rice & Veg Manchurian', price: 130 },
+    { name: 'Veg Noodle & Paneer Manchurian', price: 140 },
+    { name: 'Veg Rice & Paneer Manchurian', price: 140 },
+    { name: 'Veg Noodles & Chicken Manchurian', price: 150 },
+    { name: 'Veg Rice & Chicken Manchurian', price: 150 },
+  ],
+
+  Soup: [
+    { name: 'Veg Hot & Sour Soup(not updated)', price: 100 },
+    { name: 'Veg Mix Hot & Sour Soup(not updated)', price: 100 },
+    { name: 'Chicken Hot & Sour Soup(not updated)', price: 100 },
+  ],
+
+  ChillyVeg: [
+    { name: 'Veg Chilli', price: 120 },
+    { name: 'Paneer Chilli', price: 140 },
+    { name: 'Mushroom Chilli', price: 140 },
+    { name: 'Potato Chilli', price: 130 },
+  ],
+
+  Special: [
+    { name: 'Special Chicken Dum Biryani (Half)', price: 80 },
+    { name: 'Special Chicken Dum Biryani (Full)', price: 150 },
+  ]
+},
+
   chotu: {
     Rolls: [
       { name: 'Veg. Roll', price: 35 },
@@ -179,8 +350,8 @@ const menus = {
 };
 
 const whatsappNumbers = {
-  foodtruck: '918051568658',
-  chotu: '918051568658',
+  rkfastfood: '917759922223',
+  tandoorijunction: '916202639844',
   apna: '918051568658',
   paahan: '918051568658'
 };
@@ -300,5 +471,6 @@ function placeOrder() {
   cart = [];
   renderCart();
 }
+
 
 
