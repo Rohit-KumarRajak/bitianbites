@@ -1,14 +1,172 @@
 const menus = {
-  foodtruck: {
-    Rolls: [
-      { name: 'Veg. Roll', price: 40 },
-      { name: 'Single Egg Roll', price: 50 },
-    ],
-    Paratha: [
-      { name: 'Aloo Paratha', price: 35 },
-      { name: 'Paneer Paratha', price: 55 },
-    ]
-  },
+  rkfastfood: {
+  Noodles: [
+    { name: 'Veg. Noodles (Full)', price: 80 },
+    { name: 'Veg. Noodles (Half)', price: 50 },
+    { name: 'Veg. Sehezwan Noodles (Full)', price: 90 },
+    { name: 'Veg. Sehezwan Noodles (Half)', price: 60 },
+    { name: 'Paneer Noodles (Full)', price: 120 },
+    { name: 'Paneer Noodles (Half)', price: 70 },
+    { name: 'Mushroom Noodles (Full)', price: 120 },
+    { name: 'Mushroom Noodles (Half)', price: 70 },
+    { name: 'Egg Noodles (Full)', price: 100 },
+    { name: 'Egg Noodles (Half)', price: 60 },
+    { name: 'Chicken Noodles (Full)', price: 120 },
+    { name: 'Chicken Noodles (Half)', price: 70 },
+    { name: 'Non-Veg Noodles (Full)', price: 140 },
+    { name: 'Non-Veg Noodles (Half)', price: 80 },
+    { name: 'Veg Mix Noodles (Full)', price: 150 },
+    { name: 'Veg Mix Noodles (Half)', price: 90 },
+  ],
+
+  Momos: [
+    { name: 'Steam Veg Momos', price: 70 },
+    { name: 'Steam Chicken Momos', price: 80 },
+    { name: 'Steam Paneer Momos', price: 80 },
+    { name: 'Fry Veg Momos', price: 80 },
+    { name: 'Fry Chicken Momos', price: 90 },
+    { name: 'Fry Paneer Momos', price: 90 },
+    { name: 'Tandoori Veg Momos', price: 100 },
+    { name: 'Tandoori Chicken Momos', price: 120 },
+    { name: 'Tandoori Paneer Momos', price: 120 },
+    { name: 'Afghani Veg Momos', price: 100 },
+    { name: 'Afghani Chicken Momos', price: 120 },
+    { name: 'Afghani Paneer Momos', price: 120 },
+    { name: 'Malai Veg Momos', price: 100 },
+    { name: 'Malai Chicken Momos', price: 120 },
+    { name: 'Malai Paneer Momos', price: 120 },
+    { name: 'Haryali Veg Momos', price: 100 },
+    { name: 'Haryali Chicken Momos', price: 120 },
+    { name: 'Haryali Paneer Momos', price: 120 },
+    { name: 'Achari Veg Momos', price: 100 },
+    { name: 'Achari Chicken Momos', price: 120 },
+    { name: 'Achari Paneer Momos', price: 120 },
+    { name: 'Kurkuray Veg Momos', price: 100 },
+    { name: 'Kurkuray Chicken Momos', price: 120 },
+    { name: 'Kurkuray Paneer Momos', price: 120 },
+  ],
+
+  Tikka: [
+    { name: 'Paneer Tandoori Tikka', price: 150 },
+    { name: 'Paneer Malai Tikka', price: 150 },
+    { name: 'Paneer Haryali Tikka', price: 150 },
+    { name: 'Paneer Maharaja Tikka', price: 150 },
+    { name: 'Chicken Tandoori Tikka', price: 160 },
+    { name: 'Chicken Malai Tikka', price: 160 },
+    { name: 'Chicken Haryali Tikka', price: 160 },
+    { name: 'Maharaja Chicken Tikka', price: 160 },
+  ],
+
+  SpecialChicken: [
+    { name: 'Hot Chicken Fried wings (4 pcs)', price: 140 },
+    { name: 'Hot Grill Chicken (Legs & Thai)', price: 140 },
+    { name: 'Boil Chicken (1 Container)', price: 130 },
+  ],
+
+  Rice: [
+    { name: 'Veg. Fried Rice (Full)', price: 110 },
+    { name: 'Veg. Fried Rice (Half)', price: 60 },
+    { name: 'Veg. Schezwan Fried Rice (Full)', price: 110 },
+    { name: 'Veg. Schezwan Fried Rice (Half)', price: 60 },
+    { name: 'Paneer Fried Rice (Full)', price: 140 },
+    { name: 'Paneer Fried Rice (Half)', price: 80 },
+    { name: 'Mushroom Fried Rice (Full)', price: 130 },
+    { name: 'Mushroom Fried Rice (Half)', price: 80 },
+    { name: 'Veg. Mix Fried Rice (Full)', price: 140 },
+    { name: 'Veg. Mix Fried Rice (Half)', price: 80 },
+    { name: 'Egg Fried Rice (Full)', price: 120 },
+    { name: 'Egg Fried Rice (Half)', price: 70 },
+    { name: 'Chicken Fried Rice (Full)', price: 130 },
+    { name: 'Chicken Fried Rice (Half)', price: 70 },
+    { name: 'Non Veg. Mix Fried Rice (Full)', price: 150 },
+    { name: 'Non Veg. Mix Fried Rice (Half)', price: 80 },
+    { name: 'Corn Fried Rice (Full)', price: 140 },
+    { name: 'Corn Fried Rice (Half)', price: 80 },
+  ],
+
+  Maggi: [
+    { name: 'Plain Maggi', price: 50 },
+    { name: 'Masala Maggi', price: 60 },
+    { name: 'Paneer Masala cheese Maggi', price: 80 },
+    { name: 'Chiken Masala cheese Maggi', price: 80 },
+  ],
+
+  Pasta: [
+    { name: 'White Sauce Pasta (Veg)', price: 120 },
+    { name: 'White Sauce Pasta (Non-Veg)', price: 140 },
+    { name: 'Red Sauce Pasta (Veg)', price: 120 },
+    { name: 'Red Sauce Pasta (Non-Veg)', price: 140 },
+    { name: 'Mix Sauce Pasta (Veg)', price: 120 },
+    { name: 'Mix Sauce Pasta (Non-Veg)', price: 140 },
+  ],
+
+  RollVeg: [
+    { name: 'Veg. Roll', price: 50 },
+    { name: 'Paneer Roll', price: 80 },
+    { name: 'Paneer Afghani Tikka Roll', price: 110 },
+    { name: 'Paneer Tandoori Tikka Roll', price: 110 },
+    { name: 'Paneer Malai Tikka Roll', price: 110 },
+  ],
+
+  RollNonVeg: [
+    { name: 'Single Egg Roll', price: 60 },
+    { name: 'Double Egg Roll', price: 70 },
+    { name: 'Chicken Roll', price: 80 },
+    { name: 'Egg Chicken Roll', price: 90 },
+    { name: 'Double Egg Chicken Roll', price: 100 },
+    { name: 'Chicken Tandoori Tikka Roll', price: 120 },
+    { name: 'Chicken Malai Tikka Roll', price: 120 },
+    { name: 'Chicken Maharaja Roll', price: 120 },
+  ],
+
+  Shanghai: [
+    { name: 'Veg Shanghai (Full)', price: 110 },
+    { name: 'Veg Shanghai (Half)', price: 60 },
+    { name: 'Mix Shanghai (Full)', price: 130 },
+    { name: 'Mix Shanghai (Half)', price: 70 },
+    { name: 'Non Veg Mix Shanghai (Full)', price: 150 },
+    { name: 'Non Veg Mix Shanghai (Half)', price: 80 },
+    { name: 'Egg Shanghai (Full)', price: 110 },
+    { name: 'Egg Shanghai (Half)', price: 60 },
+    { name: 'Chicken Shanghai (Full)', price: 130 },
+    { name: 'Chicken Shanghai (Half)', price: 70 },
+  ],
+
+  SoyaChap: [
+    { name: 'Tandoori Soya Chap (10ps)', price: 130 },
+    { name: 'Afghani Soya Chap (10ps)', price: 130 },
+    { name: 'Haryani Soya Chap (10ps)', price: 130 },
+    { name: 'Achari Soya Chap (10ps)', price: 130 },
+    { name: 'Malai Soya Chap (10ps)', price: 130 },
+  ],
+
+  RKSpecial: [
+    { name: 'Chicken Laccha Paratha', price: 110 },
+    { name: 'Chicken Biryani', price: 160 },
+    { name: 'Chola Batura', price: 80 },
+    { name: 'Chicken Lollipop', price: 280 },
+    { name: 'Chicken Dry Fry', price: 230 },
+    { name: 'Boiled Chicken (250gm) (adv. order)', price: 130 },
+  ],
+
+  Chilli: [
+    { name: 'Veg Chilli (Full)', price: 130 },
+    { name: 'Veg Chilli (Half)', price: 70 },
+    { name: 'Paneer Chilli (Full)', price: 190 },
+    { name: 'Paneer Chilli (Half)', price: 100 },
+    { name: 'Chicken Chilli (Full)', price: 170 },
+    { name: 'Chicken Chilli (Half)', price: 100 },
+    { name: 'Mushroom Chilli', price: 150 },
+    { name: 'Baby Corn Chilli', price: 150 },
+  ],
+
+  TeaCoffee: [
+    { name: 'Tea/Coffee (Small)', price: 10 },
+    { name: 'Tea/Coffee (Medium)', price: 15 },
+    { name: 'Tea/Coffee (Large)', price: 20 },
+  ]
+},
+
   chotu: {
     Rolls: [
       { name: 'Veg. Roll', price: 35 },
@@ -142,4 +300,5 @@ function placeOrder() {
   cart = [];
   renderCart();
 }
+
 
