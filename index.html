@@ -87,9 +87,9 @@
 
   <main style="display:none;">
     <section id="note">
-      <h2>📢 Note</h2>
-      <p>More stalls and food options will be added. Stay tuned!</p>
-    </section>
+    <h2>📢 Note</h2>
+    <p id="note-content">More stalls and food options will be added. Stay tuned!</p>
+  </section>
 
     <section id="shops">
       <h2>🍴 Select a Stall</h2>
@@ -103,12 +103,11 @@
     </section>
 
     <section id="menu" style="display:none;">
-      <button class="back-btn" onclick="goBack()">⬅️ Back to Stalls</button>
-      <h2>📋 Menu</h2>
-      <div id="category-buttons"></div>
-      <div id="menu-items"></div>
-    </section>
-
+    <button class="back-btn" onclick="goBack()">⬅️ Back to Stalls</button>
+    <h2 id="menu-heading">📋 Menu</h2>
+    <div id="category-buttons"></div>
+    <div id="menu-items"></div>
+  </section>
 
     <section id="hostel">
       <h2>🚚 Delivery Details</h2>
@@ -164,6 +163,7 @@
   <script src="script.js"></script>
 </body>
 </html>
+
 
 
 
