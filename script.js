@@ -3,7 +3,7 @@ const stallNotes = {
   tandoorijunction: "🔥 Open: 10 AM – 9 PM | 😋 Best in Tandoori Items",
   italianpizzahub: "🍕 Open: 10 AM – 9 PM | 💥 Today's Offer: Updated soon.",
   amritdharatecno: "⏰ 10 AM – 9 PM | 💥 Today's Offer: Updated soon.",
-  paahan: "⛔ Currently Not added. | 🛒 Available: 10 AM – 9 PM"
+  brothersfoodjunction: "Open from 10 AM – 9 PM."
 };
 
 const menus = {
@@ -552,15 +552,164 @@ const menus = {
   ]
 },
 
-  chotu: {
-    Rolls: [
-      { name: 'Veg. Roll', price: 35 },
-      { name: 'Single Egg Roll', price: 50 }
-    ],
-    Curries: [
-      { name: 'Omlet Curry', price: 90 }
-    ]
-  }
+  brothersfoodjunction: {
+  Paratha: [
+    { name: "Chicken Cheese Paratha", price: 80 },
+    { name: "Plain Paratha", price: 20 },
+    { name: "Alu Paratha", price: 40 },
+    { name: "Onion Paratha", price: 40 },
+    { name: "Sattu Paratha", price: 40 },
+    { name: "Paneer Paratha", price: 60 },
+    { name: "Egg Paratha", price: 40 },
+    { name: "Chicken Paratha", price: 60 },
+    { name: "Alu Egg Paratha", price: 50 },
+    { name: "Onion Egg Paratha", price: 50 },
+    { name: "Paneer Egg Paratha", price: 70 },
+    { name: "Chicken Egg Paratha", price: 70 },
+    { name: "Mughlai Paratha (Veg)", price: 150 },
+    { name: "Mughlai Paratha (Non-Veg)", price: 200 },
+    { name: "Lachedar Paratha", price: 60 },
+    { name: "Gobhi Paratha", price: 60 },
+    { name: "Onion Paratha", price: 50 },
+    { name: "Paneer Paratha", price: 70 },
+    { name: "Sattu Paratha", price: 60 },
+    { name: "Plain Paratha", price: 40 },
+    { name: "Muli Paratha", price: 60 }
+  ],
+  Egg: [
+    { name: "Boiled Egg (2pc)", price: 30 },
+    { name: "Omlet (2pc)", price: 35 },
+    { name: "Egg Bhurjiya (2pc)", price: 40 },
+    { name: "Egg Curry Masala", price: 80 }
+  ],
+  Chicken: [
+    { name: "Chicken Do Pyaza", price: 170 },
+    { name: "Chicken Dry Fry", price: 180 },
+    { name: "Chicken Dehati", price: 200 },
+    { name: "Chicken Karahi", price: 180 },
+    { name: "Chicken Pakora", price: 150 },
+    { name: "Chicken Lollipop", price: 180 },
+    { name: "Chicken Masala", price: 160 },
+    { name: "Chicken Butter Masala", price: 180 },
+    { name: "Chicken Curry", price: 170 },
+    { name: "Chicken Chilli (Bone)", price: 150 },
+    { name: "Chicken Chilli Boneless", price: 150 }
+  ],
+  Paneer: [
+    { name: "Paneer Masala", price: 170 },
+    { name: "Paneer Tikka Sahi Palak (8pcs)", price: 280 },
+    { name: "Paneer Tikka (8pcs)", price: 280 },
+    { name: "Paneer Sheek Kabab", price: 260 },
+    { name: "Paneer Malai Kabab (8pc)", price: 330 },
+    { name: "Paneer Butter Masala", price: 190 }
+  ],
+  RiceANDbriyani: [
+    { name: "Steamed Rice", price: 80 },
+    { name: "Veg Fried Rice", price: 90 },
+    { name: "Paneer Fried Rice", price: 130 },
+    { name: "Jeera Fried Rice", price: 90 },
+    { name: "Egg Fried Rice", price: 100 },
+    { name: "Chicken Biryani", price: 160 },
+    { name: "Egg Biryani", price: 120 },
+    { name: "Chicken Fried Rice", price: 120 },
+    { name: "Mix Fried Rice", price: 150 }
+  ],
+  Bread: [
+    { name: "Roti (Tandoori)", price: 20 },
+    { name: "Roti (Tawa)", price: 20 },
+    { name: "Butter Roti (Tandoori)", price: 25 },
+    { name: "Butter Roti (Tawa)", price: 25 },
+    { name: "Missi Roti", price: 50 },
+    { name: "Nan", price: 55 },
+    { name: "Butter Nan", price: 60 },
+    { name: "Shahi Nan", price: 85 },
+    { name: "Veg Stuffed Nan", price: 75 },
+    { name: "Kashmiri Nan", price: 85 },
+    { name: "Garlic Nan", price: 70 },
+    { name: "Kulcha", price: 40 },
+    { name: "Butter Kulcha", price: 45 },
+    { name: "Masala Kulcha", price: 60 },
+    { name: "Tawa Roti", price: 10 },
+    { name: "Butter Roti", price: 15 },
+    { name: "Lachha Roti", price: 30 }
+  ],
+  Chowmein: [
+    { name: "Veg Chowmein", price: 60 },
+    { name: "Chicken Chowmein", price: 100 },
+    { name: "Egg Chowmein", price: 80 },
+    { name: "Paneer Chowmein", price: 110 },
+    { name: "Mix Chowmein", price: 150 },
+    { name: "Chicken Egg Chowmein", price: 100 }
+  ],
+  Maggi: [
+    { name: "Plane Maggi", price: 30 },
+    { name: "Masala Maggi", price: 35 },
+    { name: "Butter Maggi Masala", price: 45 },
+    { name: "Egg Maggi Masala", price: 50 },
+    { name: "Chicken Maggi Masala", price: 70 },
+    { name: "Masala Cheese Maggi", price: 50 },
+    { name: "Butter Cheese Masala Maggi", price: 55 },
+    { name: "Egg Cheese Masala Maggi", price: 65 },
+    { name: "Chicken Cheese Masala Maggi", price: 90 }
+  ],
+  Rolls: [
+    { name: "Veg Roll", price: 40 },
+    { name: "Veg Cheese Roll", price: 60 },
+    { name: "Egg Roll (Single)", price: 50 },
+    { name: "Egg Roll (Double)", price: 60 },
+    { name: "Egg Cheese Roll (Double)", price: 80 },
+    { name: "Egg Cheese Roll (Single)", price: 70 },
+    { name: "Paneer Roll", price: 80 },
+    { name: "Chicken Roll", price: 80 },
+    { name: "Chicken Cheese Roll", price: 100 },
+    { name: "Chicken Egg Roll", price: 90 },
+    { name: "Chicken Cheese Egg Roll", price: 110 },
+    { name: "Double Egg Chicken Roll", price: 100 },
+    { name: "Paneer Cheese Roll", price: 100 }
+  ],
+  Chilli: [
+    { name: "Veg Chilli", price: 90 },
+    { name: "Egg Chilli", price: 120 },
+    { name: "Paneer Chilli", price: 160 }
+  ],
+  Tea: [
+    { name: "Lemon Tea", price: 10 },
+    { name: "Milk Tea", price: 10 },
+    { name: "Coffee", price: 10 }
+  ],
+  Soup: [
+    { name: "Veg Hot Soup", price: 50 },
+    { name: "Veg Sour Soup", price: 50 },
+    { name: "Chicken Hot Soup", price: 80 },
+    { name: "Chiken Sour Soup", price: 80 },
+    { name: "Mix Hot Soup", price: 100 },
+    { name: "Mix Sour Soup", price: 100 }
+  ],
+  TandooriKebab: [
+    { name: "Paneer Tikka Sahi Palak (8pcs)", price: 280 },
+    { name: "Paneer Tikka (8pcs)", price: 280 },
+    { name: "Paneer Sheek Kabab", price: 260 },
+    { name: "Paneer Malai Kabab (8pc)", price: 330 },
+    { name: "Veg Sheek Kabab", price: 220 },
+    { name: "Veg Hara Bhara Kabab", price: 230 },
+    { name: "Corn Sheek Kabab", price: 250 },
+    { name: "Chicken Tandoori", price: 380 },
+    { name: "Chicken Tandoori (Half)", price: 220 },
+    { name: "Chi. Shahi Kabab (8pcs)", price: 300 },
+    { name: "Chicken Sheek Kabab", price: 300 },
+    { name: "Chi. Leg Kabab (2pcs)", price: 330 },
+    { name: "Chi. Botti Kabab (8pcs)", price: 330 },
+    { name: "Chi. Malai Kabab (8pcs)", price: 330 },
+    { name: "Chicken Tikka (12pcs)", price: 310 },
+    { name: "Chi. Reshmi Kabab (8pc)", price: 330 },
+    { name: "Chi. Banjara Kabab (8pc)", price: 330 },
+    { name: "Kali Mirch Tandoori", price: 400 },
+    { name: "Chicken Afghani Kabab (8pc)", price: 390 },
+    { name: "Chicken Haryali Kabab (8pc)", price: 330 },
+    { name: "Chicken Pahari Kabab (8pc)", price: 320 },
+    { name: "Mirchi Kabab (8pc)", price: 330 }
+  ]
+}
 };
 
 const whatsappNumbers = {
@@ -568,7 +717,7 @@ const whatsappNumbers = {
   tandoorijunction: '916202639844',
   italianpizzahub: '917050285626',
   amritdharatecno: '919934062930',
-  paahan: '918051568658'
+  brothersfoodjunction: '917488742230'
 };
 
 let cart = [];
@@ -704,6 +853,7 @@ function placeOrder() {
   cart = [];
   renderCart();
 }
+
 
 
 
