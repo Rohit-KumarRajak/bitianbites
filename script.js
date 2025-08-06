@@ -347,12 +347,101 @@ const menus = {
 },
 
   italianpizzahub: {
-  PizzaForAll: [
-    { name: 'Tomato Pizza', price: 65 },
-    { name: 'Onion Pizza', price: 79 },
-    { name: 'Corn Pizza', price: 99 },
-    { name: 'Crispy Capsicum Pizza', price: 99 },
-    { name: 'Onion & Paneer Pizza', price: 130 },
+
+    RegularVegPizza: [
+  { name: "Cheese & Tomato Pizza", price: 190 },
+  { name: "Hari Dhaniya & Mirch Pizza", price: 190 },
+  { name: "Pane Pasta Pizza", price: 250 },
+  { name: "Tandoori Paneer Pizza", price: 240 },
+  { name: "Italian Spiced Pizza", price: 399 },
+  { name: "Onion & Capsicum Pizza", price: 190 },
+  { name: "Cheese Corn Pizza", price: 205 },
+  { name: "Cheese Square Pizza", price: 195 },
+  { name: "Trio Pepper Pizza", price: 225 },
+  { name: "Pizza Gardenia", price: 225 },
+  { name: "P Square Pizza", price: 225 },
+  { name: "Wild Mushroom Pizza", price: 225 },
+  { name: "Pizza Green Home", price: 245 },
+  { name: "Pizza Red Home", price: 245 },
+  { name: "Pizza Exotica", price: 245 },
+  { name: "Chef Ajeet Choice (Veg)", price: 245 }
+],
+    MediumVegPizza: [
+  { name: "Cheese & Tomato Pizza", price: 390 },
+  { name: "Hari Dhaniya & Mirch Pizza", price: 390 },
+  { name: "Pane Pasta Pizza", price: 470 },
+  { name: "Tandoori Paneer Pizza", price: 450 },
+  { name: "Italian Spiced Pizza", price: 549 },
+  { name: "Onion & Capsicum Pizza", price: 390 },
+  { name: "Cheese Corn Pizza", price: 390 },
+  { name: "Cheese Square Pizza", price: 380 },
+  { name: "Trio Pepper Pizza", price: 385 },
+  { name: "Pizza Gardenia", price: 385 },
+  { name: "P Square Pizza", price: 425 },
+  { name: "Wild Mushroom Pizza", price: 425 },
+  { name: "Pizza Green Home", price: 460 },
+  { name: "Pizza Red Home", price: 460 },
+  { name: "Pizza Exotica", price: 470 },
+  { name: "Chef Ajeet Choice (Veg)", price: 470 }
+],
+    LargeVegPizza: [
+  { name: "Cheese & Tomato Pizza", price: 575 },
+  { name: "Hari Dhaniya & Mirch Pizza", price: 575 },
+  { name: "Pane Pasta Pizza", price: 670 },
+  { name: "Tandoori Paneer Pizza", price: 650 },
+  { name: "Italian Spiced Pizza", price: 799 },
+  { name: "Onion & Capsicum Pizza", price: 575 },
+  { name: "Cheese Corn Pizza", price: 580 },
+  { name: "Cheese Square Pizza", price: 580 },
+  { name: "Trio Pepper Pizza", price: 610 },
+  { name: "Pizza Gardenia", price: 610 },
+  { name: "P Square Pizza", price: 630 },
+  { name: "Wild Mushroom Pizza", price: 625 },
+  { name: "Pizza Green Home", price: 670 },
+  { name: "Pizza Red Home", price: 650 },
+  { name: "Pizza Exotica", price: 670 },
+  { name: "Chef Ajeet Choice (Veg)", price: 670 }
+],
+    RegularNonVegPizza: [
+  { name: "Chicken Sausage Pizza", price: 199 },
+  { name: "Char Grilled Chic Pizza", price: 210 },
+  { name: "Tandoori Chic Pizza", price: 240 },
+  { name: "Hot & Spicy Pizza", price: 240 },
+  { name: "Trio Chic Pizza", price: 250 },
+  { name: "Chef Ajeet Choice Pizza (Non-Veg)", price: 260 },
+  { name: "Cocktail Pizza", price: 260 },
+  { name: "Shawarma Grilled Chicken Pizza", price: 260 },
+  { name: "Mexican Pizza", price: 270 }
+],
+    MediumNonVegPizza: [
+  { name: "Chicken Sausage Pizza", price: 419 },
+  { name: "Char Grilled Chic Pizza", price: 421 },
+  { name: "Tandoori Chic Pizza", price: 450 },
+  { name: "Hot & Spicy Pizza", price: 450 },
+  { name: "Trio Chic Pizza", price: 480 },
+  { name: "Chef Ajeet Choice Pizza (Non-Veg)", price: 490 },
+  { name: "Cocktail Pizza", price: 490 },
+  { name: "Shawarma Grilled Chicken Pizza", price: 490 },
+  { name: "Mexican Pizza", price: 495 },
+  { name: "Chix Garlic Naan Pizza", price: 490 }
+],
+    LargeNonVegPizza: [
+  { name: "Chicken Sausage Pizza", price: 599 },
+  { name: "Char Grilled Chic Pizza", price: 635 },
+  { name: "Tandoori Chic Pizza", price: 645 },
+  { name: "Hot & Spicy Pizza", price: 645 },
+  { name: "Trio Chic Pizza", price: 660 },
+  { name: "Chef Ajeet Choice Pizza (Non-Veg)", price: 680 },
+  { name: "Cocktail Pizza", price: 680 },
+  { name: "Shawarma Grilled Chicken Pizza", price: 680 },
+  { name: "Mexican Pizza", price: 690 }
+],
+    PizzaForAll: [
+    { name: 'Tomato Pizza', price: 90 },
+    { name: 'Onion Pizza', price: 90 },
+    { name: 'Corn Pizza', price: 110 },
+    { name: 'Crispy Capsicum Pizza', price: 110 },
+    { name: 'Onion & Paneer Pizza', price: 140 },
   ],
 
   Soup: [
@@ -402,7 +491,7 @@ const menus = {
     { name: 'Veg Crisper', price: 95 },
     { name: 'French Fry (Small)', price: 95 },
   ],
-
+    
   Pasta: [
     { name: 'Pane Arrabiata', price: 85 },
     { name: 'Tandoori Pane', price: 120 },
@@ -412,7 +501,17 @@ const menus = {
     { name: 'Spagetti Aglio E Oglio', price: 130 },
     { name: 'Spagetti Chiken', price: 145 },
   ],
-
+  ItalianFood: [
+    { name: "Italian pocket potato paratha", price: 30 },
+    { name: "Italian pocket paneer paratha", price: 60 },
+    { name: "Italian chicken keema pocket paratha", price: 60 },
+    { name: "Italian Paneer roll", price: 70 },
+    { name: "Italian chicken roll", price: 80 },
+    { name: "Italian trio egg roll", price: 60 },
+    { name: "Italian corn roll", price: 70 },
+    { name: "Italian spring paratha", price: 30 },
+    { name: "Italian chicken gravy", price: 150 }
+  ],
   Coffee: [
     { name: 'Cold Coffee', price: 110 },
   ],
@@ -455,14 +554,14 @@ const menus = {
   ],
 
   VegCombos: [
-    { name: 'Family Combo Veg (1 Large Pizza, 1 French Fry, 2 Grilled Sandwich, 2 Mocktails)', price: 699 },
+    { name: 'Family Combo Veg (1 Large Pizza, 1 French Fry, 2 Grilled Sandwich, 2 Mocktails)', price: 849 },
     { name: 'Couple Combo Veg (1 Medium Pizza, 1 Cheese Garlic Bread, 2 Coke)', price: 520 },
-    { name: 'Kids Combo Veg (1 Small Pizza, 1 French Fry, 1 Maza)', price: 249 },
+    { name: 'Kids Combo Veg (1 Small Pizza, 1 French Fry, 1 Maza)', price: 299 },
   ],
   NonVegCombos: [
-    { name: 'Family Combo Non Veg (1 Large Pizza, 1 French Fry, 1 Grilled Sandwich, 2 Mocktails)', price: 749 },
-    { name: 'Couple Combo Non Veg (1 Medium Pizza, 1 Cheese Garlic Bread, 2 Coke)', price: 549 },
-    { name: 'Kids Combo Non Veg (1 Small Pizza, 1 French Fry, 1 Maza)', price: 249 },
+    { name: 'Family Combo Non Veg (1 Large Pizza, 1 French Fry, 1 Grilled Sandwich, 2 Mocktails)', price: 999 },
+    { name: 'Couple Combo Non Veg (1 Medium Pizza, 1 Cheese Garlic Bread, 2 Coke)', price: 629 },
+    { name: 'Kids Combo Non Veg (1 Small Pizza, 1 French Fry, 1 Maza)', price: 299 },
   ]
 },
 
@@ -853,6 +952,7 @@ function placeOrder() {
   cart = [];
   renderCart();
 }
+
 
 
 
