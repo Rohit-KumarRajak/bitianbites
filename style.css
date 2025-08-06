@@ -287,6 +287,17 @@ footer img {
 footer img:hover {
   transform: scale(1.12);
 }
+footer .insta-icon img {
+  width: 24px;
+  height: 24px;
+  border-radius: 6px;
+  transition: transform 0.3s ease;
+}
+
+footer .insta-icon img:hover {
+  transform: scale(1.2);
+}
+
 
 /* Responsive */
 @media (max-width: 768px) {
@@ -304,5 +315,6 @@ footer img:hover {
   align-items: center;
   justify-content: center;
 }
+
 
 
