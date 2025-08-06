@@ -1,3 +1,11 @@
+const stallNotes = {
+  rkfastfood: "🕙 Timings: 10 AM – 9 PM | 💥 Today's Offer: Updated soon.",
+  tandoorijunction: "🔥 Open: 10 AM – 9 PM | 😋 Best in Tandoori Items",
+  italianpizzahub: "🍕 Open: 10 AM – 9 PM | 💥 Today's Offer: Updated soon.",
+  amritdharatecno: "⏰ 10 AM – 9 PM | 💥 Today's Offer: Updated soon.",
+  paahan: "⛔ Currently Not added. | 🛒 Available: 10 AM – 9 PM"
+};
+
 const menus = {
   rkfastfood: {
   Noodles: [
@@ -570,9 +578,19 @@ function loadMenu(shop) {
   currentShop = shop;
   cart = [];
   renderCart();
+
   document.getElementById('shops').style.display = 'none';
   document.getElementById('menu').style.display = 'block';
 
+  // 🟡 Update Note
+  const noteContent = document.getElementById('note-content');
+  noteContent.innerText = stallNotes[shop] || "Welcome to this stall.";
+
+  // 🟡 Update Menu Heading
+  const menuHeading = document.getElementById('menu-heading');
+  menuHeading.innerHTML = `📋 Menu - <span style="color:#ff3f6c">${shop.toUpperCase()}</span>`;
+
+  // 🟡 Render Menu
   const categories = menus[shop];
   const categoryButtons = document.getElementById('category-buttons');
   const menuItemsDiv = document.getElementById('menu-items');
@@ -606,6 +624,14 @@ function showCategoryItems(category) {
 function goBack() {
   document.getElementById('menu').style.display = 'none';
   document.getElementById('shops').style.display = 'block';
+
+  // 🟡 Reset Note to default
+  const noteContent = document.getElementById('note-content');
+  noteContent.innerText = "More stalls and food options will be added. Stay tuned!";
+
+  // 🟡 Reset Menu Heading
+  const menuHeading = document.getElementById('menu-heading');
+  menuHeading.innerText = "📋 Menu";
 }
 
 function addToCart(name, price) {
@@ -678,6 +704,7 @@ function placeOrder() {
   cart = [];
   renderCart();
 }
+
 
 
 
