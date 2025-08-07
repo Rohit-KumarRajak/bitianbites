@@ -875,7 +875,7 @@ function goBack() {
 
   // 🟡 Reset Note to default
   const noteContent = document.getElementById('note-content');
-  noteContent.innerText = "More stalls and food options will be added. Stay tuned!br><br>
+  noteContent.innerText = "More stalls and food options will be added. Stay tuned!
       💬 After placing your order on WhatsApp, if there's a delay in response — whether the message is seen or not — you can make a WhatsApp call to the stall directly using the displayed number.";
 
   // 🟡 Reset Menu Heading
