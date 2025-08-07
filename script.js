@@ -1,9 +1,9 @@
 const stallNotes = {
-  rkfastfood: "🕙 Timings: 10 AM – 9 PM | 💥 Today's Offer: Updated soon.",
+  rkfastfood: "🕙 Timings: 10 AM – 9 PM | 💥 Today's Offer: Discount Of 5% on every order.",
   tandoorijunction: "🔥 Open: 10 AM – 9 PM | 😋 Best in Tandoori Items",
-  italianpizzahub: "🍕 Open: 10 AM – 9 PM | 💥 Today's Offer: Updated soon.",
+  italianpizzahub: "🍕 Open: 10 AM – 9 PM | 💥 Today's Offer: 10% discount on Order above 500.",
   amritdharatecno: "⏰ 10 AM – 9 PM | 💥 Today's Offer: Updated soon.",
-  brothersfoodjunction: "Open from 10 AM – 9 PM."
+  brothersfoodjunction: "Open from 10 AM – 9 PM.💥 Today's Offer: Discount Of 5% on every order."
 };
 
 const menus = {
@@ -816,7 +816,7 @@ const whatsappNumbers = {
   tandoorijunction: '916202639844',
   italianpizzahub: '917050285626',
   amritdharatecno: '919934062930',
-  brothersfoodjunction: '917488742230'
+  brothersfoodjunction: '917667392577'
 };
 
 let cart = [];
@@ -920,8 +920,8 @@ function placeOrder() {
 
   const total = cart.reduce((sum, i) => sum + (i.price * i.qty), 0);
 
-  if (total < 50) {
-    alert("Minimum order amount should be ₹50.");
+  if (total < 100) {
+    alert("Minimum order amount should be ₹100.");
     return;
   }
 
@@ -952,6 +952,7 @@ function placeOrder() {
   cart = [];
   renderCart();
 }
+
 
 
 
