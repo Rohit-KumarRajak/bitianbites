@@ -276,10 +276,10 @@ footer {
 }
 
 footer img {
-  width: 52px;
-  height: 52px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
-  border: 2px solid white;
+  border: none;
   object-fit: cover;
   transition: transform 0.3s ease;
 }
@@ -315,6 +315,7 @@ footer .insta-icon img:hover {
   align-items: center;
   justify-content: center;
 }
+
 
 
 
