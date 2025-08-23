@@ -942,15 +942,6 @@ function renderCart() {
   });
   updateCartBadge(); // Update the cart badge
 }
-// Show navbar after login
-function handleCredentialResponse(response) {
-  // ... existing code ...
-  
-  // Show navbar after successful login
-  document.getElementById('navbar').style.display = 'block';
-  
-  // ... rest of existing code ...
-}
 
 // Initialize navbar event listeners when DOM is loaded
 document.addEventListener('DOMContentLoaded', function() {
@@ -1024,6 +1015,7 @@ function placeOrder() {
   cart = [];
   renderCart();
 }
+
 
 
 
