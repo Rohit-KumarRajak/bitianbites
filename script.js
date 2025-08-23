@@ -853,7 +853,43 @@ function loadMenu(shop) {
     categoryButtons.appendChild(btn);
   });
 }
+// Navbar functionality
+function toggleMenu() {
+  const navMenu = document.getElementById('nav-menu');
+  const menuToggle = document.getElementById('menu-toggle');
+  navMenu.classList.toggle('active');
+  menuToggle.classList.toggle('active');
+}
 
+function closeMenu() {
+  const navMenu = document.getElementById('nav-menu');
+  const menuToggle = document.getElementById('menu-toggle');
+  navMenu.classList.remove('active');
+  menuToggle.classList.remove('active');
+}
+
+// Update cart badge
+function updateCartBadge() {
+  const totalItems = cart.reduce((total, item) => total + item.qty, 0);
+  document.getElementById('cart-badge').textContent = totalItems;
+}
+
+// Scroll to cart function
+function scrollToCart() {
+  document.getElementById('cart').scrollIntoView({ 
+    behavior: 'smooth',
+    block: 'start'
+  });
+  closeMenu();
+}
+
+// Scroll to top function
+function scrollToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+}
 function showCategoryItems(category) {
   const items = menus[currentShop][category];
   const menuItemsDiv = document.getElementById('menu-items');
@@ -893,6 +929,7 @@ function addToCart(name, price) {
     alert(`✅ ${name} added to cart.`);
   }
   renderCart();
+  updateCartBadge(); // Update the cart badge
 }
 
 function renderCart() {
@@ -903,7 +940,41 @@ function renderCart() {
     li.textContent = `${i.name} x ${i.qty} = ₹${i.qty * i.price}`;
     cartList.appendChild(li);
   });
+  updateCartBadge(); // Update the cart badge
 }
+// Show navbar after login
+function handleCredentialResponse(response) {
+  // ... existing code ...
+  
+  // Show navbar after successful login
+  document.getElementById('navbar').style.display = 'block';
+  
+  // ... rest of existing code ...
+}
+
+// Initialize navbar event listeners when DOM is loaded
+document.addEventListener('DOMContentLoaded', function() {
+  const menuToggle = document.getElementById('menu-toggle');
+  if (menuToggle) {
+    menuToggle.addEventListener('click', toggleMenu);
+  }
+  
+  // Close menu when clicking outside on mobile
+  document.addEventListener('click', function(event) {
+    const navMenu = document.getElementById('nav-menu');
+    const menuToggle = document.getElementById('menu-toggle');
+    
+    if (window.innerWidth <= 768 && 
+        navMenu.classList.contains('active') &&
+        !navMenu.contains(event.target) &&
+        !menuToggle.contains(event.target)) {
+      closeMenu();
+    }
+  });
+  
+  // Hide navbar initially (before login)
+  document.getElementById('navbar').style.display = 'none';
+});
 function placeOrder() {
   const name = document.getElementById('user-name').value.trim();
   const email = document.getElementById('user-email').value.trim();
@@ -953,6 +1024,7 @@ function placeOrder() {
   cart = [];
   renderCart();
 }
+
 
 
 
