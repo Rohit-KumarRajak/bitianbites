@@ -836,7 +836,7 @@ function loadMenu(shop) {
 
   // 🟡 Update Menu Heading
   const menuHeading = document.getElementById('menu-heading');
-  menuHeading.innerHTML = `📋 Menu - <span style="color:#ff3f6c">${shop.toUpperCase()}</span>`;
+  menuHeading.innerHTML = `📋 Menu - <span style="font-size: 27px;">${shop.toUpperCase()}</span>`;
 
   // 🟡 Render Menu
   const categories = menus[shop];
@@ -1015,6 +1015,7 @@ function placeOrder() {
   cart = [];
   renderCart();
 }
+
 
 
 
