@@ -198,11 +198,6 @@ main {
   margin-top: 90px !important;
 }
 
-/* Hero section adjustment for navbar */
-header {
-  margin-top: 70px;
-}
-
 /* Animation for menu toggle when active */
 .menu-toggle.active span:nth-child(1) {
   transform: rotate(-45deg) translate(-5px, 6px);
@@ -700,7 +695,7 @@ footer {
   justify-content: center;
   align-items: center;
   gap: 24px;
-  margin-top: 80px;
+  margin-top: 0px;
   border-top: 3px solid rgba(255, 255, 255, 0.3);
   box-shadow: 0 -12px 40px rgba(216, 67, 21, 0.3);
 }
@@ -898,6 +893,7 @@ select:focus {
   50% { transform: scale(1.05); }
   100% { transform: scale(1.02); }
 }
+
 
 
 
