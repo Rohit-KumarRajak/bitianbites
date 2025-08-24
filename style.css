@@ -463,7 +463,7 @@ section h2::after {
 #category-buttons {
   display: flex;
   flex-wrap: wrap;
-  gap: 16px;
+  gap: 6px;
   margin-bottom: 28px;
   justify-content: center;
 }
@@ -472,7 +472,7 @@ section h2::after {
   background: rgba(255, 87, 34, 0.08);
   border: 2px solid #ff5722;
   color: #ff5722;
-  padding: 14px 24px;
+  padding: 7px 6px;
   border-radius: 50px;
   font-weight: 600;
   font-size: 1rem;
@@ -893,6 +893,7 @@ select:focus {
   50% { transform: scale(1.05); }
   100% { transform: scale(1.02); }
 }
+
 
 
 
