@@ -1,7 +1,7 @@
 const stallNotes = {
   rkfastfood: "🕙 Timings: 10 AM – 9 PM | 💥 Today's Offer: Discount Of 5% on every order.",
   tandoorijunction: "🔥 Open: 10 AM – 9 PM | 😋 Best in Tandoori Items",
-  italianpizzahub: "🍕 Open: 10 AM – 9 PM | 💥 Today's Offer: 10% discount on Order above 500.",
+  italianpizzahub: "🍕 Open: 10 AM – 9 PM | 💥 Today's Offer: 10% discount on Order above 500.Buy 1 get 1 free on medium and large pizza & 1 chocolawa cake is free on 1 small pizza",
   amritdharatecno: "⏰ 10 AM – 9 PM | 💥 Today's Offer: Updated soon.",
   brothersfoodjunction: "Open from 10 AM – 9 PM.💥 Today's Offer: Discount Of 5% on every order."
 };
@@ -1015,6 +1015,7 @@ function placeOrder() {
   cart = [];
   renderCart();
 }
+
 
 
 
