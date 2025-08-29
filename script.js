@@ -3,7 +3,8 @@ const stallNotes = {
   tandoorijunction: "🔥 Open: 10 AM – 9 PM | 😋 Best in Tandoori Items",
   italianpizzahub: "🍕 Open: 10 AM – 9 PM | 💥 Today's Offer: 10% discount on Order above 500.Buy 1 get 1 free on medium and large pizza & 1 chocolawa cake is free on 1 small pizza",
   amritdharatecno: "⏰ 10 AM – 9 PM | 💥 Today's Offer: Updated soon.",
-  brothersfoodjunction: "Open from 10 AM – 9 PM.💥 Today's Offer: Discount Of 5% on every order."
+  brothersfoodjunction: "Open from 10 AM – 9 PM.💥 Today's Offer: Discount Of 5% on every order.",
+  downsouth: "🕙 Timings: 10 AM – 9 PM | 💥 Today's Offer: Updated soon."
 };
 
 const menus = {
@@ -808,6 +809,199 @@ const menus = {
     { name: "Chicken Pahari Kabab (8pc)", price: 320 },
     { name: "Mirchi Kabab (8pc)", price: 330 }
   ]
+},
+
+  downsouth: {
+  Beverages: [
+    { name: 'Coffee', price: 25 },
+    { name: 'Vanilla Shake', price: 95 },
+    { name: 'Double Chocolate Shake', price: 110 },
+    { name: 'Kit Kat Shake', price: 120 },
+    { name: 'Hazelnut Nutella Shake', price: 135 },
+    { name: 'Strawberry Shake', price: 105 },
+    { name: 'Oreo Shake', price: 110 },
+    { name: 'Blueberry Shake', price: 110 },
+    { name: 'Chocolate Cake Shake', price: 165 },
+    { name: 'Cold Coffee', price: 100 },
+    { name: 'Blue Lagoon Mocktail', price: 70 },
+    { name: 'Virgin Mojito', price: 70 },
+    { name: 'Masala Cold Drink', price: 60 }
+  ],
+
+  Burger: [
+    { name: 'Aloo Tikki Burger', price: 50 },
+    { name: 'Veg Burger', price: 80 },
+    { name: 'Paneer Burger', price: 105 },
+    { name: 'Veg Cheese Burger', price: 90 },
+    { name: 'Jumbo Veggie Burger', price: 100 },
+    { name: 'Veg Dogla Burger', price: 135 },
+    { name: 'Jumbo Aloo Tikki Burger', price: 70 },
+    { name: 'Chicken KFC Burger', price: 110 },
+    { name: 'Grilled Chicken Burger', price: 110 },
+    { name: 'Chicken Dogla Burger', price: 150 },
+    { name: 'Butter Chicken Burger', price: 120 },
+    { name: 'Extra Cheese Spread', price: 10 },
+    { name: 'Extra Cheese Slice', price: 15 }
+  ],
+
+  Snacks: [
+    { name: 'French Fries (Salted)', price: 85 },
+    { name: 'French Fries (Peri-Peri)', price: 90 },
+    { name: 'Loaded Fries (Veg)', price: 110 },
+    { name: 'Loaded Fries (Chicken)', price: 145 },
+    { name: 'Loaded Fries (Cheese)', price: 145 }
+  ],
+
+  Pasta: [
+    { name: 'Red Sauce Pasta (Veg)', price: 115 },
+    { name: 'Red Sauce Pasta (Chicken)', price: 145 },
+    { name: 'White Sauce Pasta (Veg)', price: 135 },
+    { name: 'White Sauce Pasta (Chicken)', price: 155 },
+    { name: 'Mix Sauce Pasta (Veg)', price: 145 },
+    { name: 'Mix Sauce Pasta (Chicken)', price: 165 },
+    { name: 'Cheese Sauce Pasta (Veg)', price: 145 },
+    { name: 'Cheese Sauce Pasta (Chicken)', price: 165 },
+    { name: 'Cheesy Baked Pasta (Veg)', price: 155 },
+    { name: 'Cheesy Baked Pasta (Chicken)', price: 175 },
+    { name: 'Butter Chicken Pasta', price: 165 },
+    { name: 'Butter Paneer Pasta', price: 155 }
+  ],
+
+  Indian: [
+    { name: 'Paneer Butter Masala', price: 200 },
+    { name: 'Kadhai Paneer', price: 220 },
+    { name: 'Paneer Do Pyaza', price: 210 },
+    { name: 'Paneer Keema', price: 235 },
+    { name: 'Special Malai Kofta (must try)', price: 260 },
+    { name: 'Matar Paneer', price: 230 },
+    { name: 'Paneer Mushroom Taj', price: 260 },
+    { name: 'Matar Mushroom', price: 245 },
+    { name: 'Mushroom Do Pyaza (must try)', price: 240 },
+    { name: 'Babycorn Masala', price: 250 },
+    { name: 'Chicken Butter Masala', price: 265 },
+    { name: 'Chicken Seek Kebab Masala', price: 300 },
+    { name: 'Chicken Curry (must try)', price: 250 },
+    { name: 'Chicken Handi', price: 280 },
+    { name: 'Chicken Do Pyaza', price: 280 }
+  ],
+
+  Dessert: [
+    { name: 'Hot Brownie with Vanilla Ice-cream', price: 120 },
+    { name: 'White Forest Pastry', price: 90 },
+    { name: 'Dark Fantasy Pastry', price: 70 },
+    { name: 'Hazelnut Pastry', price: 100 }
+  ],
+
+    /*
+  ComboMeals: [
+    { name: 'Chicken Butter Masala with 3 Roti', price: 165 },
+    { name: 'Chicken Butter Masala with 2 Naan', price: 195 },
+    { name: 'Chicken Curry with 3 Roti', price: 165 },
+    { name: 'Chicken Curry with 2 Naan', price: 185 },
+    { name: 'Chicken Curry with Rice', price: 165 },
+    { name: 'Chicken Seek Kebab Masala with 3 Roti', price: 170 },
+    { name: 'Chicken Seek Kebab Masala with 2 Naan', price: 195 },
+    { name: 'Paneer Butter Masala with 3 Roti', price: 140 },
+    { name: 'Paneer Butter Masala with 2 Naan', price: 175 },
+    { name: 'Kadhai Paneer with 3 Roti', price: 150 },
+    { name: 'Kadhai Paneer with 2 Naan', price: 185 },
+    { name: 'Malai Kofta with 3 Roti', price: 160 },
+    { name: 'Malai Kofta with 2 Naan', price: 190 },
+    { name: 'Mushroom Do Pyaza with 3 Roti', price: 155 },
+    { name: 'Mushroom Do Pyaza with 2 Naan', price: 185 }
+  ],
+  */
+  
+  Rolls: [
+    { name: 'Veg Roll', price: 60 },
+    { name: 'Special Mix Veg Roll', price: 100 },
+    { name: 'Paneer Roll', price: 95 },
+    { name: 'Paneer Peri Peri Roll', price: 95 },
+    { name: 'Cheesy Italian Paneer Roll', price: 110 },
+    { name: 'Paneer Chilly Roll', price: 110 },
+    { name: 'Paneer Butter Masala Roll', price: 110 },
+    { name: 'Mushroom Roll', price: 100 },
+    { name: 'Mushroom Peri Peri Roll', price: 105 },
+    { name: 'BBQ Mushroom Roll', price: 120 },
+    { name: 'Veg Manchurian Roll', price: 80 },
+    { name: 'Veggie Burger Roll', price: 95 },
+    { name: 'Egg Roll', price: 60 },
+    { name: 'Double Egg Masala Roll', price: 95 },
+    { name: 'Double Egg Roll', price: 70 },
+    { name: 'Triple Egg Roll', price: 80 },
+    { name: 'Chicken Roll', price: 95 },
+    { name: 'Chicken Egg Roll', price: 110 },
+    { name: 'Special Chicken Seek Kebab Roll', price: 110 },
+    { name: 'Dogla Chicken Roll', price: 120 },
+    { name: 'Dogla Butter Masala Roll', price: 145 },
+    { name: 'Cheesy Italian Chicken Roll', price: 115 }
+  ],
+
+  ChineseStarters: [
+    { name: 'Veg Manchurian (Dry)', price: 120 },
+    { name: 'Veg Manchurian (Gravy)', price: 135 },
+    { name: 'Paneer Chilly (Half - Dry)', price: 100 },
+    { name: 'Paneer Chilly (Full - Dry)', price: 190 },
+    { name: 'Paneer Chilly (Half - Gravy)', price: 110 },
+    { name: 'Paneer Chilly (Full - Gravy)', price: 200 },
+    { name: 'Baby Corn Chilly', price: 160 },
+    { name: 'Mushroom Chilly (Dry)', price: 180 },
+    { name: 'Mushroom Chilly (Gravy)', price: 190 },
+    { name: 'Honey Chilly Potato', price: 170 },
+    { name: 'Chicken Salt & Pepper (with special dip)', price: 200 },
+    { name: 'Mushroom Salt & Pepper (with special dip)', price: 180 },
+    { name: 'Paneer Salt & Pepper (with special dip)', price: 190 },
+    { name: 'Corn Salt & Pepper (with special dip)', price: 170 },
+    { name: 'Hot & Sour Soup (Veg)', price: 90 },
+    { name: 'Hot & Sour Soup (Chicken)', price: 100 },
+    { name: 'Honey Chilly Chicken', price: 225 },
+    { name: 'Chicken Chilly (Dry)', price: 210 },
+    { name: 'Chicken Chilly (Gravy)', price: 230 },
+    { name: 'Chicken BBQ Wings', price: 165 },
+    { name: 'Butter Chicken Wings', price: 185 },
+    { name: 'Chicken Sweet Spicy Wings', price: 165 },
+    { name: 'Chicken Lollypop (4 pc)', price: 155 },
+    { name: 'Chicken Lollypop (8 pc)', price: 300 }
+  ],
+
+  RiceNoodles: [
+    { name: 'Chow Mein (Veg)', price: 90 },
+    { name: 'Chow Mein (Veg Mix)', price: 140 },
+    { name: 'Chow Mein (Egg)', price: 100 },
+    { name: 'Chow Mein (Chicken)', price: 140 },
+    { name: 'Chow Mein (Non-Veg Mix)', price: 155 },
+    { name: 'Fried Rice (Veg)', price: 100 },
+    { name: 'Fried Rice (Mix Veg)', price: 135 },
+    { name: 'Fried Rice (Egg)', price: 115 },
+    { name: 'Fried Rice (Chicken)', price: 155 },
+    { name: 'Fried Rice (Non-Veg Mix)', price: 170 },
+    { name: 'Shanghai (Veg)', price: 105 },
+    { name: 'Shanghai (Mix Veg)', price: 130 },
+    { name: 'Shanghai (Egg)', price: 120 },
+    { name: 'Shanghai (Chicken)', price: 155 },
+    { name: 'Shanghai (Non-Veg Mix)', price: 170 },
+    { name: 'Burnt Garlic Noodles (Veg)', price: 120 },
+    { name: 'Burnt Garlic Noodles (Egg)', price: 145 },
+    { name: 'Burnt Garlic Noodles (Chicken)', price: 165 },
+    { name: 'Burnt Garlic Rice (Veg)', price: 125 },
+    { name: 'Burnt Garlic Rice (Egg)', price: 145 },
+    { name: 'Burnt Garlic Rice (Chicken)', price: 180 },
+    { name: 'Schezwan Rice (Veg)', price: 110 },
+    { name: 'Schezwan Rice (Egg)', price: 125 },
+    { name: 'Schezwan Rice (Chicken)', price: 170 },
+    { name: 'Schezwan Noodles (Veg)', price: 110 },
+    { name: 'Schezwan Noodles (Egg)', price: 120 },
+    { name: 'Schezwan Noodles (Chicken)', price: 155 }
+  ],
+
+  ChineseCombo: [
+    { name: 'Paneer Chilly with Veg Fried Rice', price: 140 },
+    { name: 'Paneer Chilly with Veg Chow Mein', price: 140 },
+    { name: 'Veg Manchurian with Veg Fried Rice', price: 125 },
+    { name: 'Veg Manchurian with Veg Chow Mein', price: 125 },
+    { name: 'Chicken Chilly with Veg Fried Rice', price: 160 },
+    { name: 'Chicken Chilly with Veg Chow Mein', price: 160 }
+  ]
 }
 };
 
@@ -816,7 +1010,8 @@ const whatsappNumbers = {
   tandoorijunction: '916202639844',
   italianpizzahub: '917050285626',
   amritdharatecno: '919934062930',
-  brothersfoodjunction: '917667392577'
+  brothersfoodjunction: '917667392577',
+  downsouth: '919122871250'
 };
 
 let cart = [];
@@ -1015,6 +1210,7 @@ function placeOrder() {
   cart = [];
   renderCart();
 }
+
 
 
 
