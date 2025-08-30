@@ -892,25 +892,25 @@ const menus = {
     { name: 'Hazelnut Pastry', price: 100 }
   ],
 
-    /*
+    
   ComboMeals: [
     { name: 'Chicken Butter Masala with 3 Roti', price: 165 },
-    { name: 'Chicken Butter Masala with 2 Naan', price: 195 },
+    { name: 'Chicken Butter Masala with 2 Lachha Paratha', price: 195 },
     { name: 'Chicken Curry with 3 Roti', price: 165 },
-    { name: 'Chicken Curry with 2 Naan', price: 185 },
+    { name: 'Chicken Curry with 2 Lachha Paratha', price: 185 },
     { name: 'Chicken Curry with Rice', price: 165 },
     { name: 'Chicken Seek Kebab Masala with 3 Roti', price: 170 },
-    { name: 'Chicken Seek Kebab Masala with 2 Naan', price: 195 },
+    { name: 'Chicken Seek Kebab Masala with 2 Lachha Paratha', price: 195 },
     { name: 'Paneer Butter Masala with 3 Roti', price: 140 },
-    { name: 'Paneer Butter Masala with 2 Naan', price: 175 },
+    { name: 'Paneer Butter Masala with 2 Lachha Paratha', price: 175 },
     { name: 'Kadhai Paneer with 3 Roti', price: 150 },
-    { name: 'Kadhai Paneer with 2 Naan', price: 185 },
+    { name: 'Kadhai Paneer with 2 Lachha Paratha', price: 185 },
     { name: 'Malai Kofta with 3 Roti', price: 160 },
-    { name: 'Malai Kofta with 2 Naan', price: 190 },
+    { name: 'Malai Kofta with 2 Lachha Paratha', price: 190 },
     { name: 'Mushroom Do Pyaza with 3 Roti', price: 155 },
-    { name: 'Mushroom Do Pyaza with 2 Naan', price: 185 }
+    { name: 'Mushroom Do Pyaza with 2 Lachha Paratha', price: 185 }
   ],
-  */
+  
   
   Rolls: [
     { name: 'Veg Roll', price: 60 },
@@ -934,7 +934,11 @@ const menus = {
     { name: 'Special Chicken Seek Kebab Roll', price: 110 },
     { name: 'Dogla Chicken Roll', price: 120 },
     { name: 'Dogla Butter Masala Roll', price: 145 },
-    { name: 'Cheesy Italian Chicken Roll', price: 115 }
+    { name: 'Cheesy Italian Chicken Roll', price: 115 },
+    { name: 'Crispy KFC Chicken Roll', price: 120 },
+    { name: 'Chicken Butter Masala Roll', price: 120 },
+    { name: 'Chilly Chicken Roll', price: 110 },
+    { name: 'Add cheese Spread', price: 20 }
   ],
 
   ChineseStarters: [
@@ -1210,6 +1214,7 @@ function placeOrder() {
   cart = [];
   renderCart();
 }
+
 
 
 
