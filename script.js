@@ -1015,7 +1015,7 @@ const whatsappNumbers = {
   italianpizzahub: '917050285626',
   amritdharatecno: '919934062930',
   brothersfoodjunction: '917667392577',
-  downsouth: '919122871250'
+  downsouth: '919955581795'
 };
 
 let cart = [];
@@ -1214,6 +1214,7 @@ function placeOrder() {
   cart = [];
   renderCart();
 }
+
 
 
 
