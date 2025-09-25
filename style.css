@@ -711,7 +711,7 @@ footer img {
 }
 
 footer img:hover {
-  transform: scale(1.15) rotate(5deg);
+  transform: scale(2) rotate(1440deg);
   border-color: #ffe082;
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
 }
@@ -893,3 +893,4 @@ select:focus {
   50% { transform: scale(1.05); }
   100% { transform: scale(1.02); }
 }
+
