@@ -1340,6 +1340,7 @@ function loadMenu(shop) {
     categoryButtons.appendChild(btn);
   });
 }
+
 // Navbar functionality
 function toggleMenu() {
   const navMenu = document.getElementById('nav-menu');
@@ -1377,6 +1378,7 @@ function scrollToTop() {
     behavior: 'smooth'
   });
 }
+
 function showCategoryItems(category) {
   const items = menus[currentShop][category];
   const menuItemsDiv = document.getElementById('menu-items');
@@ -1453,6 +1455,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // Hide navbar initially (before login)
   document.getElementById('navbar').style.display = 'none';
 });
+
 function placeOrder() {
   const name = document.getElementById('user-name').value.trim();
   const email = document.getElementById('user-email').value.trim();
@@ -1502,22 +1505,3 @@ function placeOrder() {
   cart = [];
   renderCart();
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
