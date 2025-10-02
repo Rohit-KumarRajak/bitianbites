@@ -22,41 +22,40 @@
 
       const bitEmailPattern = /^[^@]+@bitmesra\.ac\.in$/;
 
+      // ✅ Special Access Gmail IDs allowed even if not BIT format
+      const allowedSpecialEmails = [
+        'chandradeok96@gmail.com',
+        'santosh1991golu@gmail.com',
+        'arvindbhagat15@gmail.com',
+        'pinturahe7050@gmail.com',
+        'rjrajpratap77@gmail.com',
+        'pradeepkumarashis5555@gmail.com',
+        'gauravjha4000@gmail.com',
+        'Varunmalhotra94@gmail.com',
+        'rohitkrrajak8051@gmail.com',
+        'sandeep28sirt@gmail.com',
+        'kaushalkr7858@gmail.com'
+      ];
 
-  // ✅ Special Access Gmail IDs allowed even if not BIT format
-  const allowedSpecialEmails = [
-    'chandradeok96@gmail.com',
-    'santosh1991golu@gmail.com',
-    'arvindbhagat15@gmail.com',
-    'pinturahe7050@gmail.com',
-    'rjrajpratap77@gmail.com',
-    'pradeepkumarashis5555@gmail.com',
-    'gauravjha4000@gmail.com',
-    'Varunmalhotra94@gmail.com',
-    'rohitkrrajak8051@gmail.com',
-    'sandeep28sirt@gmail.com',
-    'kaushalkr7858@gmail.com'
-  ];
+      // 🔒 Blocked BIT email(s)
+      const blockedEmails = [
+        'btech10383.02@bitmesra.ac.in',
+        'btech10343.99@bitmesra.ac.in',
+        'btech10362.99@bitmesra.ac.in',
+        'btech10340.99@bitmesra.ac.in',
+        'btech10389.99@bitmesra.ac.in',
+        'btech10363.99@bitmesra.ac.in'
+      ];
 
-  // 🔒 Blocked BIT email(s)
-  const blockedEmails = [
-    'btech10383.02@bitmesra.ac.in',
-    'btech10343.99@bitmesra.ac.in',
-    'btech10362.99@bitmesra.ac.in',
-    'btech10340.99@bitmesra.ac.in',
-    'btech10389.99@bitmesra.ac.in',
-    'btech10363.99@bitmesra.ac.in'
-  ];
+      if (blockedEmails.includes(email)) {
+        alert("⚠️ Access denied! This BIT email is blocked from using Bitian Bites.");
+        return;
+      }
 
-  if (blockedEmails.includes(email)) {
-    alert("⚠️ Access denied! This BIT email is blocked from using Bitian Bites.");
-    return;
-  }
-
-  if (!bitEmailPattern.test(email) && !allowedSpecialEmails.includes(email)) {
-    alert("Only BIT Mesra student emails allowed!");
-    return;
-  }
+      if (!bitEmailPattern.test(email) && !allowedSpecialEmails.includes(email)) {
+        alert("Only BIT Mesra student emails allowed!");
+        return;
+      }
 
       document.getElementById('user-name').value = name;
       document.getElementById('user-email').value = email;
@@ -72,44 +71,46 @@
 </head>
 <body>
   <!-- Navbar (initially hidden) -->
-<nav id="navbar" style="display: none;">
-  <div class="nav-container">
-    <div class="nav-logo">
-      <span>Bitian Bites</span>
-    </div>
-    
-    <div class="nav-icons">
-      <!-- Cart Icon with Badge -->
-      <div class="nav-cart-icon" onclick="scrollToCart()">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <circle cx="9" cy="21" r="1"></circle>
-          <circle cx="20" cy="21" r="1"></circle>
-          <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
-        </svg>
-        <span id="cart-badge" class="cart-badge">0</span>
+  <nav id="navbar" style="display: none;">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <span>Bitian Bites</span>
       </div>
       
-      <!-- Hamburger Menu -->
-      <div class="menu-toggle" id="menu-toggle">
-        <span></span>
-        <span></span>
-        <span></span>
+      <div class="nav-icons">
+        <!-- Cart Icon with Badge -->
+        <div class="nav-cart-icon" onclick="scrollToCart()">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="9" cy="21" r="1"></circle>
+            <circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+          </svg>
+          <span id="cart-badge" class="cart-badge">0</span>
+        </div>
+        
+        <!-- Hamburger Menu -->
+        <div class="menu-toggle" id="menu-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      
+      <!-- Navigation Menu -->
+      <div class="nav-menu" id="nav-menu">
+        <a href="#" class="nav-link" onclick="closeMenu(); scrollToTop()">Home</a>
+        <a href="#popular-items" class="nav-link" onclick="closeMenu()">Popular</a>
+        <a href="#shops" class="nav-link" onclick="closeMenu()">Stalls</a>
+        <a href="#hostel" class="nav-link" onclick="closeMenu()">Delivery</a>
+        <a href="#cart" class="nav-link" onclick="closeMenu()">My Cart</a>
+        <a href="#footer" class="nav-link" onclick="closeMenu()">Contact</a>
       </div>
     </div>
-    
-    <!-- Navigation Menu -->
-    <div class="nav-menu" id="nav-menu">
-      <a href="#" class="nav-link" onclick="closeMenu(); scrollToTop()">Home</a>
-      <a href="#shops" class="nav-link" onclick="closeMenu()">Stalls</a>
-      <a href="#hostel" class="nav-link" onclick="closeMenu()">Delivery</a>
-      <a href="#cart" class="nav-link" onclick="closeMenu()">My Cart</a>
-      <a href="#footer" class="nav-link" onclick="closeMenu()">Contact</a>
-    </div>
-  </div>
-</nav>
+  </nav>
+
   <header>
     <div class="hero-img">
-      <img src="bitmesra.png" alt="BIT Mesra Campus">
+      <img src="https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="BIT Mesra Campus">
     </div>
     <div class="hero-text">
       <h1>Bitian Bites</h1>
@@ -119,7 +120,7 @@
 
   <section id="login-section">
     <div id="g_id_onload"
-      data-client_id=581523739451-mnjcba0lk0ipn81d31bn0gtch7ei4c13.apps.googleusercontent.com
+      data-client_id="581523739451-mnjcba0lk0ipn81d31bn0gtch7ei4c13.apps.googleusercontent.com"
       data-callback="handleCredentialResponse"
       data-auto_prompt="false">
     </div>
@@ -140,30 +141,123 @@
 
   <main style="display:none;">
     <section id="note">
-    <h2>📢 Note</h2>
-    <p id="note-content">More stalls and food options will be added. Stay tuned!<br><br>
-    💬 After placing your order on WhatsApp, if there's a delay in response — whether the message is seen or not — you can make a WhatsApp call to the stall directly using the displayed number.</p>
-  </section>
+      <h2>📢 Note</h2>
+      <p id="note-content">More stalls and food options will be added. Stay tuned!<br><br>
+      💬 After placing your order on WhatsApp, if there's a delay in response — whether the message is seen or not — you can make a WhatsApp call to the stall directly using the displayed number.</p>
+    </section>
+
+    <!-- Popular Items Section -->
+    <section id="popular-items">
+      <h2>🔥 Popular Items</h2>
+      <div class="popular-grid">
+        <div class="popular-item">
+          <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Pizza">
+          <h3>Italian Pizza</h3>
+          <p>Fresh, authentic pizzas from Italian Pizza Hub</p>
+          <span class="price">Starting ₹190</span>
+        </div>
+        <div class="popular-item">
+          <img src="https://images.unsplash.com/photo-1496412705862-e0088f16f791?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Noodles">
+          <h3>Hakka Noodles</h3>
+          <p>Delicious noodles from multiple stalls</p>
+          <span class="price">Starting ₹80</span>
+        </div>
+        <div class="popular-item">
+          <img src="https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Momos">
+          <h3>Steamed Momos</h3>
+          <p>Hot & fresh momos with spicy chutney</p>
+          <span class="price">Starting ₹70</span>
+        </div>
+        <div class="popular-item">
+          <img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Burger">
+          <h3>Gourmet Burgers</h3>
+          <p>Juicy burgers from Down South</p>
+          <span class="price">Starting ₹80</span>
+        </div>
+      </div>
+    </section>
 
     <section id="shops">
       <h2>🍴 Select a Stall</h2>
-      <div class="shop-list">
-        <button onclick="loadMenu('rkfastfood')">R.K FAST FOOD(near H4)</button>
-        <button onclick="loadMenu('tandoorijunction')">Tandoori Junction(near H4)</button>
-        <button onclick="loadMenu('italianpizzahub')">Italian Pizza Hub(behind H5)</button>
-        <button onclick="loadMenu('amritdharatecno')">Amrit Dhara Tecno(near H6)</button>
-        <button onclick="loadMenu('brothersfoodjunction')">Brothers Food Junction(near H13)</button>
-        <button onclick="loadMenu('downsouth')">Down South (Behind H5)</button>
-        <button onclick="loadMenu('delhishake')">Delhi Shake & Juice (Behind H5)</button>
+      <div class="shop-grid">
+        <div class="stall-card" onclick="loadMenu('rkfastfood')">
+          <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="R.K Fast Food">
+          <div class="stall-info">
+            <h3>R.K FAST FOOD</h3>
+            <p>Near H4 • Noodles, Momos, Rolls</p>
+            <span class="timing">⏰ 10 AM - 9 PM</span>
+            <div class="offer">💥 5% Discount on every order</div>
+          </div>
+        </div>
+
+        <div class="stall-card" onclick="loadMenu('tandoorijunction')">
+          <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Tandoori Junction">
+          <div class="stall-info">
+            <h3>TANDOORI JUNCTION</h3>
+            <p>Near H4 • Best Tandoori Items</p>
+            <span class="timing">⏰ 10 AM - 9 PM</span>
+            <div class="offer">🔥 Speciality in Tandoori</div>
+          </div>
+        </div>
+
+        <div class="stall-card" onclick="loadMenu('italianpizzahub')">
+          <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Italian Pizza Hub">
+          <div class="stall-info">
+            <h3>ITALIAN PIZZA HUB</h3>
+            <p>Behind H5 • Authentic Italian Pizza</p>
+            <span class="timing">⏰ 10 AM - 9 PM</span>
+            <div class="offer">🍕 10% off on orders above ₹500</div>
+          </div>
+        </div>
+
+        <div class="stall-card" onclick="loadMenu('amritdharatecno')">
+          <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Amrit Dhara Tecno">
+          <div class="stall-info">
+            <h3>AMRIT DHARA TECNO</h3>
+            <p>Near H6 • Quick Bites & Snacks</p>
+            <span class="timing">⏰ 10 AM - 9 PM</span>
+            <div class="offer">💥 Special offers updated soon</div>
+          </div>
+        </div>
+
+        <div class="stall-card" onclick="loadMenu('brothersfoodjunction')">
+          <img src="https://images.unsplash.com/photo-1517244683847-7456b63c5969?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Brothers Food Junction">
+          <div class="stall-info">
+            <h3>BROTHERS FOOD JUNCTION</h3>
+            <p>Near H13 • Traditional Indian Food</p>
+            <span class="timing">⏰ 10 AM - 9 PM</span>
+            <div class="offer">💥 5% Discount on every order</div>
+          </div>
+        </div>
+
+        <div class="stall-card" onclick="loadMenu('downsouth')">
+          <img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Down South">
+          <div class="stall-info">
+            <h3>DOWN SOUTH</h3>
+            <p>Behind H5 • Continental & Indian</p>
+            <span class="timing">⏰ 10 AM - 9 PM</span>
+            <div class="offer">💥 Special offers updated soon</div>
+          </div>
+        </div>
+
+        <div class="stall-card" onclick="loadMenu('delhishake')">
+          <img src="https://images.unsplash.com/photo-1553787434-6f3a6b1b4b4b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Delhi Shake">
+          <div class="stall-info">
+            <h3>DELHI SHAKE & JUICE</h3>
+            <p>Behind H5 • Fresh Juices & Shakes</p>
+            <span class="timing">⏰ 10 AM - 9 PM</span>
+            <div class="offer">🥤 Fresh & Healthy Options</div>
+          </div>
+        </div>
       </div>
     </section>
 
     <section id="menu" style="display:none;">
-    <button class="back-btn" onclick="goBack()">⬅️ Back to Stalls</button>
-    <h2 id="menu-heading">📋 Menu</h2>
-    <div id="category-buttons"></div>
-    <div id="menu-items"></div>
-  </section>
+      <button class="back-btn" onclick="goBack()">⬅️ Back to Stalls</button>
+      <h2 id="menu-heading">📋 Menu</h2>
+      <div id="category-buttons"></div>
+      <div id="menu-items"></div>
+    </section>
 
     <section id="hostel">
       <h2>🚚 Delivery Details</h2>
@@ -211,71 +305,39 @@
 
   <footer id="footer" style="background: linear-gradient(135deg, #d84315 0%, #ff5722 30%, #ff6f00 70%, #f57c00 100%);
   color: white; text-align: center; padding: 24px; font-weight: 700; display: flex; justify-content: center; align-items: center;">
-  <div style="display:flex; flex-direction: column; align-items:center; gap:10px; text-align:center;">
+    <div style="display:flex; flex-direction: column; align-items:center; gap:10px; text-align:center;">
 
-    <!-- Founder Image & Name -->
-    <img src="PF.png" alt="Founder Rohit Kumar Rajak" 
-         style="width: 100px; height: 100px; border-radius: 50%; border:2px solid white; object-fit: cover;">
-    <p style="margin:0;">&copy; 2025 Bitian Bites | Founder & Developer: Rohit Kumar Rajak</p>
+      <!-- Founder Image & Name -->
+      <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Founder Rohit Kumar Rajak" 
+           style="width: 100px; height: 100px; border-radius: 50%; border:2px solid white; object-fit: cover;">
+      <p style="margin:0;">&copy; 2025 Bitian Bites | Founder & Developer: Rohit Kumar Rajak</p>
 
-    <!-- Instagram Follow -->
-<div style="display: flex; align-items: center; gap: 8px; margin-top: 5px;">
-  <span style="color: #ffeaea; font-size: 0.95rem;">Follow us on Instagram</span>
-  <a href="https://www.instagram.com/bitian_bites?igsh=cDNqaHNra2h5cGY=" target="_blank" class="insta-icon" style="display:flex; align-items:center;">
-    <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" 
-         alt="Instagram" width="24" height="24" 
-         style="border-radius:6px; vertical-align: middle;" />
-  </a>
-</div>
+      <!-- Instagram Follow -->
+      <div style="display: flex; align-items: center; gap: 8px; margin-top: 5px;">
+        <span style="color: #ffeaea; font-size: 0.95rem;">Follow us on Instagram</span>
+        <a href="https://www.instagram.com/bitian_bites?igsh=cDNqaHNra2h5cGY=" target="_blank" class="insta-icon" style="display:flex; align-items:center;">
+          <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" 
+               alt="Instagram" width="24" height="24" 
+               style="border-radius:6px; vertical-align: middle;" />
+        </a>
+      </div>
 
+      <!-- Marketing Team -->
+      <p style="margin:0; font-size: 0.95rem; color: #ffeaea;">
+        Marketing Team: Mohit Kumar & Varun Kumar
+      </p>
 
-    <!-- Marketing Team -->
-    <p style="margin:0; font-size: 0.95rem; color: #ffeaea;">
-      Marketing Team: Mohit Kumar & Varun Kumar
-    </p>
+      <!-- Email -->
+      <p style="font-size: 0.9rem; color: #ffeaea;">
+        Want special email access? Contact us at:<br>
+        📧 <a href="/cdn-cgi/l/email-protection#1072796479717e72796475636475717d6350777d71797c3e737f7d" style="color: #fff; text-decoration: underline;">
+          <span class="__cf_email__" data-cfemail="24464d504d454a464d5041575041454957644349454d480a474b49">[email&#160;protected]</span>
+        </a>
+      </p>
 
-    <!-- Email -->
-    <p style="font-size: 0.9rem; color: #ffeaea;">
-      Want special email access? Contact us at:<br>
-      📧 <a href="mailto:bitianbitesteams@gmail.com" style="color: #fff; text-decoration: underline;">
-        bitianbitesteams@gmail.com
-      </a>
-    </p>
+    </div>
+  </footer>
 
-  </div>
-</footer>
-
-
-  <script src="script.js"></script>
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="script.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
