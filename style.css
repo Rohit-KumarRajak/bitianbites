@@ -557,8 +557,8 @@ section h2::after {
 #category-buttons {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
-  margin-bottom: 28px;
+  gap: 5px;
+  margin-bottom: 8px;
   justify-content: center;
 }
 
@@ -566,7 +566,7 @@ section h2::after {
   background: rgba(255, 87, 34, 0.08);
   border: 2px solid #ff5722;
   color: #ff5722;
-  padding: 12px 20px;
+  padding: 8px 10px;
   border-radius: 50px;
   font-weight: 600;
   font-size: 1rem;
@@ -805,7 +805,7 @@ footer img {
 }
 
 footer img:hover {
-  transform: scale(1.2) rotate(360deg);
+  transform: scale(1.8) rotate(1440deg);
   border-color: #ffe082;
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
 }
@@ -999,3 +999,4 @@ select:focus {
   50% { transform: scale(1.05); }
   100% { transform: scale(1.02); }
 }
+
