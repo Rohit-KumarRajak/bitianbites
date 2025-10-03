@@ -1,3 +1,5 @@
+// Enhanced Bitian Bites JavaScript with Professional Features
+
 const stallNotes = {
   rkfastfood: "🕙 Timings: 10 AM – 9 PM | 💥 Today's Offer: Discount Of 5% on every order.",
   tandoorijunction: "🔥 Open: 10 AM – 9 PM | 😋 Best in Tandoori Items",
@@ -8,6 +10,27 @@ const stallNotes = {
   delhishake: "🕙 Timings: 10 AM – 9 PM | 💥 Today's Offer: Updated soon."
 };
 
+const stallImages = {
+  rkfastfood: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+  tandoorijunction: "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+  italianpizzahub: "https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+  amritdharatecno: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+  brothersfoodjunction: "https://images.unsplash.com/photo-1517244683847-7456b63c5969?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+  downsouth: "https://images.unsplash.com/photo-1546833999-b9f581a1996d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+  delhishake: "https://images.unsplash.com/photo-1553787434-6f3a6b1b4b4b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+};
+
+const stallDescriptions = {
+  rkfastfood: "Delicious noodles, momos, and rolls near H4. Known for quick service and tasty food.",
+  tandoorijunction: "Specializing in authentic tandoori items with the best flavors on campus.",
+  italianpizzahub: "Authentic Italian pizzas made fresh with premium ingredients and traditional recipes.",
+  amritdharatecno: "Quick bites and snacks perfect for students looking for fast, affordable meals.",
+  brothersfoodjunction: "Traditional Indian food with homestyle cooking and authentic flavors.",
+  downsouth: "Continental and Indian cuisine with a modern twist and premium quality.",
+  delhishake: "Fresh juices, shakes, and healthy beverages made with natural ingredients."
+};
+
+// Include all the existing menu data
 const menus = {
   rkfastfood: {
   Noodles: [
@@ -1309,39 +1332,221 @@ const whatsappNumbers = {
 let cart = [];
 let currentShop = '';
 
+// Enhanced Menu Loading with Professional UI
 function loadMenu(shop) {
   currentShop = shop;
   cart = [];
   renderCart();
 
-  document.getElementById('shops').style.display = 'none';
+  // Hide all other sections and show only menu
+  hideAllSections();
   document.getElementById('menu').style.display = 'block';
 
-  // 🟡 Update Note
-  const noteContent = document.getElementById('note-content');
-  noteContent.innerText = stallNotes[shop] || "Welcome to this stall.";
-
-  // 🟡 Update Menu Heading
+  // Update stall image and info in menu header
+  const menuStallImage = document.getElementById('menu-stall-image');
+  menuStallImage.innerHTML = `<img src="${stallImages[shop]}" alt="${shop.toUpperCase()}">`;
+  
   const menuHeading = document.getElementById('menu-heading');
-  menuHeading.innerHTML = `📋 Menu - <span style="font-size: 27px;">${shop.toUpperCase()}</span>`;
+  menuHeading.innerHTML = `📋 ${shop.toUpperCase()} Menu`;
+  
+  const menuStallDescription = document.getElementById('menu-stall-description');
+  menuStallDescription.textContent = stallDescriptions[shop];
 
-  // 🟡 Render Menu
+  // Update note content
+  const noteContent = document.getElementById('note-content');
+  noteContent.innerHTML = stallNotes[shop] || "Welcome to this stall.";
+
+  // Render menu categories
   const categories = menus[shop];
   const categoryButtons = document.getElementById('category-buttons');
   const menuItemsDiv = document.getElementById('menu-items');
 
   categoryButtons.innerHTML = '';
-  menuItemsDiv.innerHTML = '<p>Select a category to view items.</p>';
+  menuItemsDiv.innerHTML = `
+    <div class="menu-placeholder">
+      <div class="placeholder-icon">🍽️</div>
+      <p>Select a category to view delicious items</p>
+    </div>
+  `;
 
   Object.keys(categories).forEach(category => {
     const btn = document.createElement('button');
-    btn.textContent = category;
+    btn.textContent = category.replace(/([A-Z])/g, ' $1').trim();
     btn.onclick = () => showCategoryItems(category);
     categoryButtons.appendChild(btn);
   });
+
+  // Smooth scroll to menu
+  document.getElementById('menu').scrollIntoView({ 
+    behavior: 'smooth',
+    block: 'start'
+  });
 }
 
-// Navbar functionality
+// Hide all main sections except menu
+function hideAllSections() {
+  const sections = ['popular-items', 'shops', 'hostel', 'cart'];
+  sections.forEach(sectionId => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.style.display = 'none';
+    }
+  });
+}
+
+// Show all sections when going back
+function showAllSections() {
+  const sections = ['popular-items', 'shops', 'hostel', 'cart'];
+  sections.forEach(sectionId => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.style.display = 'block';
+    }
+  });
+}
+
+// Enhanced category item display
+function showCategoryItems(category) {
+  const items = menus[currentShop][category];
+  const menuItemsDiv = document.getElementById('menu-items');
+  menuItemsDiv.innerHTML = '';
+
+  // Update active category button
+  const categoryButtons = document.querySelectorAll('#category-buttons button');
+  categoryButtons.forEach(btn => btn.classList.remove('active'));
+  event.target.classList.add('active');
+
+  items.forEach(item => {
+    const div = document.createElement('div');
+    div.className = 'menu-item';
+    div.innerHTML = `
+      <div class="menu-item-info">
+        <div class="menu-item-name">${item.name}</div>
+        <div class="menu-item-price">₹${item.price}</div>
+      </div>
+      <button class="add-btn" onclick="addToCart('${item.name}', ${item.price})">Add to Cart</button>
+    `;
+    menuItemsDiv.appendChild(div);
+  });
+}
+
+// Enhanced go back function
+function goBack() {
+  document.getElementById('menu').style.display = 'none';
+  showAllSections();
+
+  // Reset note to default
+  const noteContent = document.getElementById('note-content');
+  noteContent.innerHTML = `More stalls and food options will be added. Stay tuned!<br><br>
+  💬 After placing your order on WhatsApp, if there's a delay in response — whether the message is seen or not — you can make a WhatsApp call to the stall directly using the displayed number.`;
+
+  // Smooth scroll to stalls section
+  document.getElementById('shops').scrollIntoView({ 
+    behavior: 'smooth',
+    block: 'start'
+  });
+}
+
+// Enhanced add to cart with animations
+function addToCart(name, price) {
+  const existing = cart.find(i => i.name === name);
+  if (existing) {
+    existing.qty++;
+    showNotification(`✅ ${name} quantity updated! Total: ${existing.qty}`, 'success');
+  } else {
+    cart.push({ name, price, qty: 1 });
+    showNotification(`✅ ${name} added to cart!`, 'success');
+  }
+  renderCart();
+  updateCartBadge();
+  
+  // Add visual feedback to button
+  const button = event.target;
+  const originalText = button.textContent;
+  button.textContent = 'Added!';
+  button.style.background = 'linear-gradient(135deg, #4caf50 0%, #66bb6a 100%)';
+  
+  setTimeout(() => {
+    button.textContent = originalText;
+    button.style.background = '';
+  }, 1000);
+}
+
+// Enhanced cart rendering
+function renderCart() {
+  const cartList = document.getElementById('cart-items');
+  const cartSummary = document.getElementById('cart-summary');
+  const emptyCart = cartList.querySelector('.empty-cart');
+  
+  if (cart.length === 0) {
+    if (!emptyCart) {
+      cartList.innerHTML = `
+        <div class="empty-cart">
+          <div class="empty-cart-icon">🛒</div>
+          <p>Your cart is empty</p>
+          <span>Add some delicious items to get started!</span>
+        </div>
+      `;
+    }
+    cartSummary.style.display = 'none';
+    return;
+  }
+
+  cartList.innerHTML = '';
+  cartSummary.style.display = 'block';
+  
+  let subtotal = 0;
+  
+  cart.forEach((item, index) => {
+    const itemTotal = item.qty * item.price;
+    subtotal += itemTotal;
+    
+    const li = document.createElement('div');
+    li.className = 'cart-item';
+    li.innerHTML = `
+      <div class="cart-item-info">
+        <div class="cart-item-name">${item.name}</div>
+        <div class="cart-item-details">₹${item.price} × ${item.qty} = ₹${itemTotal}</div>
+      </div>
+      <div class="cart-item-actions">
+        <button class="qty-btn" onclick="updateQuantity(${index}, -1)">-</button>
+        <span class="qty">${item.qty}</span>
+        <button class="qty-btn" onclick="updateQuantity(${index}, 1)">+</button>
+        <button class="remove-btn" onclick="removeFromCart(${index})">🗑️</button>
+      </div>
+    `;
+    cartList.appendChild(li);
+  });
+
+  // Update cart summary
+  document.getElementById('cart-subtotal').textContent = `₹${subtotal}`;
+  document.getElementById('cart-total').textContent = `₹${subtotal}`;
+  
+  updateCartBadge();
+}
+
+// Update item quantity
+function updateQuantity(index, change) {
+  if (cart[index]) {
+    cart[index].qty += change;
+    if (cart[index].qty <= 0) {
+      cart.splice(index, 1);
+    }
+    renderCart();
+  }
+}
+
+// Remove item from cart
+function removeFromCart(index) {
+  if (cart[index]) {
+    const itemName = cart[index].name;
+    cart.splice(index, 1);
+    renderCart();
+    showNotification(`🗑️ ${itemName} removed from cart`, 'info');
+  }
+}
+
+// Enhanced navbar functionality
 function toggleMenu() {
   const navMenu = document.getElementById('nav-menu');
   const menuToggle = document.getElementById('menu-toggle');
@@ -1359,19 +1564,36 @@ function closeMenu() {
 // Update cart badge
 function updateCartBadge() {
   const totalItems = cart.reduce((total, item) => total + item.qty, 0);
-  document.getElementById('cart-badge').textContent = totalItems;
+  const badge = document.getElementById('cart-badge');
+  badge.textContent = totalItems;
+  
+  if (totalItems > 0) {
+    badge.style.display = 'flex';
+    badge.style.animation = 'pulse 0.3s ease';
+  } else {
+    badge.style.display = 'flex'; // Always show, even if 0
+  }
 }
 
-// Scroll to cart function
+// Enhanced scroll functions
 function scrollToCart() {
-  document.getElementById('cart').scrollIntoView({ 
-    behavior: 'smooth',
-    block: 'start'
-  });
+  if (document.getElementById('menu').style.display === 'block') {
+    goBack();
+    setTimeout(() => {
+      document.getElementById('cart').scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }, 300);
+  } else {
+    document.getElementById('cart').scrollIntoView({ 
+      behavior: 'smooth',
+      block: 'start'
+    });
+  }
   closeMenu();
 }
 
-// Scroll to top function
 function scrollToTop() {
   window.scrollTo({
     top: 0,
@@ -1379,57 +1601,102 @@ function scrollToTop() {
   });
 }
 
-function showCategoryItems(category) {
-  const items = menus[currentShop][category];
-  const menuItemsDiv = document.getElementById('menu-items');
-  menuItemsDiv.innerHTML = '';
-
-  items.forEach(item => {
-    const div = document.createElement('div');
-    div.innerHTML = `
-      <span>${item.name} - ₹${item.price}</span>
-      <button class="add-btn" onclick="addToCart('${item.name}', ${item.price})">Add</button>
-    `;
-    menuItemsDiv.appendChild(div);
+function scrollToStalls() {
+  document.getElementById('shops').scrollIntoView({ 
+    behavior: 'smooth',
+    block: 'start'
   });
 }
 
-function goBack() {
-  document.getElementById('menu').style.display = 'none';
-  document.getElementById('shops').style.display = 'block';
-
-  // 🟡 Reset Note to default
-  const noteContent = document.getElementById('note-content');
-  noteContent.innerHTML = `More stalls and food options will be added. Stay tuned!<br><br>
-💬 After placing your order on WhatsApp, if there's a delay in response — whether the message is seen or not — you can make a WhatsApp call to the stall directly using the displayed number.`;
-
-  // 🟡 Reset Menu Heading
-  const menuHeading = document.getElementById('menu-heading');
-  menuHeading.innerText = "📋 Menu";
+// Enhanced notification system
+function showNotification(message, type = 'info') {
+  const notification = document.createElement('div');
+  notification.className = `notification notification-${type}`;
+  notification.textContent = message;
+  
+  notification.style.cssText = `
+    position: fixed;
+    top: 100px;
+    right: 20px;
+    background: ${type === 'success' ? '#4caf50' : type === 'error' ? '#f44336' : '#2196f3'};
+    color: white;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    z-index: 10000;
+    font-weight: 600;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+  `;
+  
+  document.body.appendChild(notification);
+  
+  // Animate in
+  setTimeout(() => {
+    notification.style.transform = 'translateX(0)';
+  }, 100);
+  
+  // Animate out and remove
+  setTimeout(() => {
+    notification.style.transform = 'translateX(100%)';
+    setTimeout(() => {
+      if (notification.parentNode) {
+        notification.parentNode.removeChild(notification);
+      }
+    }, 300);
+  }, 3000);
 }
 
-function addToCart(name, price) {
-  const existing = cart.find(i => i.name === name);
-  if (existing) {
-    existing.qty++;
-    alert(`✅ ${name} added again. Total: ${existing.qty}`);
-  } else {
-    cart.push({ name, price, qty: 1 });
-    alert(`✅ ${name} added to cart.`);
+// Enhanced place order function
+function placeOrder() {
+  const name = document.getElementById('user-name').value.trim();
+  const email = document.getElementById('user-email').value.trim();
+  const hostel = document.getElementById('hostel-select').value;
+
+  if (!currentShop || cart.length === 0) {
+    showNotification('Please select a stall and add items to cart.', 'error');
+    return;
   }
-  renderCart();
-  updateCartBadge(); // Update the cart badge
-}
 
-function renderCart() {
-  const cartList = document.getElementById('cart-items');
-  cartList.innerHTML = '';
-  cart.forEach(i => {
-    const li = document.createElement('li');
-    li.textContent = `${i.name} x ${i.qty} = ₹${i.qty * i.price}`;
-    cartList.appendChild(li);
+  if (!hostel || !name || !email) {
+    showNotification('Please fill in all delivery details.', 'error');
+    return;
+  }
+
+  const total = cart.reduce((sum, i) => sum + (i.price * i.qty), 0);
+
+  if (total < 100) {
+    showNotification("Minimum order amount should be ₹100.", 'error');
+    return;
+  }
+
+  const orderText = cart.map(i => `- ${i.name} x ${i.qty} = ₹${i.price * i.qty}`).join('\n');
+  const message =
+    `Hello, I want to order from ${currentShop.toUpperCase()}:\n${orderText}\n\nTotal: ₹${total}\nName: ${name}\nEmail: ${email}\nHostel: ${hostel}`;
+
+  const waUrl = `https://wa.me/${whatsappNumbers[currentShop]}?text=${encodeURIComponent(message)}`;
+  window.open(waUrl, '_blank');
+
+  const now = new Date();
+  const time = now.toLocaleString();
+
+  // Send email notification
+  emailjs.send("service_9dpoazn", "template_mvegzx9", {
+    order_summary: orderText,
+    total_amount: total,
+    user_name: name,
+    user_email: email,
+    user_hostel: hostel,
+    vendor: currentShop.toUpperCase(),
+    time: time
+  }).then(() => {
+    showNotification("Order placed! Confirmation sent to vendor and admin.", 'success');
+  }).catch((error) => {
+    showNotification("Order placed, but email failed to send.", 'error');
   });
-  updateCartBadge(); // Update the cart badge
+
+  cart = [];
+  renderCart();
 }
 
 // Initialize navbar event listeners when DOM is loaded
@@ -1445,7 +1712,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const menuToggle = document.getElementById('menu-toggle');
     
     if (window.innerWidth <= 768 && 
-        navMenu.classList.contains('active') &&
+        navMenu && navMenu.classList.contains('active') &&
         !navMenu.contains(event.target) &&
         !menuToggle.contains(event.target)) {
       closeMenu();
@@ -1453,55 +1720,25 @@ document.addEventListener('DOMContentLoaded', function() {
   });
   
   // Hide navbar initially (before login)
-  document.getElementById('navbar').style.display = 'none';
+  const navbar = document.getElementById('navbar');
+  if (navbar) {
+    navbar.style.display = 'none';
+  }
+
+  // Initialize cart badge
+  updateCartBadge();
 });
 
-function placeOrder() {
-  const name = document.getElementById('user-name').value.trim();
-  const email = document.getElementById('user-email').value.trim();
-  const hostel = document.getElementById('hostel-select').value;
-
-  if (!currentShop || cart.length === 0) {
-    alert('Please select a stall and add items to cart.');
-    return;
+// Enhanced smooth scrolling for anchor links
+document.addEventListener('click', function(e) {
+  if (e.target.matches('a[href^="#"]')) {
+    e.preventDefault();
+    const target = document.querySelector(e.target.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
   }
-
-  if (!hostel || !name || !email) {
-    alert('Please select your hostel.');
-    return;
-  }
-
-  const total = cart.reduce((sum, i) => sum + (i.price * i.qty), 0);
-
-  if (total < 100) {
-    alert("Minimum order amount should be ₹100.");
-    return;
-  }
-
-  const orderText = cart.map(i => `- ${i.name} x ${i.qty} = ₹${i.price * i.qty}`).join('\n');
-  const message =
-    `Hello, I want to order from ${currentShop.toUpperCase()}:\n${orderText}\n\nTotal: ₹${total}\nName: ${name}\nEmail: ${email}\nHostel: ${hostel}`;
-
-  const waUrl = `https://wa.me/${whatsappNumbers[currentShop]}?text=${encodeURIComponent(message)}`;
-  window.open(waUrl, '_blank');
-
-  const now = new Date();
-  const time = now.toLocaleString();
-
-  emailjs.send("service_9dpoazn", "template_mvegzx9", {
-    order_summary: orderText,
-    total_amount: total,
-    user_name: name,
-    user_email: email,
-    user_hostel: hostel,
-    vendor: currentShop.toUpperCase(),
-    time: time
-  }).then(() => {
-    alert("Order placed! Confirmation sent to vendor and admin.");
-  }).catch((error) => {
-    alert("Order placed, but email failed to send: " + JSON.stringify(error));
-  });
-
-  cart = [];
-  renderCart();
-}
+});
