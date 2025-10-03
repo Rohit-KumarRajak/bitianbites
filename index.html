@@ -10,6 +10,9 @@
   <meta name="author" content="Rohit Kumar Rajak" />
 
   <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
   <script src="https://accounts.google.com/gsi/client" async defer></script>
   <script src="https://cdn.jsdelivr.net/npm/jwt-decode/build/jwt-decode.min.js"></script>
@@ -62,6 +65,12 @@
       document.getElementById('login-section').style.display = 'none';
       document.querySelector('main').style.display = 'block';
       document.getElementById('navbar').style.display = 'block';
+      
+      // Add smooth transition
+      document.querySelector('main').style.opacity = '0';
+      setTimeout(() => {
+        document.querySelector('main').style.opacity = '1';
+      }, 100);
     }
 
     (function () {
@@ -70,11 +79,20 @@
   </script>
 </head>
 <body>
+  <!-- Enhanced Loading Screen -->
+  <div id="loading-screen" class="loading-screen">
+    <div class="loading-content">
+      <div class="loading-logo">🍽️</div>
+      <div class="loading-text">Bitian Bites</div>
+      <div class="loading-spinner"></div>
+    </div>
+  </div>
+
   <!-- Navbar (initially hidden) -->
   <nav id="navbar" style="display: none;">
     <div class="nav-container">
       <div class="nav-logo">
-        <span>Bitian Bites</span>
+        <span>🍽️ Bitian Bites</span>
       </div>
       
       <div class="nav-icons">
@@ -98,247 +116,393 @@
       
       <!-- Navigation Menu -->
       <div class="nav-menu" id="nav-menu">
-        <a href="#" class="nav-link" onclick="closeMenu(); scrollToTop()">Home</a>
-        <a href="#popular-items" class="nav-link" onclick="closeMenu()">Popular</a>
-        <a href="#shops" class="nav-link" onclick="closeMenu()">Stalls</a>
-        <a href="#hostel" class="nav-link" onclick="closeMenu()">Delivery</a>
-        <a href="#cart" class="nav-link" onclick="closeMenu()">My Cart</a>
-        <a href="#footer" class="nav-link" onclick="closeMenu()">Contact</a>
+        <a href="#" class="nav-link" onclick="closeMenu(); scrollToTop()">🏠 Home</a>
+        <a href="#popular-items" class="nav-link" onclick="closeMenu()">🔥 Popular</a>
+        <a href="#shops" class="nav-link" onclick="closeMenu()">🍴 Stalls</a>
+        <a href="#hostel" class="nav-link" onclick="closeMenu()">🚚 Delivery</a>
+        <a href="#cart" class="nav-link" onclick="closeMenu()">🛒 My Cart</a>
+        <a href="#footer" class="nav-link" onclick="closeMenu()">📞 Contact</a>
       </div>
     </div>
   </nav>
 
-  <header>
-    <div class="hero-img">
-      <img src="bitmesra.png" alt="BIT Mesra Campus">
+  <!-- Enhanced Hero Section -->
+  <header class="hero-section">
+    <div class="hero-background">
+      <div class="hero-overlay"></div>
+      <img src="bitmesra.png" alt="BIT Mesra Campus" class="hero-bg-img">
     </div>
-    <div class="hero-text">
-      <h1>Bitian Bites</h1>
-      <p>Campus Food Ordering Portal - BIT Mesra</p>
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1>🍽️ Bitian Bites</h1>
+        <p>Premium Campus Food Ordering Portal</p>
+        <div class="hero-subtitle">BIT Mesra • Fresh • Fast • Delicious</div>
+      </div>
     </div>
   </header>
 
-  <section id="login-section">
-    <div id="g_id_onload"
-      data-client_id="581523739451-mnjcba0lk0ipn81d31bn0gtch7ei4c13.apps.googleusercontent.com"
-      data-callback="handleCredentialResponse"
-      data-auto_prompt="false">
-    </div>
+  <!-- Enhanced Login Section -->
+  <section id="login-section" class="login-container">
+    <div class="login-card">
+      <div class="login-header">
+        <h2>🔐 Welcome to Bitian Bites</h2>
+        <p>Sign in to start ordering delicious food</p>
+      </div>
+      
+      <div id="g_id_onload"
+        data-client_id="581523739451-mnjcba0lk0ipn81d31bn0gtch7ei4c13.apps.googleusercontent.com"
+        data-callback="handleCredentialResponse"
+        data-auto_prompt="false">
+      </div>
 
-    <div class="g_id_signin"
-      data-type="standard"
-      data-size="large"
-      data-theme="filled_blue"
-      data-text="sign_in_with"
-      data-shape="pill"
-      data-logo_alignment="left">
-    </div>
+      <div class="g_id_signin"
+        data-type="standard"
+        data-size="large"
+        data-theme="filled_blue"
+        data-text="sign_in_with"
+        data-shape="pill"
+        data-logo_alignment="left">
+      </div>
 
-    <p style="text-align:center; margin-top: 10px; color: #444; font-weight: 500;">
-      Please login using your official <strong>@bitmesra.ac.in</strong> email only to continue.
-    </p>
+      <div class="login-info">
+        <p>Please login using your official <strong>@bitmesra.ac.in</strong> email only to continue.</p>
+      </div>
+    </div>
   </section>
 
   <main style="display:none;">
-    <section id="note">
-      <h2>📢 Note</h2>
-      <p id="note-content">More stalls and food options will be added. Stay tuned!<br><br>
-      💬 After placing your order on WhatsApp, if there's a delay in response — whether the message is seen or not — you can make a WhatsApp call to the stall directly using the displayed number.</p>
+    <!-- Enhanced Note Section -->
+    <section id="note" class="note-section">
+      <div class="note-icon">📢</div>
+      <div class="note-content">
+        <h2>Important Notice</h2>
+        <p id="note-content">More stalls and food options will be added. Stay tuned!<br><br>
+        💬 After placing your order on WhatsApp, if there's a delay in response — whether the message is seen or not — you can make a WhatsApp call to the stall directly using the displayed number.</p>
+      </div>
     </section>
 
-    <!-- Popular Items Section -->
-    <section id="popular-items">
-      <h2>🔥 Popular Items</h2>
+    <!-- Enhanced Popular Items Section -->
+    <section id="popular-items" class="popular-section">
+      <div class="section-header">
+        <h2>🔥 Popular Items</h2>
+        <p>Most loved dishes by BIT students</p>
+      </div>
       <div class="popular-grid">
-        <div class="popular-item">
-          <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Pizza">
-          <h3>Italian Pizza</h3>
-          <p>Fresh, authentic pizzas from Italian Pizza Hub</p>
-          <span class="price">Starting ₹190</span>
+        <div class="popular-item" onclick="scrollToStalls()">
+          <div class="popular-image">
+            <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Pizza">
+            <div class="popular-overlay">
+              <span class="popular-cta">Order Now</span>
+            </div>
+          </div>
+          <div class="popular-info">
+            <h3>Italian Pizza</h3>
+            <p>Fresh, authentic pizzas from Italian Pizza Hub</p>
+            <div class="popular-price">Starting ₹190</div>
+          </div>
         </div>
-        <div class="popular-item">
-          <img src="https://images.unsplash.com/photo-1496412705862-e0088f16f791?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Noodles">
-          <h3>Hakka Noodles</h3>
-          <p>Delicious noodles from multiple stalls</p>
-          <span class="price">Starting ₹80</span>
+        <div class="popular-item" onclick="scrollToStalls()">
+          <div class="popular-image">
+            <img src="https://images.unsplash.com/photo-1496412705862-e0088f16f791?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Noodles">
+            <div class="popular-overlay">
+              <span class="popular-cta">Order Now</span>
+            </div>
+          </div>
+          <div class="popular-info">
+            <h3>Hakka Noodles</h3>
+            <p>Delicious noodles from multiple stalls</p>
+            <div class="popular-price">Starting ₹80</div>
+          </div>
         </div>
-        <div class="popular-item">
-          <img src="https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Momos">
-          <h3>Steamed Momos</h3>
-          <p>Hot & fresh momos with spicy chutney</p>
-          <span class="price">Starting ₹70</span>
+        <div class="popular-item" onclick="scrollToStalls()">
+          <div class="popular-image">
+            <img src="https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Momos">
+            <div class="popular-overlay">
+              <span class="popular-cta">Order Now</span>
+            </div>
+          </div>
+          <div class="popular-info">
+            <h3>Steamed Momos</h3>
+            <p>Hot & fresh momos with spicy chutney</p>
+            <div class="popular-price">Starting ₹70</div>
+          </div>
         </div>
-        <div class="popular-item">
-          <img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Burger">
-          <h3>Gourmet Burgers</h3>
-          <p>Juicy burgers from Down South</p>
-          <span class="price">Starting ₹80</span>
+        <div class="popular-item" onclick="scrollToStalls()">
+          <div class="popular-image">
+            <img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Burger">
+            <div class="popular-overlay">
+              <span class="popular-cta">Order Now</span>
+            </div>
+          </div>
+          <div class="popular-info">
+            <h3>Gourmet Burgers</h3>
+            <p>Juicy burgers from Down South</p>
+            <div class="popular-price">Starting ₹80</div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="shops">
-      <h2>🍴 Select a Stall</h2>
-      <div class="shop-grid">
-        <div class="stall-card" onclick="loadMenu('rkfastfood')">
-          <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="R.K Fast Food">
+    <!-- Enhanced Stalls Section -->
+    <section id="shops" class="stalls-section">
+      <div class="section-header">
+        <h2>🍴 Choose Your Stall</h2>
+        <p>Fresh food from verified campus vendors</p>
+      </div>
+      <div class="stalls-grid">
+        <div class="stall-card" onclick="loadMenu('rkfastfood')" data-stall="rkfastfood">
+          <div class="stall-image">
+            <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="R.K Fast Food">
+            <div class="stall-badge">0% OFF</div>
+          </div>
           <div class="stall-info">
             <h3>R.K FAST FOOD</h3>
-            <p>Near H4 • Noodles, Momos, Rolls</p>
-            <span class="timing">⏰ 10 AM - 9 PM</span>
-            <div class="offer">💥 5% Discount on every order</div>
+            <p>📍 Near H4 • Noodles, Momos, Rolls</p>
+            <div class="stall-details">
+              <span class="timing">⏰ 10 AM - 9 PM</span>
+              <div class="rating">⭐ not availble</div>
+            </div>
+            <div class="offer">💥 0% Discount on every order</div>
           </div>
         </div>
 
-        <div class="stall-card" onclick="loadMenu('tandoorijunction')">
-          <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Tandoori Junction">
+        <div class="stall-card" onclick="loadMenu('tandoorijunction')" data-stall="tandoorijunction">
+          <div class="stall-image">
+            <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Tandoori Junction">
+            <div class="stall-badge">TANDOORI</div>
+          </div>
           <div class="stall-info">
             <h3>TANDOORI JUNCTION</h3>
-            <p>Near H4 • Best Tandoori Items</p>
-            <span class="timing">⏰ 10 AM - 9 PM</span>
+            <p>📍 Near H4 • Best Tandoori Items</p>
+            <div class="stall-details">
+              <span class="timing">⏰ 10 AM - 9 PM</span>
+              <div class="rating">⭐ not available</div>
+            </div>
             <div class="offer">🔥 Speciality in Tandoori</div>
           </div>
         </div>
 
-        <div class="stall-card" onclick="loadMenu('italianpizzahub')">
-          <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Italian Pizza Hub">
+        <div class="stall-card" onclick="loadMenu('italianpizzahub')" data-stall="italianpizzahub">
+          <div class="stall-image">
+            <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Italian Pizza Hub">
+            <div class="stall-badge">10% OFF</div>
+          </div>
           <div class="stall-info">
             <h3>ITALIAN PIZZA HUB</h3>
-            <p>Behind H5 • Authentic Italian Pizza</p>
-            <span class="timing">⏰ 10 AM - 9 PM</span>
+            <p>📍 Behind H5 • Authentic Italian Pizza</p>
+            <div class="stall-details">
+              <span class="timing">⏰ 10 AM - 9 PM</span>
+              <div class="rating">⭐ not available</div>
+            </div>
             <div class="offer">🍕 10% off on orders above ₹500</div>
           </div>
         </div>
 
-        <div class="stall-card" onclick="loadMenu('amritdharatecno')">
-          <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Amrit Dhara Tecno">
+        <div class="stall-card" onclick="loadMenu('amritdharatecno')" data-stall="amritdharatecno">
+          <div class="stall-image">
+            <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Amrit Dhara Tecno">
+            <div class="stall-badge">QUICK</div>
+          </div>
           <div class="stall-info">
             <h3>AMRIT DHARA TECNO</h3>
-            <p>Near H6 • Quick Bites & Snacks</p>
-            <span class="timing">⏰ 10 AM - 9 PM</span>
+            <p>📍 Near H6 • Quick Bites & Snacks</p>
+            <div class="stall-details">
+              <span class="timing">⏰ 10 AM - 9 PM</span>
+              <div class="rating">⭐ not available</div>
+            </div>
             <div class="offer">💥 Special offers updated soon</div>
           </div>
         </div>
 
-        <div class="stall-card" onclick="loadMenu('brothersfoodjunction')">
-          <img src="https://images.unsplash.com/photo-1517244683847-7456b63c5969?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Brothers Food Junction">
+        <div class="stall-card" onclick="loadMenu('brothersfoodjunction')" data-stall="brothersfoodjunction">
+          <div class="stall-image">
+            <img src="https://images.unsplash.com/photo-1517244683847-7456b63c5969?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Brothers Food Junction">
+            <div class="stall-badge">5% OFF</div>
+          </div>
           <div class="stall-info">
             <h3>BROTHERS FOOD JUNCTION</h3>
-            <p>Near H13 • Traditional Indian Food</p>
-            <span class="timing">⏰ 10 AM - 9 PM</span>
+            <p>📍 Near H13 • Traditional Indian Food</p>
+            <div class="stall-details">
+              <span class="timing">⏰ 10 AM - 9 PM</span>
+              <div class="rating">⭐ not availble</div>
+            </div>
             <div class="offer">💥 5% Discount on every order</div>
           </div>
         </div>
 
-        <div class="stall-card" onclick="loadMenu('downsouth')">
-          <img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Down South">
+        <div class="stall-card" onclick="loadMenu('downsouth')" data-stall="downsouth">
+          <div class="stall-image">
+            <img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Down South">
+            <div class="stall-badge">PREMIUM</div>
+          </div>
           <div class="stall-info">
             <h3>DOWN SOUTH</h3>
-            <p>Behind H5 • Continental & Indian</p>
-            <span class="timing">⏰ 10 AM - 9 PM</span>
+            <p>📍 Behind H5 • Continental & Indian</p>
+            <div class="stall-details">
+              <span class="timing">⏰ 10 AM - 9 PM</span>
+              <div class="rating">⭐ not availble</div>
+            </div>
             <div class="offer">💥 Special offers updated soon</div>
           </div>
         </div>
 
-        <div class="stall-card" onclick="loadMenu('delhishake')">
-          <img src="https://images.unsplash.com/photo-1553787434-6f3a6b1b4b4b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Delhi Shake">
+        <div class="stall-card" onclick="loadMenu('delhishake')" data-stall="delhishake">
+          <div class="stall-image">
+            <img src="https://images.unsplash.com/photo-1553787434-6f3a6b1b4b4b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Delhi Shake">
+            <div class="stall-badge">FRESH</div>
+          </div>
           <div class="stall-info">
             <h3>DELHI SHAKE & JUICE</h3>
-            <p>Behind H5 • Fresh Juices & Shakes</p>
-            <span class="timing">⏰ 10 AM - 9 PM</span>
+            <p>📍 Behind H5 • Fresh Juices & Shakes</p>
+            <div class="stall-details">
+              <span class="timing">⏰ 10 AM - 9 PM</span>
+              <div class="rating">⭐ not availble</div>
+            </div>
             <div class="offer">🥤 Fresh & Healthy Options</div>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="menu" style="display:none;">
-      <button class="back-btn" onclick="goBack()">⬅️ Back to Stalls</button>
-      <h2 id="menu-heading">📋 Menu</h2>
-      <div id="category-buttons"></div>
-      <div id="menu-items"></div>
-    </section>
-
-    <section id="hostel">
-      <h2>🚚 Delivery Details</h2>
-      <div class="input-group">
-        <label for="user-name">Your Name:</label>
-        <input type="text" id="user-name" placeholder="Enter your name" readonly required>
+    <!-- Enhanced Menu Section -->
+    <section id="menu" class="menu-section" style="display:none;">
+      <div class="menu-header">
+        <button class="back-btn" onclick="goBack()">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M19 12H5M12 19l-7-7 7-7"/>
+          </svg>
+          Back to Stalls
+        </button>
+        <div class="menu-stall-info">
+          <div id="menu-stall-image" class="menu-stall-image"></div>
+          <div class="menu-stall-details">
+            <h2 id="menu-heading">📋 Menu</h2>
+            <p id="menu-stall-description"></p>
+          </div>
+        </div>
       </div>
-      <div class="input-group">
-        <label for="user-email">Your BIT Gmail:</label>
-        <input type="email" id="user-email" placeholder="Your BIT email" readonly required>
-      </div>
-      <div class="input-group">
-        <label for="hostel-select">Hostel:</label>
-        <select id="hostel-select">
-          <option value="">Select Hostel</option>
-          <option value="Girls Hostel">Girls Hostel</option>
-          <option value="Hostel 1">Hostel 1</option>
-          <option value="Hostel 2">Hostel 2</option>
-          <option value="Hostel 3">Hostel 3</option>
-          <option value="Hostel 4">Hostel 4</option>
-          <option value="Hostel 5">Hostel 5</option>
-          <option value="Hostel 6">Hostel 6</option>
-          <option value="Hostel 7">Hostel 7</option>
-          <option value="Hostel 10">Hostel 10</option>
-          <option value="Hostel 11">Hostel 11</option>
-          <option value="Hostel 12">Hostel 12</option>
-          <option value="Hostel 13">Hostel 13</option>
-          <option value="Rs Hostel">RS Hostel</option>
-          <option value="PMC">PMC</option>
-          <option value="Auditorium">Auditorium</option>
-          <option value="Inner Canteen">Inner Canteen</option>
-          <option value="Quarter-E1">Quarter-E1</option>
-          <option value="Quarter-E2">Quarter-E2</option>
-          <option value="BIT Gate">BIT Gate</option>
-        </select>
+      
+      <div class="menu-content">
+        <div id="category-buttons" class="category-buttons"></div>
+        <div id="menu-items" class="menu-items">
+          <div class="menu-placeholder">
+            <div class="placeholder-icon">🍽️</div>
+            <p>Select a category to view delicious items</p>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section id="cart">
-      <h2>🛒 Your Cart</h2>
-      <ul id="cart-items"></ul>
-      <button class="order-btn" onclick="placeOrder()">✅ Place Order via WhatsApp</button>
+    <!-- Enhanced Delivery Section -->
+    <section id="hostel" class="delivery-section">
+      <div class="section-header">
+        <h2>🚚 Delivery Details</h2>
+        <p>We deliver fresh food right to your hostel</p>
+      </div>
+      <div class="delivery-form">
+        <div class="input-group">
+          <label for="user-name">👤 Your Name:</label>
+          <input type="text" id="user-name" placeholder="Enter your full name" readonly required>
+        </div>
+        <div class="input-group">
+          <label for="user-email">📧 Your BIT Gmail:</label>
+          <input type="email" id="user-email" placeholder="Your BIT email address" readonly required>
+        </div>
+        <div class="input-group">
+          <label for="hostel-select">🏠 Select Your Hostel:</label>
+          <select id="hostel-select">
+            <option value="">Choose your hostel</option>
+            <option value="Girls Hostel">Girls Hostel</option>
+            <option value="Hostel 1">Hostel 1</option>
+            <option value="Hostel 2">Hostel 2</option>
+            <option value="Hostel 3">Hostel 3</option>
+            <option value="Hostel 4">Hostel 4</option>
+            <option value="Hostel 5">Hostel 5</option>
+            <option value="Hostel 6">Hostel 6</option>
+            <option value="Hostel 7">Hostel 7</option>
+            <option value="Hostel 10">Hostel 10</option>
+            <option value="Hostel 11">Hostel 11</option>
+            <option value="Hostel 12">Hostel 12</option>
+            <option value="Hostel 13">Hostel 13</option>
+            <option value="Rs Hostel">RS Hostel</option>
+            <option value="PMC">PMC</option>
+            <option value="Auditorium">Auditorium</option>
+            <option value="Inner Canteen">Inner Canteen</option>
+            <option value="Quarter-E1">Quarter-E1</option>
+            <option value="Quarter-E2">Quarter-E2</option>
+            <option value="BIT Gate">BIT Gate</option>
+          </select>
+        </div>
+      </div>
+    </section>
+
+    <!-- Enhanced Cart Section -->
+    <section id="cart" class="cart-section">
+      <div class="section-header">
+        <h2>🛒 Your Cart</h2>
+        <p>Review your order before placing</p>
+      </div>
+      <div class="cart-content">
+        <div id="cart-items" class="cart-items">
+          <div class="empty-cart">
+            <div class="empty-cart-icon">🛒</div>
+            <p>Your cart is empty</p>
+            <span>Add some delicious items to get started!</span>
+          </div>
+        </div>
+        <div class="cart-summary" id="cart-summary" style="display: none;">
+          <div class="summary-row">
+            <span>Subtotal:</span>
+            <span id="cart-subtotal">₹0</span>
+          </div>
+          <div class="summary-row total">
+            <span>Total:</span>
+            <span id="cart-total">₹0</span>
+          </div>
+        </div>
+        <button class="order-btn" onclick="placeOrder()">
+          <span class="btn-icon">📱</span>
+          Place Order via WhatsApp
+        </button>
+      </div>
     </section>
   </main>
 
-  <footer id="footer" style="background: linear-gradient(135deg, #d84315 0%, #ff5722 30%, #ff6f00 70%, #f57c00 100%);
-  color: white; text-align: center; padding: 24px; font-weight: 700; display: flex; justify-content: center; align-items: center;">
-    <div style="display:flex; flex-direction: column; align-items:center; gap:10px; text-align:center;">
-
-      <!-- Founder Image & Name -->
-      <img src="PF.png" alt="Founder Rohit Kumar Rajak" 
-           style="width: 100px; height: 100px; border-radius: 50%; border:2px solid white; object-fit: cover;">
-      <p style="margin:0;">&copy; 2025 Bitian Bites | Founder & Developer: Rohit Kumar Rajak</p>
-
-      <!-- Instagram Follow -->
-      <div style="display: flex; align-items: center; gap: 8px; margin-top: 5px;">
-        <span style="color: #ffeaea; font-size: 0.95rem;">Follow us on Instagram</span>
-        <a href="https://www.instagram.com/bitian_bites?igsh=cDNqaHNra2h5cGY=" target="_blank" class="insta-icon" style="display:flex; align-items:center;">
-          <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" 
-               alt="Instagram" width="24" height="24" 
-               style="border-radius:6px; vertical-align: middle;" />
-        </a>
+  <!-- Enhanced Footer -->
+  <footer id="footer">
+    <div class="footer-content">
+      <div class="footer-main">
+        <div class="founder-section">
+          <img src="PF.png" alt="Founder Rohit Kumar Rajak" class="founder-image">
+          <div class="founder-info">
+            <h3>Rohit Kumar Rajak</h3>
+            <p>Founder & Developer</p>
+          </div>
+        </div>
+        
+        <div class="footer-links">
+          <div class="social-section">
+            <p>Follow us on Instagram</p>
+            <a href="https://www.instagram.com/bitian_bites?igsh=cDNqaHNra2h5cGY=" target="_blank" class="social-link">
+              <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram" class="social-icon">
+              @bitian_bites
+            </a>
+          </div>
+          
+          <div class="team-section">
+            <p>Marketing Team</p>
+            <span>Mohit Kumar & Varun Kumar</span>
+          </div>
+        </div>
       </div>
-
-      <!-- Marketing Team -->
-      <p style="margin:0; font-size: 0.95rem; color: #ffeaea;">
-        Marketing Team: Mohit Kumar & Varun Kumar
-      </p>
-
-      <!-- Email -->
-      <p style="font-size: 0.9rem; color: #ffeaea;">
-        Want special email access? Contact us at:<br>
-        📧 <a href="/cdn-cgi/l/email-protection#1072796479717e72796475636475717d6350777d71797c3e737f7d" style="color: #fff; text-decoration: underline;">
-          <span class="__cf_email__" data-cfemail="24464d504d454a464d5041575041454957644349454d480a474b49">[email&#160;protected]</span>
-        </a>
-      </p>
-
+      
+      <div class="footer-bottom">
+        <p>&copy; 2025 Bitian Bites. All rights reserved.</p>
+        <p>Want special email access? Contact us at: <a href="/cdn-cgi/l/email-protection#472428293326243307252e332e2629252e3322346924282a"><span class="__cf_email__" data-cfemail="80e3efeef4e1e3f4c0e2e9f4e9e1eee2e9f4e5f3aee3efed">[email&#160;protected]</span></a></p>
+      </div>
     </div>
   </footer>
 
   <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="script.js"></script>
 </body>
 </html>
-
