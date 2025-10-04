@@ -71,6 +71,8 @@
       setTimeout(() => {
         document.querySelector('main').style.opacity = '1';
       }, 100);
+      // ✅ Force scroll to top after login
+window.scrollTo({ top: 0, behavior: "smooth" });
     }
 
     (function () {
@@ -506,3 +508,4 @@
   <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="script.js"></script>
 </body>
 </html>
+
