@@ -1376,11 +1376,11 @@ function loadMenu(shop) {
     categoryButtons.appendChild(btn);
   });
 
-  // Smooth scroll to menu
-  document.getElementById('menu').scrollIntoView({ 
-    behavior: 'smooth',
-    block: 'start'
-  });
+  // ✅ Smooth scroll to note with offset (avoid navbar overlap)
+const noteSection = document.getElementById('note');
+const y = noteSection.getBoundingClientRect().top + window.scrollY - 80; 
+window.scrollTo({ top: y, behavior: 'smooth' });
+
 }
 
 // Hide all main sections except menu
@@ -1742,3 +1742,4 @@ document.addEventListener('click', function(e) {
     }
   }
 });
+
