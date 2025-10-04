@@ -766,13 +766,13 @@ section:hover {
   font-weight: 600;
   font-size: var(--font-size-sm);
   cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  margin-bottom: 2rem;
+  display: block;          /* ✅ button ko block banaya */
+  margin: 0 auto 2rem;     /* ✅ auto left-right se center */
   transition: var(--transition-fast);
   box-shadow: var(--shadow-sm);
+  text-align: center;
 }
+
 
 .back-btn:hover {
   background: linear-gradient(135deg, #616161 0%, #757575 100%);
@@ -1486,3 +1486,4 @@ select:focus {
     display: none !important;
   }
 }
+
