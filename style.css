@@ -256,7 +256,7 @@ body {
 /* Enhanced Hero Section with Better Text Visibility */
 .hero-section {
   position: relative;
-  height: 65vh;
+  height: 53vh;
   min-height: 500px;
   overflow: hidden;
   display: flex;
@@ -1486,5 +1486,6 @@ select:focus {
     display: none !important;
   }
 }
+
 
 
