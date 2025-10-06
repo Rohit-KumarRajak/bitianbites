@@ -662,7 +662,7 @@ section:hover {
 
 .stall-image {
   position: relative;
-  height: 220px;
+  height: 400px;
   overflow: hidden;
 }
 
@@ -1486,4 +1486,5 @@ select:focus {
     display: none !important;
   }
 }
+
 
