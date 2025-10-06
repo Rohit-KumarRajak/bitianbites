@@ -18,7 +18,7 @@ const stallImages = {
   amritdharatecno: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
   brothersfoodjunction: "https://images.unsplash.com/photo-1517244683847-7456b63c5969?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
   downsouth: "https://images.unsplash.com/photo-1546833999-b9f581a1996d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-  delhishake: "https://images.unsplash.com/photo-1553787434-6f3a6b1b4b4b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+  delhishake: "assets/stallimages/delhishake.jpg",
   dhananjaymess: "https://images.unsplash.com/photo-1517244683847-7456b63c5969?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
 };
 
@@ -1825,6 +1825,7 @@ document.addEventListener('click', function(e) {
     }
   }
 });
+
 
 
 
