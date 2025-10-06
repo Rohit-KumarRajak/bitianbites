@@ -3,18 +3,18 @@
 const stallNotes = {
   rkfastfood: "🕙 Timings: 10 AM – 9 PM | 💥 Today's Offer: Updated soon.",
   tandoorijunction: "🔥 Open: 10 AM – 9 PM | 😋 Best in Tandoori Items",
-  italianpizzahub: "🍕 Open: 10 AM – 9 PM | 💥 Today's Offer: 10% discount on Order above 500.Buy 1 get 1 free on medium and large pizza & 1 chocolawa cake is free on 1 small pizza",
+  italianpizzahub: "🍕 Open: 10 AM – 9 PM | 💥 Today's Offer: 30% OFF(Large),20% OFF(Medium),10%OFF(Small) Pizzas",
   amritdharatecno: "⏰ 10 AM – 9 PM | 💥 Today's Offer: Updated soon.",
   brothersfoodjunction: "Open from 10 AM – 9 PM.💥 Today's Offer: Updated soon.",
   downsouth: "🕙 Timings: 10 AM – 9 PM | 💥 Today's Offer: Updated soon.",
   delhishake: "🕙 Timings: 10 AM – 9 PM | 💥 Today's Offer: Updated soon.",
-  dhananjaymess: "📍 Located 0.5 km outside campus | 💰 Lower prices compared to other stalls | 🕙 Timings: 10 AM – 9 PM",
+  dhananjaymess: "📍 Located 0.5 km outside campus | 💰 Lower prices compared to other stalls | 🕙 Timings: 10 AM – 10 PM",
 };
 
 const stallImages = {
   rkfastfood: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
   tandoorijunction: "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-  italianpizzahub: "https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+  italianpizzahub: "assets/stallimages/italianpizzahub.jpg",
   amritdharatecno: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
   brothersfoodjunction: "https://images.unsplash.com/photo-1517244683847-7456b63c5969?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
   downsouth: "https://images.unsplash.com/photo-1546833999-b9f581a1996d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
@@ -1825,5 +1825,6 @@ document.addEventListener('click', function(e) {
     }
   }
 });
+
 
 
