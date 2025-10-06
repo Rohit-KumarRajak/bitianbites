@@ -1,13 +1,14 @@
 // Enhanced Bitian Bites JavaScript with Professional Features
 
 const stallNotes = {
-  rkfastfood: "🕙 Timings: 10 AM – 9 PM | 💥 Today's Offer: Discount Of 5% on every order.",
+  rkfastfood: "🕙 Timings: 10 AM – 9 PM | 💥 Today's Offer: Updated soon.",
   tandoorijunction: "🔥 Open: 10 AM – 9 PM | 😋 Best in Tandoori Items",
   italianpizzahub: "🍕 Open: 10 AM – 9 PM | 💥 Today's Offer: 10% discount on Order above 500.Buy 1 get 1 free on medium and large pizza & 1 chocolawa cake is free on 1 small pizza",
   amritdharatecno: "⏰ 10 AM – 9 PM | 💥 Today's Offer: Updated soon.",
-  brothersfoodjunction: "Open from 10 AM – 9 PM.💥 Today's Offer: Discount Of 5% on every order.",
+  brothersfoodjunction: "Open from 10 AM – 9 PM.💥 Today's Offer: Updated soon.",
   downsouth: "🕙 Timings: 10 AM – 9 PM | 💥 Today's Offer: Updated soon.",
-  delhishake: "🕙 Timings: 10 AM – 9 PM | 💥 Today's Offer: Updated soon."
+  delhishake: "🕙 Timings: 10 AM – 9 PM | 💥 Today's Offer: Updated soon.",
+  dhananjaymess: "📍 Located 0.5 km outside campus | 💰 Lower prices compared to other stalls | 🕙 Timings: 10 AM – 9 PM",
 };
 
 const stallImages = {
@@ -17,7 +18,8 @@ const stallImages = {
   amritdharatecno: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
   brothersfoodjunction: "https://images.unsplash.com/photo-1517244683847-7456b63c5969?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
   downsouth: "https://images.unsplash.com/photo-1546833999-b9f581a1996d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-  delhishake: "https://images.unsplash.com/photo-1553787434-6f3a6b1b4b4b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+  delhishake: "https://images.unsplash.com/photo-1553787434-6f3a6b1b4b4b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+  dhananjaymess: "https://images.unsplash.com/photo-1517244683847-7456b63c5969?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
 };
 
 const stallDescriptions = {
@@ -27,7 +29,8 @@ const stallDescriptions = {
   amritdharatecno: "Quick bites and snacks perfect for students looking for fast, affordable meals.",
   brothersfoodjunction: "Traditional Indian food with homestyle cooking and authentic flavors.",
   downsouth: "Continental and Indian cuisine with a modern twist and premium quality.",
-  delhishake: "Fresh juices, shakes, and healthy beverages made with natural ingredients."
+  delhishake: "Fresh juices, shakes, and healthy beverages made with natural ingredients.",
+  dhananjaymess: "Authentic North Indian mess located 0.5km outside campus. Known for homestyle cooking and budget-friendly prices."
 };
 
 // Include all the existing menu data
@@ -1316,7 +1319,86 @@ const menus = {
     { name: 'Rasmalai Lassi (M)', price: 60 },
     { name: 'Rasmalai Lassi (XL)', price: 120 }
   ]
-}
+},
+
+    dhananjaymess: {
+    NonVegSpecials: [
+      { name: 'Chicken Curry', price: 160 },
+      { name: 'Chicken Butter Masala', price: 170 },
+      { name: 'Chicken Do Payja', price: 180 },
+      { name: 'Chicken Masala', price: 170 },
+      { name: 'Chicken Khadai', price: 170 },
+      { name: 'Chicken Korma', price: 200 },
+      { name: 'Chicken Muglai', price: 200 },
+      { name: 'Chicken Chilli', price: 160 },
+      { name: 'Chicken Chilli Bone-less', price: 180 },
+      { name: 'Chicken Manchurian', price: 160 },
+      { name: 'Chicken Manchurian Bone-less', price: 190 },
+      { name: 'Chicken Dry Fry', price: 160 },
+      { name: 'Full Chicken', price: 450 },
+      { name: 'Half Chicken', price: 250 },
+      { name: 'Fish Curry', price: 140 },
+      { name: 'Fish Do Payja', price: 140 },
+      { name: 'Fish Dry Fry', price: 140 },
+      { name: 'Fish Fry', price: 140 }
+    ],
+
+    PaneerMushroom: [
+      { name: 'Paneer Butter Masala', price: 160 },
+      { name: 'Paneer Masala', price: 160 },
+      { name: 'Paneer Do Payja', price: 180 },
+      { name: 'Paneer Korma', price: 180 },
+      { name: 'Paneer Chilli', price: 170 },
+      { name: 'Paneer Manchurian', price: 170 },
+      { name: 'Mushroom Butter Masala', price: 160 },
+      { name: 'Mushroom Masala', price: 160 }
+    ],
+
+    VegItems: [
+      { name: 'Mix Veg', price: 120 },
+      { name: 'Aloo Gobi', price: 100 },
+      { name: 'Aloo Matar', price: 80 },
+      { name: 'Aloo Do Payja', price: 100 },
+      { name: 'Veg Dal Fry', price: 140 },
+      { name: 'Veg Korma', price: 140 },
+      { name: 'Veg Narmatan Korma', price: 140 },
+      { name: 'Aloo Dam', price: 80 },
+      { name: 'Aloo Dam Kashmiri', price: 150 },
+      { name: 'Veg Chilli', price: 160 },
+      { name: 'Veg Manchurian', price: 120 },
+      { name: 'Dal Tadka', price: 100 },
+      { name: 'Dal Makhani', price: 120 },
+      { name: 'Butter Dal', price: 100 },
+      { name: 'Fizz Masala', price: 120 }
+    ],
+
+    Thali: [
+      { name: 'Veg Thali (Paneer,Mix Veg, Dal Tadka, Roti)', price: 160 },
+      { name: 'Chicken Thali (Chicken, Roti)', price: 120 }
+    ],
+
+    RiceBiryani: [
+      { name: 'Katrani Normal Rice (1 Plate)', price: 60 },
+      { name: 'Bab Normal Rice (1 Plate)', price: 50 },
+      { name: 'Basmati Rice(1 Plate)', price: 50 },
+      { name: 'Zeera Fry Rice', price: 100 },
+      { name: 'Veg Fry Rice', price: 120 },
+      { name: 'Veg Biryani', price: 120 },
+      { name: 'Chicken Biryani', price: 140 }
+    ],
+
+    RotiParatha: [
+      { name: 'Plain Roti', price: 7 },
+      { name: 'Plain Paratha', price: 20 },
+      { name: 'Laccha Paratha', price: 20 },
+      { name: 'Aloo Paratha', price: 30 },
+      { name: 'Gobi Paratha', price: 30 },
+      { name: 'Sattu Paratha', price: 30 },
+      { name: 'Pyaz Paratha', price: 30 },
+      { name: 'Muli Paratha', price: 30 },
+      { name: 'Paneer Paratha', price: 60 }
+    ]
+  }
 };
 
 const whatsappNumbers = {
@@ -1326,7 +1408,8 @@ const whatsappNumbers = {
   amritdharatecno: '919934062930',
   brothersfoodjunction: '917667392577',
   downsouth: '919955581795',
-  delhishake: '917050312280'
+  delhishake: '917050312280',
+  dhananjaymess: '919939738152',
 };
 
 let cart = [];
@@ -1742,4 +1825,5 @@ document.addEventListener('click', function(e) {
     }
   }
 });
+
 
