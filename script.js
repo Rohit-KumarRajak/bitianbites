@@ -1691,6 +1691,26 @@ function scrollToStalls() {
   });
 }
 
+function scrollToStall(stallId) {
+  // Scroll smoothly to the stalls section
+  const stallSection = document.querySelector(`#shops`);
+  stallSection.scrollIntoView({ behavior: 'smooth' });
+
+  // Wait a bit for scroll animation, then highlight the correct stall
+  setTimeout(() => {
+    const targetStall = document.querySelector(`.stall-card[data-stall="${stallId}"]`);
+    if (targetStall) {
+      targetStall.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      targetStall.style.boxShadow = "0 0 25px 5px rgba(255, 107, 53, 0.6)";
+      targetStall.style.transform = "scale(1.05)";
+      setTimeout(() => {
+        targetStall.style.boxShadow = "";
+        targetStall.style.transform = "";
+      }, 1500);
+    }
+  }, 800);
+}
+
 // Enhanced notification system
 function showNotification(message, type = 'info') {
   const notification = document.createElement('div');
@@ -1825,6 +1845,7 @@ document.addEventListener('click', function(e) {
     }
   }
 });
+
 
 
 
