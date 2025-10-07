@@ -374,6 +374,10 @@ body {
   text-align: center;
   position: relative;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .login-card::before {
@@ -1486,6 +1490,7 @@ select:focus {
     display: none !important;
   }
 }
+
 
 
 
