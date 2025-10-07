@@ -666,7 +666,7 @@ section:hover {
 
 .stall-image {
   position: relative;
-  height: 400px;
+  height: 250px;
   overflow: hidden;
 }
 
@@ -1490,6 +1490,7 @@ select:focus {
     display: none !important;
   }
 }
+
 
 
 
