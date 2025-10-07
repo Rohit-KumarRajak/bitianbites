@@ -120,10 +120,10 @@ window.scrollTo({ top: 0, behavior: "smooth" });
       <!-- Navigation Menu -->
       <div class="nav-menu" id="nav-menu">
         <a href="#" class="nav-link" onclick="closeMenu(); scrollToTop()">🏠 Home</a>
-        <a href="#popular-items" class="nav-link" onclick="closeMenu()">🔥 Popular</a>
-        <a href="#shops" class="nav-link" onclick="closeMenu()">🍴 Stalls</a>
-        <a href="#hostel" class="nav-link" onclick="closeMenu()">🚚 Delivery</a>
-        <a href="#cart" class="nav-link" onclick="closeMenu()">🛒 My Cart</a>
+        <a href="#popular-items" class="nav-link" onclick="navigateToSection('#popular-items')">🔥 Popular</a>
+        <a href="#shops" class="nav-link" onclick="navigateToSection('#shops')">🍴 Stalls</a>
+        <a href="#hostel" class="nav-link" onclick="navigateToSection('#hostel')">🚚 Delivery</a>
+        <a href="#cart" class="nav-link" onclick="navigateToSection('#cart')">🛒 My Cart</a>
         <a href="#footer" class="nav-link" onclick="closeMenu()">📞 Contact</a>
       </div>
     </div>
@@ -525,6 +525,7 @@ window.scrollTo({ top: 0, behavior: "smooth" });
   <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="script.js"></script>
 </body>
 </html>
+
 
 
 
