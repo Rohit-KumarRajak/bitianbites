@@ -1466,6 +1466,28 @@ window.scrollTo({ top: y, behavior: 'smooth' });
 
 }
 
+// 🧭 Navbar Navigation Fix
+function navigateToSection(sectionId) {
+  // If menu is open (only menu visible), reset to main view
+  const menuSection = document.getElementById('menu');
+  const mainSections = document.querySelectorAll('main > section');
+
+  // If menu is open (visible), hide it and show all sections back
+  if (menuSection && menuSection.style.display === 'block') {
+    menuSection.style.display = 'none';
+    mainSections.forEach(sec => sec.style.display = 'block');
+  }
+
+  // Scroll to the desired section
+  const target = document.querySelector(sectionId);
+  if (target) {
+    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  // Close mobile nav menu if open
+  closeMenu && closeMenu();
+}
+
 // Hide all main sections except menu
 function hideAllSections() {
   const sections = ['popular-items', 'shops', 'hostel', 'cart'];
@@ -1845,6 +1867,7 @@ document.addEventListener('click', function(e) {
     }
   }
 });
+
 
 
 
