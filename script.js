@@ -9,6 +9,7 @@ const stallNotes = {
   downsouth: "🕙 Timings: 10 AM – 9 PM | 💥 Today's Offer: Updated soon.",
   delhishake: "🕙 Timings: 10 AM – 9 PM | 💥 Today's Offer: Updated soon.",
   dhananjaymess: "📍 Located 0.5 km outside campus | 💰 Lower prices compared to other stalls | 🕙 Timings: 10 AM – 10 PM",
+  turchifastfood: "🕙 Timings: 10 AM – 10 PM | 💥 Today's Offer: Authentic Indian & Chinese cuisine"
 };
 
 const stallImages = {
@@ -19,7 +20,8 @@ const stallImages = {
   brothersfoodjunction: "https://images.unsplash.com/photo-1517244683847-7456b63c5969?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
   downsouth: "assets/stallimages/downsouth.jpg",
   delhishake: "assets/stallimages/delhishake.jpg",
-  dhananjaymess: "https://images.unsplash.com/photo-1517244683847-7456b63c5969?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+  dhananjaymess: "https://images.unsplash.com/photo-1517244683847-7456b63c5969?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+  turchifastfood: "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
 };
 
 const stallDescriptions = {
@@ -30,7 +32,8 @@ const stallDescriptions = {
   brothersfoodjunction: "Traditional Indian food with homestyle cooking and authentic flavors.",
   downsouth: "Continental and Indian cuisine with a modern twist and premium quality.",
   delhishake: "Fresh juices, shakes, and healthy beverages made with natural ingredients.",
-  dhananjaymess: "Authentic North Indian mess located 0.5km outside campus. Known for homestyle cooking and budget-friendly prices."
+  dhananjaymess: "Authentic North Indian mess located 0.5km outside campus. Known for homestyle cooking and budget-friendly prices.",
+   turchifastfood: "Authentic Indian and Chinese cuisine located behind Hostel 5. Known for delicious rolls, biryani, and quick snacks."
 };
 
 // Include all the existing menu data
@@ -1398,6 +1401,120 @@ const menus = {
       { name: 'Muli Paratha', price: 30 },
       { name: 'Paneer Paratha', price: 60 }
     ]
+  },
+
+    turchifastfood: {
+    Chowmein: [
+      { name: 'Veg Chowmein (Half)', price: 40 },
+      { name: 'Veg Chowmein (Full)', price: 70 },
+      { name: 'Chicken Chowmein (Half)', price: 60 },
+      { name: 'Chicken Chowmein (Full)', price: 110 },
+      { name: 'Egg Chowmein (Half)', price: 50 },
+      { name: 'Egg Chowmein (Full)', price: 100 },
+      { name: 'Paneer Chowmein (Half)', price: 70 },
+      { name: 'Paneer Chowmein (Full)', price: 140 },
+      { name: 'Mix Chowmein (Half)', price: 80 },
+      { name: 'Mix Chowmein (Full)', price: 150 }
+    ],
+
+    Rolls: [
+      { name: 'Veg Roll', price: 40 },
+      { name: 'Veg Cheese Roll', price: 60 },
+      { name: 'Egg Roll (Single)', price: 50 },
+      { name: 'Egg Roll (Double)', price: 60 },
+      { name: 'Paneer Roll', price: 60 },
+      { name: 'Paneer Cheese Roll', price: 70 },
+      { name: 'Chicken Roll', price: 70 },
+      { name: 'Chicken Egg Roll', price: 80 },
+      { name: 'Chicken Cheese Egg Roll', price: 100 }
+    ],
+
+    NonVegMainCourse: [
+      { name: 'Chicken Masala (Half)', price: 80 },
+      { name: 'Chicken Masala (Full)', price: 150 },
+      { name: 'Chicken Butter Masala (Half)', price: 100 },
+      { name: 'Chicken Butter Masala (Full)', price: 180 },
+      { name: 'Chicken Curry (Half)', price: 100 },
+      { name: 'Chicken Curry (Full)', price: 160 },
+      { name: 'Fish Curry (Half)', price: 70 },
+      { name: 'Fish Curry (Full)', price: 150 },
+      { name: 'Mutton Curry (Half)', price: 180 },
+      { name: 'Mutton Curry (Full)', price: 350 },
+      { name: 'Egg Curry', price: 60 }
+    ],
+
+    VegMainCourse: [
+      { name: 'Paneer Masala (Half)', price: 90 },
+      { name: 'Paneer Masala (Full)', price: 160 },
+      { name: 'Paneer Butter Masala (Half)', price: 90 },
+      { name: 'Paneer Butter Masala (Full)', price: 170 },
+      { name: 'Paneer Kadhai (Half)', price: 100 },
+      { name: 'Paneer Kadhai (Full)', price: 180 },
+      { name: 'Mix Veg (Half)', price: 80 },
+      { name: 'Mix Veg (Full)', price: 150 },
+      { name: 'Veg Thali (Half)', price: 100 },
+      { name: 'Mushroom Kadhai (Half)', price: 100 },
+      { name: 'Mushroom Kadhai (Full)', price: 180 }
+    ],
+
+    RotiParatha: [
+      { name: 'Tawa Roti', price: 10 },
+      { name: 'Butter Roti', price: 15 },
+      { name: 'Lachha Paratha', price: 25 },
+      { name: 'Chicken Paratha', price: 60 },
+      { name: 'Aloo Paratha', price: 50 },
+      { name: 'Onion Paratha', price: 50 },
+      { name: 'Chicken Egg Paratha', price: 80 }
+    ],
+
+    Rice: [
+      { name: 'Plain Rice(half)', price: 40 },
+      { name: 'Plain Rice(full)', price: 80 },
+      { name: 'Veg Fried Rice(half)', price: 50 },
+      { name: 'Veg Fried Rice(full)', price: 110 },
+      { name: 'Egg Fried Rice(half)', price: 60 },
+      { name: 'Egg Fried Rice(full)', price: 130 },
+      { name: 'Chicken Fried Rice(half)', price: 70 },
+      { name: 'Chicken Fried Rice(full)', price: 150 }
+    ],
+
+    Chilli: [
+      { name: 'Veg Chilli(half)', price: 50 },
+      { name: 'Veg Chilli(full)', price: 100 },
+      { name: 'Paneer Chilli(half)', price: 80 },
+      { name: 'Paneer Chilli(full)', price: 160 },
+      { name: 'Chicken Chilli (Bone)(half)', price: 90 },
+      { name: 'Chicken Chilli (Bone)(full)', price: 180 },
+      { name: 'Chicken Chilli (Boneless)(half)', price: 100 },
+      { name: 'Chicken Chilli (Boneless)(full)', price: 190 }
+    ],
+
+    Snacks: [
+      { name: 'Bread Omelette', price: 50 },
+      { name: 'Plain Maggie', price: 40 },
+      { name: 'Masala Maggie', price: 45 },
+      { name: 'Butter Masala Maggie', price: 50 },
+      { name: 'Cheese Masala Maggie', price: 50 },
+      { name: 'Chicken Masala Maggie', price: 80 },
+      { name: 'Boiled Egg(1)', price: 15 },
+      { name: 'Egg Masala Maggie', price: 70 },
+      { name: 'Onion Pakoda', price: 40 },
+      { name: 'Chicken Pakoda (Half)', price: 60 },
+      { name: 'Chicken Pakoda (Full)', price: 120 },
+      { name: 'Chicken Dry Fry (Half)', price: 100 },
+      { name: 'Chicken Dry Fry (Full)', price: 160 }
+    ],
+
+    Tea: [
+      { name: 'Lemon Tea', price: 10 },
+      { name: 'Milk Tea', price: 10 },
+      { name: 'Coffee', price: 10 }
+    ],
+
+    TurchiSpecial: [
+      { name: 'Chicken Biryani', price: 150 },
+      { name: 'Chicken Dehati', price: 260 }
+    ]
   }
 };
 
@@ -1410,6 +1527,7 @@ const whatsappNumbers = {
   downsouth: '919955581795',
   delhishake: '917050312280',
   dhananjaymess: '919939738152',
+  turchifastfood: '916299076822'
 };
 
 let cart = [];
@@ -1867,6 +1985,7 @@ document.addEventListener('click', function(e) {
     }
   }
 });
+
 
 
 
