@@ -21,7 +21,7 @@ const stallImages = {
   downsouth: "assets/stallimages/downsouth.jpg",
   delhishake: "assets/stallimages/delhishake.jpg",
   dhananjaymess: "https://images.unsplash.com/photo-1517244683847-7456b63c5969?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-  turchifastfood: "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+  turchifastfood: "assets/stallimages/turchifastfood.jpg"
 };
 
 const stallDescriptions = {
@@ -1985,6 +1985,7 @@ document.addEventListener('click', function(e) {
     }
   }
 });
+
 
 
 
