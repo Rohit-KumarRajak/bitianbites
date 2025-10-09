@@ -33,7 +33,7 @@ const stallDescriptions = {
   downsouth: "Continental and Indian cuisine with a modern twist and premium quality.",
   delhishake: "Fresh juices, shakes, and healthy beverages made with natural ingredients.",
   dhananjaymess: "Authentic North Indian mess located 0.5km outside campus. Known for homestyle cooking and budget-friendly prices.",
-   turchifastfood: "Authentic Indian and Chinese cuisine located behind Hostel 5. Known for delicious rolls, biryani, and quick snacks."
+  turchifastfood: "Authentic Indian and Chinese cuisine located behind Hostel 5. Known for delicious rolls, biryani, and quick snacks."
 };
 
 // Include all the existing menu data
@@ -1985,6 +1985,7 @@ document.addEventListener('click', function(e) {
     }
   }
 });
+
 
 
 
