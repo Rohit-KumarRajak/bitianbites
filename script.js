@@ -16,7 +16,7 @@ const stallImages = {
   rkfastfood: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
   tandoorijunction: "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
   italianpizzahub: "assets/stallimages/italianpizzahub.jpg",
-  amritdharatecno: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+  amritdharatecno: "assets/stallimages/amritdharatecno.jpg",
   brothersfoodjunction: "https://images.unsplash.com/photo-1517244683847-7456b63c5969?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
   downsouth: "assets/stallimages/downsouth.jpg",
   delhishake: "assets/stallimages/delhishake.jpg",
@@ -1985,6 +1985,7 @@ document.addEventListener('click', function(e) {
     }
   }
 });
+
 
 
 
