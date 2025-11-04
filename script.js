@@ -1039,7 +1039,146 @@ const menus = {
 },
 
   delhishake: {
-  MocktailsMojito: [
+
+   ShakesWithIceCream: [
+    { name: 'Banana Shake (M)', price: 70 },
+    { name: 'Banana Shake (XL)', price: 120 },
+    { name: 'Mango Shake (M)', price: 90 },
+   
+    { name: 'Mango Shake (XL)', price: 140 },
+    { name: 'Pineapple Shake (M)', price: 90 },
+    
+    { name: 'Pineapple Shake (XL)', price: 140 },
+    { name: 'Strawberry Shake (M)', price: 90 },
+    
+    { name: 'Strawberry Shake (XL)', price: 140 },
+    { name: 'Papaya Shake (M)', price: 90 },
+    
+    { name: 'Papaya Shake (XL)', price: 140 },
+    { name: 'Black Current Shake (M)', price: 90 },
+    
+    { name: 'Black Current Shake (XL)', price: 140 },
+    { name: 'Blueberry Shake (M)', price: 90 },
+    
+    { name: 'Blueberry Shake (XL)', price: 140 },
+    { name: 'Khajoor Shake (M)', price: 90 },
+    
+    { name: 'Khajoor Shake (XL)', price: 140 },
+    { name: 'Kesar Badam Shake (M)', price: 90 },
+    
+    { name: 'Kesar Badam Shake (XL)', price: 140 },
+    { name: 'Kesar Pista Shake (M)', price: 90 },
+    
+    { name: 'Kesar Pista Shake (XL)', price: 140 },
+    { name: 'Butter Scotch Shake (M)', price: 90 },
+   
+    { name: 'Butter Scotch Shake (XL)', price: 140 },
+    { name: 'Rasmalai Shake (M)', price: 90 },
+   
+    { name: 'Rasmalai Shake (XL)', price: 140 },
+    { name: 'Chocolate Shake (M)', price: 90 },
+    
+    { name: 'Chocolate Shake (XL)', price: 140 },
+    { name: 'Oreo Shake (M)', price: 90 },
+   
+    { name: 'Oreo Shake (XL)', price: 140 },
+    { name: 'Kitkat Shake (M)', price: 90 },
+   
+    { name: 'Kitkat Shake (XL)', price: 140 }
+  ],
+    
+    BrownieShakes: [
+    { name: 'Brownie Shake (M)', price: 90 },
+    
+    { name: 'Brownie Shake (XL)', price: 140 },
+    { name: 'Banana Brownie Shake (M)', price: 90 },
+   
+    { name: 'Banana Brownie Shake (XL)', price: 140 },
+    { name: 'Mango Brownie Shake (M)', price: 90 },
+   
+    { name: 'Mango Brownie Shake (XL)', price: 140 },
+    { name: 'Pineapple Brownie Shake (M)', price: 90 },
+    
+    { name: 'Pineapple Brownie Shake (XL)', price: 140 },
+    { name: 'Strawberry Brownie Shake (M)', price: 90 },
+   
+    { name: 'Strawberry Brownie Shake (XL)', price: 140 },
+    { name: 'Black Current Brownie Shake (M)', price: 90 },
+    
+    { name: 'Black Current Brownie Shake (XL)', price: 140 },
+    { name: 'Blueberry Brownie Shake (M)', price: 90 },
+    
+    { name: 'Blueberry Brownie Shake (XL)', price: 140 },
+    { name: 'Khajoor Brownie Shake (M)', price: 90 },
+   
+    { name: 'Khajoor Brownie Shake (XL)', price: 140 },
+    { name: 'Kesar Badam Brownie Shake (M)', price: 90 },
+   
+    { name: 'Kesar Badam Brownie Shake (XL)', price: 140 },
+    { name: 'Butter Scotch Brownie Shake (M)', price: 90 },
+    
+    { name: 'Butter Scotch Brownie Shake (XL)', price: 140 },
+    { name: 'Rasmalai Brownie Shake (M)', price: 90 },
+    
+    { name: 'Rasmalai Brownie Shake (XL)', price: 140 },
+    { name: 'Chocolate Brownie Shake (M)', price: 90 },
+    
+    { name: 'Chocolate Brownie Shake (XL)', price: 140 }
+  ],  
+
+    SpecialShakes: [
+    { name: 'Traffic Jam Shake (M)', price: 120 },
+   
+    { name: 'Traffic Jam Shake (XL)', price: 180 },
+    { name: 'Banana Peanut Butter Shake (M)', price: 120 },
+   
+    { name: 'Banana Peanut Butter Shake (XL)', price: 180 },
+    { name: 'Banana Khajoor Peanut Butter Shake (M)', price: 120 },
+   
+    { name: 'Banana Khajoor Peanut Butter Shake (XL)', price: 180 },
+    { name: 'Peanut Butter Oreo Shake (M)', price: 120 },
+   
+    { name: 'Peanut Butter Oreo Shake (XL)', price: 180 },
+    { name: 'Peanut Butter Brownie Shake (M)', price: 120 },
+    
+    { name: 'Peanut Butter Brownie Shake (XL)', price: 180 },
+    { name: 'Nutella Peanut Butter Shake (M)', price: 120 },
+    
+    { name: 'Nutella Peanut Butter Shake (XL)', price: 180 },
+    { name: 'Nutella Shake (M)', price: 120 },
+   
+    { name: 'Nutella Shake (XL)', price: 180 },
+    { name: 'Mix Dry Fruit Shake (M)', price: 120 },
+    
+    { name: 'Mix Dry Fruit Shake (XL)', price: 180 }
+  ],
+
+    ColdCoffeeWithIceCream: [
+    { name: 'Cold Coffee (M)', price: 90 },
+   
+    { name: 'Cold Coffee (XL)', price: 140 },
+    { name: 'Banana Coffee (M)', price: 90 },
+   
+    { name: 'Banana Coffee (XL)', price: 140 },
+    { name: 'Khajoor Coffee (M)', price: 90 },
+    
+    { name: 'Khajoor Coffee (XL)', price: 140 },
+    { name: 'Chocolate Coffee (M)', price: 90 },
+   
+    { name: 'Chocolate Coffee (XL)', price: 140 },
+    { name: 'Oreo Coffee (M)', price: 90 },
+    
+    { name: 'Oreo Coffee (XL)', price: 140 },
+    { name: 'KitKat Coffee (M)', price: 90 },
+    
+    { name: 'KitKat Coffee (XL)', price: 140 },
+    { name: 'Brownie Coffee (M)', price: 90 },
+    
+    { name: 'Brownie Coffee (XL)', price: 140 }
+  ],
+    
+
+  Mocktails: [
     { name: 'Fresh Lemon Soda (M)', price: 60 },
     { name: 'Fresh Lemon Soda (XL)', price: 120 },
     { name: 'Masala Soda (M)', price: 60 },
@@ -1092,6 +1231,22 @@ const menus = {
     { name: 'Paan Mojito (XL)', price: 150 }
   ],
 
+    Lassi: [
+    { name: 'Sweet Lassi (M)', price: 40 },
+    { name: 'Sweet Lassi (XL)', price: 80 },
+    { name: 'Mango Lassi (M)', price: 60 },
+    { name: 'Mango Lassi (XL)', price: 120 },
+    { name: 'Banana Lassi (M)', price: 60 },
+    { name: 'Banana Lassi (XL)', price: 120 },
+    { name: 'Kesar Lassi (M)', price: 60 },
+    { name: 'Kesar Lassi (XL)', price: 120 },
+    { name: 'Chocolate Lassi (M)', price: 60 },
+    { name: 'Chocolate Lassi (XL)', price: 120 },
+    { name: 'Strawberry Lassi (M)', price: 60 },
+    { name: 'Strawberry Lassi (XL)', price: 120 },
+    { name: 'Rasmalai Lassi (M)', price: 60 },
+    { name: 'Rasmalai Lassi (XL)', price: 120 }
+  ],
   FreshJuices: [
     { name: 'ABC Juice (S)', price: 60 },
     { name: 'ABC Juice (M)', price: 80 },
@@ -1167,161 +1322,6 @@ const menus = {
     { name: 'Sweet Chaas (M)', price: 30 },
     { name: 'Sweet Chaas (XL)', price: 60 }
   ],
-
-  ShakesWithIceCream: [
-    { name: 'Banana Shake (M)', price: 70 },
-    { name: 'Banana Shake (L)', price: 90 },
-    { name: 'Banana Shake (XL)', price: 120 },
-    { name: 'Mango Shake (M)', price: 90 },
-    { name: 'Mango Shake (L)', price: 120 },
-    { name: 'Mango Shake (XL)', price: 140 },
-    { name: 'Pineapple Shake (M)', price: 90 },
-    { name: 'Pineapple Shake (L)', price: 120 },
-    { name: 'Pineapple Shake (XL)', price: 140 },
-    { name: 'Strawberry Shake (M)', price: 90 },
-    { name: 'Strawberry Shake (L)', price: 120 },
-    { name: 'Strawberry Shake (XL)', price: 140 },
-    { name: 'Papaya Shake (M)', price: 90 },
-    { name: 'Papaya Shake (L)', price: 120 },
-    { name: 'Papaya Shake (XL)', price: 140 },
-    { name: 'Black Current Shake (M)', price: 90 },
-    { name: 'Black Current Shake (L)', price: 120 },
-    { name: 'Black Current Shake (XL)', price: 140 },
-    { name: 'Blueberry Shake (M)', price: 90 },
-    { name: 'Blueberry Shake (L)', price: 120 },
-    { name: 'Blueberry Shake (XL)', price: 140 },
-    { name: 'Khajoor Shake (M)', price: 90 },
-    { name: 'Khajoor Shake (L)', price: 120 },
-    { name: 'Khajoor Shake (XL)', price: 140 },
-    { name: 'Kesar Badam Shake (M)', price: 90 },
-    { name: 'Kesar Badam Shake (L)', price: 120 },
-    { name: 'Kesar Badam Shake (XL)', price: 140 },
-    { name: 'Kesar Pista Shake (M)', price: 90 },
-    { name: 'Kesar Pista Shake (L)', price: 120 },
-    { name: 'Kesar Pista Shake (XL)', price: 140 },
-    { name: 'Butter Scotch Shake (M)', price: 90 },
-    { name: 'Butter Scotch Shake (L)', price: 120 },
-    { name: 'Butter Scotch Shake (XL)', price: 140 },
-    { name: 'Rasmalai Shake (M)', price: 90 },
-    { name: 'Rasmalai Shake (L)', price: 120 },
-    { name: 'Rasmalai Shake (XL)', price: 140 },
-    { name: 'Chocolate Shake (M)', price: 90 },
-    { name: 'Chocolate Shake (L)', price: 120 },
-    { name: 'Chocolate Shake (XL)', price: 140 },
-    { name: 'Oreo Shake (M)', price: 90 },
-    { name: 'Oreo Shake (L)', price: 120 },
-    { name: 'Oreo Shake (XL)', price: 140 },
-    { name: 'Kitkat Shake (M)', price: 90 },
-    { name: 'Kitkat Shake (L)', price: 120 },
-    { name: 'Kitkat Shake (XL)', price: 140 }
-  ],
-
-  BrownieShakes: [
-    { name: 'Brownie Shake (M)', price: 90 },
-    { name: 'Brownie Shake (L)', price: 120 },
-    { name: 'Brownie Shake (XL)', price: 140 },
-    { name: 'Banana Brownie Shake (M)', price: 90 },
-    { name: 'Banana Brownie Shake (L)', price: 120 },
-    { name: 'Banana Brownie Shake (XL)', price: 140 },
-    { name: 'Mango Brownie Shake (M)', price: 90 },
-    { name: 'Mango Brownie Shake (L)', price: 120 },
-    { name: 'Mango Brownie Shake (XL)', price: 140 },
-    { name: 'Pineapple Brownie Shake (M)', price: 90 },
-    { name: 'Pineapple Brownie Shake (L)', price: 120 },
-    { name: 'Pineapple Brownie Shake (XL)', price: 140 },
-    { name: 'Strawberry Brownie Shake (M)', price: 90 },
-    { name: 'Strawberry Brownie Shake (L)', price: 120 },
-    { name: 'Strawberry Brownie Shake (XL)', price: 140 },
-    { name: 'Black Current Brownie Shake (M)', price: 90 },
-    { name: 'Black Current Brownie Shake (L)', price: 120 },
-    { name: 'Black Current Brownie Shake (XL)', price: 140 },
-    { name: 'Blueberry Brownie Shake (M)', price: 90 },
-    { name: 'Blueberry Brownie Shake (L)', price: 120 },
-    { name: 'Blueberry Brownie Shake (XL)', price: 140 },
-    { name: 'Khajoor Brownie Shake (M)', price: 90 },
-    { name: 'Khajoor Brownie Shake (L)', price: 120 },
-    { name: 'Khajoor Brownie Shake (XL)', price: 140 },
-    { name: 'Kesar Badam Brownie Shake (M)', price: 90 },
-    { name: 'Kesar Badam Brownie Shake (L)', price: 120 },
-    { name: 'Kesar Badam Brownie Shake (XL)', price: 140 },
-    { name: 'Butter Scotch Brownie Shake (M)', price: 90 },
-    { name: 'Butter Scotch Brownie Shake (L)', price: 120 },
-    { name: 'Butter Scotch Brownie Shake (XL)', price: 140 },
-    { name: 'Rasmalai Brownie Shake (M)', price: 90 },
-    { name: 'Rasmalai Brownie Shake (L)', price: 120 },
-    { name: 'Rasmalai Brownie Shake (XL)', price: 140 },
-    { name: 'Chocolate Brownie Shake (M)', price: 90 },
-    { name: 'Chocolate Brownie Shake (L)', price: 120 },
-    { name: 'Chocolate Brownie Shake (XL)', price: 140 }
-  ],
-
-  SpecialShakes: [
-    { name: 'Traffic Jam Shake (M)', price: 120 },
-    { name: 'Traffic Jam Shake (L)', price: 150 },
-    { name: 'Traffic Jam Shake (XL)', price: 180 },
-    { name: 'Banana Peanut Butter Shake (M)', price: 120 },
-    { name: 'Banana Peanut Butter Shake (L)', price: 150 },
-    { name: 'Banana Peanut Butter Shake (XL)', price: 180 },
-    { name: 'Banana Khajoor Peanut Butter Shake (M)', price: 120 },
-    { name: 'Banana Khajoor Peanut Butter Shake (L)', price: 150 },
-    { name: 'Banana Khajoor Peanut Butter Shake (XL)', price: 180 },
-    { name: 'Peanut Butter Oreo Shake (M)', price: 120 },
-    { name: 'Peanut Butter Oreo Shake (L)', price: 150 },
-    { name: 'Peanut Butter Oreo Shake (XL)', price: 180 },
-    { name: 'Peanut Butter Brownie Shake (M)', price: 120 },
-    { name: 'Peanut Butter Brownie Shake (L)', price: 150 },
-    { name: 'Peanut Butter Brownie Shake (XL)', price: 180 },
-    { name: 'Nutella Peanut Butter Shake (M)', price: 120 },
-    { name: 'Nutella Peanut Butter Shake (L)', price: 150 },
-    { name: 'Nutella Peanut Butter Shake (XL)', price: 180 },
-    { name: 'Nutella Shake (M)', price: 120 },
-    { name: 'Nutella Shake (L)', price: 150 },
-    { name: 'Nutella Shake (XL)', price: 180 },
-    { name: 'Mix Dry Fruit Shake (M)', price: 120 },
-    { name: 'Mix Dry Fruit Shake (L)', price: 150 },
-    { name: 'Mix Dry Fruit Shake (XL)', price: 180 }
-  ],
-
-  CoffeeWithIceCream: [
-    { name: 'Cold Coffee (M)', price: 90 },
-    { name: 'Cold Coffee (L)', price: 120 },
-    { name: 'Cold Coffee (XL)', price: 140 },
-    { name: 'Banana Coffee (M)', price: 90 },
-    { name: 'Banana Coffee (L)', price: 120 },
-    { name: 'Banana Coffee (XL)', price: 140 },
-    { name: 'Khajoor Coffee (M)', price: 90 },
-    { name: 'Khajoor Coffee (L)', price: 120 },
-    { name: 'Khajoor Coffee (XL)', price: 140 },
-    { name: 'Chocolate Coffee (M)', price: 90 },
-    { name: 'Chocolate Coffee (L)', price: 120 },
-    { name: 'Chocolate Coffee (XL)', price: 140 },
-    { name: 'Oreo Coffee (M)', price: 90 },
-    { name: 'Oreo Coffee (L)', price: 120 },
-    { name: 'Oreo Coffee (XL)', price: 140 },
-    { name: 'KitKat Coffee (M)', price: 90 },
-    { name: 'KitKat Coffee (L)', price: 120 },
-    { name: 'KitKat Coffee (XL)', price: 140 },
-    { name: 'Brownie Coffee (M)', price: 90 },
-    { name: 'Brownie Coffee (L)', price: 120 },
-    { name: 'Brownie Coffee (XL)', price: 140 }
-  ],
-
-  Lassi: [
-    { name: 'Sweet Lassi (M)', price: 40 },
-    { name: 'Sweet Lassi (XL)', price: 80 },
-    { name: 'Mango Lassi (M)', price: 60 },
-    { name: 'Mango Lassi (XL)', price: 120 },
-    { name: 'Banana Lassi (M)', price: 60 },
-    { name: 'Banana Lassi (XL)', price: 120 },
-    { name: 'Kesar Lassi (M)', price: 60 },
-    { name: 'Kesar Lassi (XL)', price: 120 },
-    { name: 'Chocolate Lassi (M)', price: 60 },
-    { name: 'Chocolate Lassi (XL)', price: 120 },
-    { name: 'Strawberry Lassi (M)', price: 60 },
-    { name: 'Strawberry Lassi (XL)', price: 120 },
-    { name: 'Rasmalai Lassi (M)', price: 60 },
-    { name: 'Rasmalai Lassi (XL)', price: 120 }
-  ]
 },
 
     dhananjaymess: {
@@ -1985,6 +1985,7 @@ document.addEventListener('click', function(e) {
     }
   }
 });
+
 
 
 
