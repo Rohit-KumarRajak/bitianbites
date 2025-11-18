@@ -924,6 +924,7 @@ const menus = {
 
     
   ComboMeals: [
+    { name: 'Extra Lachha Paratha', price: 40 },
     { name: 'Chicken Butter Masala with 3 Roti', price: 165 },
     { name: 'Chicken Butter Masala with 2 Lachha Paratha', price: 195 },
     { name: 'Chicken Curry with 3 Roti', price: 165 },
@@ -1985,6 +1986,7 @@ document.addEventListener('click', function(e) {
     }
   }
 });
+
 
 
 
